@@ -24,7 +24,7 @@ class StudentsController extends Controller
         return view ('admin.index');
     }
 
-
+    
 
 }
     

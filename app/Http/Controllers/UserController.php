@@ -67,6 +67,8 @@ class UserController extends Controller
     $user = User::create($validated); // create a variable and call the User model and then create ($validated);
 
     auth()->login($user);
+    return redirect('/login')->with('message','Register successful');
+
 
    }
 

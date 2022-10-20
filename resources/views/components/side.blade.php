@@ -1,9 +1,9 @@
 <div class="container">
     <aside>
         <div class="top">
-            <div class="logo">
-                <img src="/images/logo.png">
-                <h2>ANT<span class="danger">HONY</span></h2>
+            <div class="logo">    
+                    <h2>AM<span class="danger">LAC</span></h2>
+                    <p>Senior High School</p>                
             </div>
             <div class="close" id="close-btn">
                 <span class="material-icons-sharp">close</span>
@@ -12,29 +12,29 @@
 
         <div class="sidebar" id="myDiv">
     
-            <a href="#" class="btn">
+            <a href="{{'/Dashboard'}}" class="btn">
                 <span class="material-icons-sharp">dashboard</span>
                 <h3>Dashboard</h3>
             </a>
             <a href="#" class="btn">
-                <span class="material-icons-sharp">person_outline</span>
+                <span class="material-icons-sharp">class</span>
                 <h3>Classes</h3>
             </a>
             <a href="#" class="btn">
-                <span class="material-icons-sharp">receipt_long</span>
-                <h3>Subject</h3>
+                <span class="material-icons-sharp">school</span>
+                <h3>Course</h3>
             </a>
             <a href="#" class="btn">
-                <span class="material-icons-sharp">insights</span>
+                <span class="material-icons-sharp">person_pin</span>
                 <h3>Proferssor</h3>
             </a>
        
-            <a href="#" class="btn">
-                <span class="material-icons-sharp">inventory</span>
+            <a href="{{ '/Student' }}" class="btn">
+                <span class="material-icons-sharp">people</span>   
                 <h3>Students</h3>
             </a>
             <a href="#" class="btn"">
-                <span class="material-icons-sharp">report_gmailerrorred</span>
+                <span class="material-icons-sharp">insights</span>
                 <h3>Grading</h3>
             </a>
             <a href="#" class="btn">

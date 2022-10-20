@@ -119,6 +119,7 @@ small{
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .text-muted{
@@ -128,6 +129,7 @@ small{
 p{
     color: var(--color-dark-variant) ;
 }
+
 
 b{
     color: var(--color-dark);
@@ -158,14 +160,23 @@ aside .top{
     margin-top: 1.4rem;
 }
 
-aside .logo{
+/* aside .logo {
     display: flex;
     gap: 0.8rem;
-}
-
+} */
+/* 
 aside .logo img{
     width: 2ren;
     height: 2rem;
+} */
+aside .logo {
+    margin-left: 20px;
+}
+aside .logo h2{
+    text-align: center;
+}
+aside .logo p{
+    text-align: center;
 }
 
 aside .close{
@@ -262,6 +273,8 @@ aside .sidebar button:hover span{
 }
 
 
+
+
 /* end button css */
 
 
@@ -270,6 +283,7 @@ aside .sidebar a.active:before{
     width: 6px;
     height: 100%;
     background: var(--color-primary);
+
 }
 
 aside .sidebar a.active span{
@@ -277,8 +291,13 @@ aside .sidebar a.active span{
     margin-left: calc(1rem - 3px);
 }
 
-aside .sidebar a:hover span{
-    margin-left: 1rem;
+aside .sidebar a span{
+    margin-left: 1rem;  
+}
+
+aside .sidebar a:hover{
+    background-color: rgba(210, 205, 245, 0.187);
+    margin-left: 0;
 }
 
 aside .sidebar .message-count{
@@ -289,6 +308,10 @@ aside .sidebar .message-count{
     border-radius: var(--border-radius-1);
 }
 
+.title p {
+    font-size: 8px;
+  
+}
 
 /* ================ MAIN CSS ============= */
 

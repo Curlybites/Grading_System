@@ -13,9 +13,9 @@
     <section class="mt-10">
     <form action="/login/process" method="POST" class="flex flex-col ">
         @csrf
-        <input type="email" name="email" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Email">
+        <input type="email" name="email" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Email" required>
 
-        <input type="password" name="password" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Password">
+        <input type="password" name="password" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Password" required>
         
         <a href="/register">
         <p class="text-center text-gray-400 mt-3 hover:text-blue-500 mt-5">Create new account</p>

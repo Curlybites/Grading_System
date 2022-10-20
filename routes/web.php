@@ -24,12 +24,17 @@ use Illuminate\Http\Response;
 // Route::get('/',function(){
 //     return view ('student.index',[StudentsController::class,'index']);
 // });
+// Route::get('/',function(){
+//     return view ('Welcome');
+// });
 
-
-Route::get('/', [StudentsController::class,'index'])->middleware('auth');
+Route::get('/',[StudentsController::class,'index'])->middleware('auth');
 Route::get('/login',[UserController::class,'login'])->name('login');
 Route::post('/login/process',[UserController::class,'process']);
 Route::get('/register',[UserController::class,'register']);
 Route::post('/store',[UserController::class,'store']);
 Route::post('/logout',[UserController::class,'logout']);
+Route::get('/Dashboard',[DashboardController::class,'dashboard']);
+Route::get('/Student',[DashboardController::class,'student']);
+
 // Route::get('/', [StudentsController::class,'admin'])->middleware('auth');
