@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,16 @@ Route::post('/login/process',[UserController::class,'process']);
 Route::get('/register',[UserController::class,'register']);
 Route::post('/store',[UserController::class,'store']);
 Route::post('/logout',[UserController::class,'logout']);
+
+
+
+// this route is for navbar links
 Route::get('/Dashboard',[DashboardController::class,'dashboard']);
+Route::get('/Class',[DashboardController::class,'class']);
+Route::get('/Course',[DashboardController::class,'course']);
+Route::get('/Professor',[DashboardController::class,'professor']);
 Route::get('/Student',[DashboardController::class,'student']);
+Route::get('/Grading',[DashboardController::class,'grading']);
+Route::get('/Setting',[DashboardController::class,'setting']);
 
 // Route::get('/', [StudentsController::class,'admin'])->middleware('auth');

@@ -11,6 +11,19 @@ class DashboardController extends Controller
         return view ('student.dashboard');
     }
 
+    public function class(){
+        return view ('classes.class');
+    }
+
+    public function course(){
+        return view ('course.course');
+    }
+
+    public function professor(){
+        return view ('professor.professor');
+    }
+
+
     public function student(){
     
          $data = Student::all();
@@ -18,5 +31,14 @@ class DashboardController extends Controller
          return view ('student.student',['students'=>$data]);
     
     }
+
+    public function grading(){
+        return view('grading.grading');
+    }
+
+    public function setting(){
+        return view('setting.setting');
+    }
+
 
 }
