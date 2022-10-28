@@ -11,10 +11,19 @@ class StudentsController extends Controller
 {
     public function index(){
 
-       $data = Student::all();
-
+       $data = Student::paginate(10 );    
+    //    $data = Student::table('students')->Paginate(5);
        return view ('student.index',['students'=>$data]);
 
+    //    return view('student.index', [
+    //     'Student' =>Student::table('Student')->paginate(15)]);
+
+    }
+
+    public function studlist(){
+
+        $data = Student::paginate(10);   
+           return view ('student.student',['students'=>$data]);
     }
 
 
@@ -22,6 +31,18 @@ class StudentsController extends Controller
     public function admin(){
 
         return view ('admin.index');
+    }
+
+
+
+    // this section is for CRUDING OF STUDENTS
+
+    public function create(){
+        return "Hello world";
+    }
+
+    public function edit(){
+        
     }
 
     

@@ -24,9 +24,10 @@ class DashboardController extends Controller
     }
 
 
+    // this is for pagination for Studentlist in Student navigation
     public function student(){
     
-         $data = Student::all();
+         $data = Student::paginate(10);
 
          return view ('student.student',['students'=>$data]);
     

@@ -34,6 +34,9 @@
                 <span class="material-icons-sharp">people</span>   
                 <h3>Students</h3>
             </a>
+
+
+
             <a href="{{'/Grading'}}" class="btn"">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Grading</h3>
@@ -55,13 +58,27 @@
     <!-- END OF THE ASIDE  -->
 
 
-
-
 <main>
     <h1>Student</h1>
 
-    <div class="date">
-        <input type="date">
+    <div class="content">
+       <div class="create-student">
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" class="btn-create"><span>Create Student</span></button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closes">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+
+       </div>
     </div>
 
     <div class="recent-orders">
@@ -71,28 +88,44 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Student Number</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Age</th>
                     <th>Gender</th>
                     <th>Email</th>
+                    <th>Contact Number</th>
+                    <th>Course</th>
+                    <th>Section</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($students as $student)
                 <tr>
                     <td>{{ $student->id }}</td>
+                    <td>{{ $student->student_no }}</td>
                     <td>{{ $student->first_name }}</td>
                     <td>{{ $student->last_name }}</td>
                     <td class="warning">{{ $student->age }}</td>
                     <td class="primary">{{ $student->gender }}</td>
                     <td class="primary">{{ $student->email }}</td>
+                    <td>{{ $student->contact_no }}</td>
+                    <th></th>
+                    <th></th>
+                    <td class="warning">Edit</td>
                 </tr>
                 @endforeach
             </tbody>
+            
         </table>
 
-        <a href="#">Show All</a>
+       
+        <ul class="page">
+            <li>{{ $students->links('pagination::bootstrap-4') }}</li>        
+        </ul>
+       
+       
     </div>
 </main>
 

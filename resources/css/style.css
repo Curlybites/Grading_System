@@ -44,6 +44,20 @@
     --box-shadow: 0 2rem 3rem var(--color-light)
 }
 
+ul.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination{
+    display: flex;    
+}
+
+.page-item{
+    margin: 2rem;
+    font-weight:600;
+}
 
 
 
@@ -813,3 +827,73 @@ main a {
 
 
 }
+
+
+/* create student design */
+/* 
+main .date{
+    display: flex;
+}
+main .date input{
+    padding: 1rem;
+    margin: 1rem;
+} */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .closes {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closes:hover,
+  .closes:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-create{
+    margin: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #70AE45;
+    border: 1px solid #70AE45;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .btn-create:hover{
+    margin: 1rem;
+    padding: 1rem;
+    background-color:white;
+    border: 1px solid #70AE45;
+    color: #70AE45;
+    border-radius: 5px;
+
+  }

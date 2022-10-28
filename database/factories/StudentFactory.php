@@ -18,12 +18,13 @@ class StudentFactory extends Factory
     {
         return [
             
-
+                'student_no' => fake()->numerify('22-####'),
                 'first_name' => fake()->firstname(),
                 'last_name' => fake()->lastname(),
                 'age' => fake()-> numberBetween($min=18,$max=30),
                 'gender' => fake()->randomElement(['Male', 'Female']),
                 'email' => fake()->safeEmail(),
+                'contact_no' => fake()->numerify('09-#####-####')
             
         ];
       

@@ -108,6 +108,8 @@
                         </tbody>
                     </table>
 
+                    {{ $students->links() }}
+
                     <a href="#">Show All</a>
                 </div>
 

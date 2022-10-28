@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -35,7 +36,7 @@ Route::post('/login/process',[UserController::class,'process']);
 Route::get('/register',[UserController::class,'register']);
 Route::post('/store',[UserController::class,'store']);
 Route::post('/logout',[UserController::class,'logout']);
-
+Route::get('/studentlist',[StudentsController::class,'studlist']);
 
 
 // this route is for navbar links
@@ -48,3 +49,7 @@ Route::get('/Grading',[DashboardController::class,'grading']);
 Route::get('/Setting',[DashboardController::class,'setting']);
 
 // Route::get('/', [StudentsController::class,'admin'])->middleware('auth');
+
+
+// this route for students Crud
+Route::get('/add/student',[StudentsController::class,'create']);
