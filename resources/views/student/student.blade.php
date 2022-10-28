@@ -72,8 +72,50 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="closes">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
+
+    <h1 class="title-stud">Create Student</h1>
+
+<div class="create-stud">
+  <form action="/action_page.php">
+
+    <label for="stud_no">Student Number</label>
+    <input class="input-form" type="text" id="stud_no" name="student_no" placeholder="Your Student number..">
+
+    <label for="fname">First Name</label>
+    <input class="input-form" type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input class="input-form" type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="age">Age</label>
+    <input class="input-form" type="text" id="age" name="age" placeholder="Your age..">
+
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <label for="email">Email</label>
+    <input class="input-form" type="email" id="email" name="email" placeholder="Your email..">
+
+    <label for="contact_no">Contact Number</label>
+    <input class="input-form" type="text" id="contact_no" name="contact_no" placeholder="Your contact number..">
+
+    <label for="course">Course</label>
+    <select id="course" name="course">
+      <option value="">..</option>
+      <option value="">..</option>
+    </select>
+
+    <label for="section">Section</label>
+    <select id="section" name="section">
+      <option value="">..</option>
+      <option value="">..</option>
+    </select>
+  
+    <input class="btn-create-stud" type="submit" value="Submit">
+  </form>
+</div>
 
 </div>
 
