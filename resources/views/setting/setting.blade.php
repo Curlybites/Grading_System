@@ -23,7 +23,7 @@
             </a>
             <a href="{{'/Course'}}" class="btn">
                 <span class="material-icons-sharp">school</span>
-                <h3>Course</h3>
+                <h3>Subject</h3>
             </a>
             <a href="{{'/Professor'}}" class="btn">
                 <span class="material-icons-sharp">person_pin</span>

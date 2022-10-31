@@ -36,7 +36,10 @@ Route::post('/login/process',[UserController::class,'process']);
 Route::get('/register',[UserController::class,'register']);
 Route::post('/store',[UserController::class,'store']);
 Route::post('/logout',[UserController::class,'logout']);
+
+// this route for list of student in student nav
 Route::get('/studentlist',[StudentsController::class,'studlist']);
+
 
 
 // this route is for navbar links
@@ -53,3 +56,9 @@ Route::get('/Setting',[DashboardController::class,'setting']);
 
 // this route for students Crud
 Route::get('/add/student',[StudentsController::class,'create']);
+
+
+// this route for Class Crud
+Route::post('/store-class',[ClassController::class,'create']);
+// this route for list of class
+Route::get('/Class',[ClassController::class,'classResult']);

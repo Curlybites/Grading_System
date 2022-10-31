@@ -23,7 +23,7 @@
             </a>
             <a href="{{'/Course'}}" class="btn active">
                 <span class="material-icons-sharp">school</span>
-                <h3>Course</h3>
+                <h3>Subject</h3>
             </a>
             <a href="{{'/Professor'}}" class="btn">
                 <span class="material-icons-sharp">person_pin</span>
@@ -55,7 +55,84 @@
     <!-- END OF THE ASIDE  -->
 
     <main>
+        <h1>Subject</h1>
 
+        <div class="content">
+           <div class="create-student">
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" class="btn-create"><span>Create Subject</span></button>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="closes">&times;</span>
+    
+        <h1 class="title-stud">Create Subject</h1>
+    
+    <div class="create-stud">
+      <form action="/action_page.php">
+    
+        <label for="subj_name">Subject Name</label>
+        <input class="input-form" type="text" id="subj_name" name="subj_name" placeholder="">
+    
+        <label for="subj_code">Subject Code</label>
+        <input class="input-form" type="text" id="subj_code" name="subj_code" placeholder="">
+    
+    
+        <label for="prof">Professor</label>
+        <select id="prof" name="prof">
+          <option value="">..</option>
+          <option value="">..</option>
+        </select>
+ 
+      
+        <input class="btn-create-stud" type="submit" value="Submit">
+      </form>
+    </div>
+    
+    </div>
+    
+    
+    </div>
+    </div>
+    
+        <div class="recent-orders">
+            <h2>Subject List</h2>
+    
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Subject Name</th>
+                        <th>Subject Name</th>
+                        <th>Subject Name</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                 
+                </tbody>
+                
+            </table>
+    
+           
+            <ul class="page">
+                <li></li>        
+            </ul>
+           
+           
+        </div>
     </main>
 
     <div class="right">

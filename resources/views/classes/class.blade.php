@@ -23,7 +23,7 @@
             </a>
             <a href="{{'/Course'}}" class="btn">
                 <span class="material-icons-sharp">school</span>
-                <h3>Course</h3>
+                <h3>Subject</h3>
             </a>
             <a href="{{'/Professor'}}" class="btn">
                 <span class="material-icons-sharp">person_pin</span>
@@ -55,6 +55,92 @@
     <!-- END OF THE ASIDE  -->
 
     <main>
+        <h1>Classes</h1>
+
+        <div class="content">
+           <div class="create-student">
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" class="btn-create"><span>Create New class</span></button>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="closes">&times;</span>
+    
+        <h1 class="title-stud">Create Class</h1>
+    
+            <div class="create-stud">
+            <form action="/store-class" method="POST">
+                @csrf
+                <label for="stud_no">Class Name</label>
+                <input class="input-form" type="text" id="class_name" name="class_name" placeholder="">
+            
+                <label for="fname">Class Numeric</label>
+                <input class="input-form" type="text" id="class_num" name="class_num" placeholder="">
+            
+                <label for="lname">Class Section</label>
+                <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="">
+            
+                <button class="btn-create-stud" type="submit">Add Class</button>
+            </form>
+            </div>
+    
+    </div>
+    
+    
+    </div>
+    </div>
+
+        <div class="recent-orders">
+            <h2>Class List</h2>
+    
+            <table>
+                <thead>
+                    <tr>
+                       <th>ID</th>
+                       <th>Class Name</th>
+                       <th>Class Numeric</th>
+                       <th>Class Section</th>
+                       <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                   @foreach ( $classes as $class )
+                    <tr>
+                        <td class="primary">{{ $class->id }}</td>
+                        <td class="primary">{{ $class->class_name }}</td>
+                        <td class="primary">{{ $class->class_num }}</td>
+                        <td class="primary">{{ $class->class_sec }}</td>
+                        <td class="warning"><a href="" class="warning">Edit</a></td>
+                    </tr>
+                    @endforeach
+                </tbody>
+                
+            </table>
+    
+           
+            <ul class="page">
+                <li>{{ $classes->links('pagination::bootstrap-4') }}</li>       
+            </ul>
+           
+           
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </main>
     

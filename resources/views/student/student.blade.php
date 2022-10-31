@@ -23,7 +23,7 @@
             </a>
             <a href="{{'/Course'}}" class="btn">
                 <span class="material-icons-sharp">school</span>
-                <h3>Course</h3>
+                <h3>Subject</h3>
             </a>
             <a href="{{'/Professor'}}" class="btn">
                 <span class="material-icons-sharp">person_pin</span>
@@ -120,8 +120,8 @@
 </div>
 
 
-       </div>
-    </div>
+</div>
+</div>
 
     <div class="recent-orders">
         <h2>Student List</h2>
@@ -153,9 +153,9 @@
                     <td class="primary">{{ $student->gender }}</td>
                     <td class="primary">{{ $student->email }}</td>
                     <td>{{ $student->contact_no }}</td>
-                    <th></th>
-                    <th></th>
-                    <td class="warning">Edit</td>
+                    <td></td>
+                    <td></td>
+                    <td class="warning"><a href="" class="warning">Edit</a></td>
                 </tr>
                 @endforeach
             </tbody>

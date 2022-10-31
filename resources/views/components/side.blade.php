@@ -16,28 +16,28 @@
                 <span class="material-icons-sharp">dashboard</span>
                 <h3>Dashboard</h3>
             </a>
-            <a href="#" class="btn">
+            <a href="{{ '/Class' }}" class="btn">
                 <span class="material-icons-sharp">class</span>
                 <h3>Classes</h3>
             </a>
-            <a href="#" class="btn">
+            <a href="{{ '/Course' }}" class="btn">
                 <span class="material-icons-sharp">school</span>
-                <h3>Course</h3>
+                <h3>Subject</h3>
             </a>
-            <a href="#" class="btn">
+            <a href="{{ '/Professor' }}" class="btn">
                 <span class="material-icons-sharp">person_pin</span>
-                <h3>Proferssor</h3>
+                <h3>Professor</h3>
             </a>
        
             <a href="{{ '/Student' }}" class="btn">
                 <span class="material-icons-sharp">people</span>   
                 <h3>Students</h3>
             </a>
-            <a href="#" class="btn"">
+            <a href="{{ '/Grading' }}" class="btn"">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Grading</h3>
             </a>
-            <a href="#" class="btn">
+            <a href="{{ '/Setting' }}" class="btn">
                 <span class="material-icons-sharp">settings</span>
                 <h3>Settings</h3>
             </a>
