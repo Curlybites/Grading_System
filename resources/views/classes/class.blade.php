@@ -60,7 +60,9 @@
         <div class="content">
            <div class="create-student">
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn" class="btn-create"><span>Create New class</span></button>
+    <button id="myBtn" class="btn-create">
+        <span class="material-icons-sharp">add_circle_outline</span> 
+        <span class="t">New Class</pan></button>
     
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -83,7 +85,9 @@
                 <label for="lname">Class Section</label>
                 <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="">
             
-                <button class="btn-create-stud" type="submit">Add Class</button>
+                <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
+                    add
+                    </span>Add Class</button>
             </form>
             </div>
     
@@ -96,7 +100,7 @@
         <div class="recent-orders">
             <h2>Class List</h2>
     
-            <table>
+            <table class="table table-bordered table-responsive table-striped">
                 <thead>
                     <tr>
                        <th>ID</th>
@@ -130,43 +134,9 @@
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
     
-    <div class="right">
-        <div class="top">
-            <button id="menu-btn">
-                <span class="material-icons-sharp">menu</span>
-            </button>
-
-            <div class="theme-toggler">
-                <span class="material-icons-sharp active">light_mode</span>
-                <span class="material-icons-sharp">dark_mode</span>
-            </div>
-
-            <div class="profile">
-                <div class="info">
-                    <p>hey, <b>{{ Auth::user()->firstname }}</b></p>
-                    <small class="text-muted">Admin</small>
-                </div>
-
-                <div class="profile-photo">
-                    <img src="/images/caloocan.jpeg">
-                </div>
-            </div>
-        </div>
-
+    <x-profile/>
 
     @include('partials.foot')
 

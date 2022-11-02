@@ -12,7 +12,7 @@
 
     <section class="mt-10">
     
-    <form action="/store" method ="POST"class="flex flex-col ">
+    <form action="/store" method ="POST" enctype="multipart/form-data" class="flex flex-col ">
         @csrf
         <input type="text" name="firstname" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="First Name" required>
         <input type="text" name="lastname" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Last Name" required>
@@ -21,7 +21,7 @@
 
         <input type="password" name="password" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Password" required>
         <input type="password" name="password_confirmation" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Confirm Password" required>
-  
+        <input type="file" name="image" id="image"class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500">
         <a href="/login">
         <p class="text-center text-gray-400 mt-3 hover:text-blue-500 mt-5">Already have an account? sign in</p>
         </a>

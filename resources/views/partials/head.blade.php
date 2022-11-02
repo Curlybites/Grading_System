@@ -19,6 +19,9 @@
 
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
+    
    
     {{-- <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
     <script src="{{ asset('public/js/app.js') }}"></script> --}}

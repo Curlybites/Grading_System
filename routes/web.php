@@ -62,3 +62,6 @@ Route::get('/add/student',[StudentsController::class,'create']);
 Route::post('/store-class',[ClassController::class,'create']);
 // this route for list of class
 Route::get('/Class',[ClassController::class,'classResult']);
+
+// test run login route
+Route::get('/test',[Usercontroller::class,'test']);

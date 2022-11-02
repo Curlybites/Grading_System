@@ -1,6 +1,6 @@
 @include('partials.header')
     <header class="max-w-lg mx-auto ">
-    
+          
     <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl">
 
     <section>

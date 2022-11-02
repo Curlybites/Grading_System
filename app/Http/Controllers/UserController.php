@@ -83,4 +83,14 @@ class UserController extends Controller
     return redirect('/login')->with('message','Log out successful');
    }
 
+
+   public function test(){
+    return view('user.loging');
+   }
+
+
+
+
+
+
 }

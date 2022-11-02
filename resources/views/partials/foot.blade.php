@@ -71,7 +71,11 @@ window.onclick = function(event) {
 //Popover 
 $(document).ready(function(){
   $('[data-toggle="popover"]').popover();   
-});</script>
+});
+
+
+
+</script>
 <script src="/javascript/bootstrap.js"></script>
 </body>
 </html>

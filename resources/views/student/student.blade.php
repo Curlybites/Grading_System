@@ -64,7 +64,9 @@
     <div class="content">
        <div class="create-student">
 <!-- Trigger/Open The Modal -->
-<button id="myBtn" class="btn-create"><span>Create Student</span></button>
+<button id="myBtn" class="btn-create"> <span class="material-icons-sharp">add_circle_outline</span> 
+    <span class="t">New Student</pan></button>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -113,7 +115,9 @@
       <option value="">..</option>
     </select>
   
-    <input class="btn-create-stud" type="submit" value="Submit">
+    <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
+        add
+        </span>Add Student</button>
   </form>
 </div>
 
