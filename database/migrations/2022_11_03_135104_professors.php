@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('professors', function (Blueprint $table) {
+            
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('fname');
+            $table->string('lname');
             $table->string('gender');
             $table->string('email')->unique();
             $table->timestamps();

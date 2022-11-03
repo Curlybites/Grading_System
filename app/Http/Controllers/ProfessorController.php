@@ -21,7 +21,7 @@ class ProfessorController extends Controller
 
         $prof = Professor::create($validated);
 
-        return redirect('/professor')->with('message','Successfully Created');
+        return redirect('/Professor')->with('message','Successfully Created');
     }
 
     public function list(){

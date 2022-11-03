@@ -118,10 +118,11 @@
                     @foreach ($professors as $prof)
                     <tr>
                         <td>{{ $prof->id }}</td>
-                        <td>{{ $prof->first_name }}</td>
-                        <td>{{ $prof->last_name }}</td>
+                        <td>{{ $prof->fname }}</td>
+                        <td>{{ $prof->lname }}</td>
                         <td>{{ $prof->gender}}</td>
                         <td>{{ $prof->email }}</td>
+                        <td class="warning"><a href="" class="warning">Edit</a></td>
                     </tr>
                     @endforeach
                  

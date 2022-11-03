@@ -69,6 +69,6 @@ Route::get('/Class',[ClassController::class,'classResult']);
 
 
 // this route for professors list 
-Route::get('/Professor',[ProfessorController::class,'view']);
+Route::get('/Professor',[ProfessorController::class,'list']);
 // this route for Create Professor
 Route::post('/Professor/create',[ProfessorController::class,'create']);
