@@ -18,9 +18,9 @@ class ClassesFactory extends Factory
     {
         return [
 
-                'class_name' => fake()->class_name(),
+                'class_name' => fake()->firstName(),
                 'class_num' => fake()->numerify('22-###'),
-                'class_sec' => fake()->class_sec()
+                'class_sec' => fake()->lastName()
         ];
     }
 }

@@ -69,25 +69,23 @@
       <div class="modal-content">
         <span class="closes">&times;</span>
     
-        <h1 class="title-stud">Create Subject</h1>
+        <h1 class="title-stud">Create Professor</h1>
     
     <div class="create-stud">
-      <form action="/action_page.php">
+      <form action="/Professor/create" method="POST">
+        @csrf
+        <label for="fname">First Name</label>
+        <input class="input-form" type="text" id="fname" name="fname" placeholder="">
     
-        <label for="subj_name">Subject Name</label>
-        <input class="input-form" type="text" id="subj_name" name="subj_name" placeholder="">
+        <label for="lname">Last Name</label>
+        <input class="input-form" type="text" id="lname" name="lname" placeholder="">
+
+        <label for="gender">Gender</label>
+        <input class="input-form" type="text" id="gender" name="gender" placeholder="">
     
-        <label for="subj_code">Subject Code</label>
-        <input class="input-form" type="text" id="subj_code" name="subj_code" placeholder="">
-    
-    
-        <label for="prof">Professor</label>
-        <select id="prof" name="prof">
-          <option value="">..</option>
-          <option value="">..</option>
-        </select>
+        <label for="email">Email</label>
+        <input class="input-form" type="email" id="email" name="email" placeholder="">
  
-      
         <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
             add
             </span>Add Professor</button>
@@ -107,22 +105,25 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Subject Name</th>
-                        <th>Subject Name</th>
-                        <th>Subject Name</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Email</th>
                         <th>Action</th>
                         
                     </tr>
                 </thead>
                 <tbody>
                   
+                    @foreach ($professors as $prof)
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $prof->id }}</td>
+                        <td>{{ $prof->first_name }}</td>
+                        <td>{{ $prof->last_name }}</td>
+                        <td>{{ $prof->gender}}</td>
+                        <td>{{ $prof->email }}</td>
                     </tr>
+                    @endforeach
                  
                 </tbody>
                 

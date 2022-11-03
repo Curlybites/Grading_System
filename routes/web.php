@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Professor;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -64,4 +65,10 @@ Route::post('/store-class',[ClassController::class,'create']);
 Route::get('/Class',[ClassController::class,'classResult']);
 
 // test run login route
-Route::get('/test',[Usercontroller::class,'test']);
+// Route::get('/test',[Usercontroller::class,'test']);
+
+
+// this route for professors list 
+Route::get('/Professor',[ProfessorController::class,'view']);
+// this route for Create Professor
+Route::post('/Professor/create',[ProfessorController::class,'create']);
