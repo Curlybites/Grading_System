@@ -4,11 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
-
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Fascades\Hash;
+use Illuminate\Support\Fascades\View;
 
 
 class StudentsController extends Controller
 {
+    public function create(Request $request){
+        $validated = $request->validate([
+            "student_no"=>['required'],
+            "first_name"=>['required'],
+            "last_name"=>['required'],
+            "age"=>['required'],
+            "gender"=>['required'],
+            "contact_no"=>['required'],
+            "email"=>['required','email',Rule::unique('students','email')]
+            
+        ]);
+
+        $stud = Student::create($validated);
+
+        return redirect('/Student')->with('message','Successfully Created');
+    }
+
+    public function studlist(){
+
+        $data = Student::paginate(15);   
+           return view ('student.student',['students'=>$data]);
+    }
+
+
     public function index(){
 
        $data = Student::paginate(15);    
@@ -20,25 +46,13 @@ class StudentsController extends Controller
 
     }
 
-    public function studlist(){
-
-        $data = Student::paginate(15);   
-           return view ('student.student',['students'=>$data]);
-    }
+   
 
 
 
     public function admin(){
 
         return view ('admin.index');
-    }
-
-
-
-    // this section is for CRUDING OF STUDENTS
-
-    public function create(){
-        return "Hello world";
     }
 
     public function edit(){

@@ -16,7 +16,7 @@ class Student extends Model
         'last_name',
         'age',
         'gender',
-        'email',
         'contact_no',
+        'email',
     ];
 }
