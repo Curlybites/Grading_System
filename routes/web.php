@@ -20,17 +20,6 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-// Route::get('/', function () {
-//     return view('student.index', [StudentsController::class,'index']);
-// });
-
-// Route::get('/',function(){
-//     return view ('student.index',[StudentsController::class,'index']);
-// });
-// Route::get('/',function(){
-//     return view ('Welcome');
-// });
-
 Route::get('/',[StudentsController::class,'index'])->middleware('auth');
 Route::get('/login',[UserController::class,'login'])->name('login');
 Route::post('/login/process',[UserController::class,'process']);
@@ -42,7 +31,6 @@ Route::post('/logout',[UserController::class,'logout']);
 Route::get('/studentlist',[StudentsController::class,'studlist']);
 
 
-
 // this route is for navbar links
 Route::get('/Dashboard',[DashboardController::class,'dashboard']);
 Route::get('/Class',[DashboardController::class,'class']);
@@ -52,23 +40,11 @@ Route::get('/Student',[DashboardController::class,'student']);
 Route::get('/Grading',[DashboardController::class,'grading']);
 Route::get('/Setting',[DashboardController::class,'setting']);
 
-// Route::get('/', [StudentsController::class,'admin'])->middleware('auth');
-
-
-// this route for students Crud
+/*************************************** Route for Create and Display Function for Class  ************************************/
 Route::get('/add/student',[StudentsController::class,'create']);
-
-
-// this route for Class Crud
 Route::post('/store-class',[ClassController::class,'create']);
-// this route for list of class
 Route::get('/Class',[ClassController::class,'classResult']);
 
-// test run login route
-// Route::get('/test',[Usercontroller::class,'test']);
-
-
-// this route for professors list 
+/*************************************** Route for Create and Display Function for Professor  ************************************/
 Route::get('/Professor',[ProfessorController::class,'list']);
-// this route for Create Professor
 Route::post('/Professor/create',[ProfessorController::class,'create']);

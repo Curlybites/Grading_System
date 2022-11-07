@@ -2,17 +2,17 @@
 <div class="container">
     <aside>
         <div class="top">
-            <div class="logo">    
+            <div class="logo">
                     <h2>AM<span class="danger">LAC</span></h2>
-                    <p>Senior High School</p>                
+                    <p>Senior High School</p>
             </div>
             <div class="close" id="close-btn">
                 <span class="material-icons-sharp">close</span>
-            </div> 
+            </div>
         </div>
 
         <div class="sidebar" id="myDiv">
-    
+
             <a href="{{'/Dashboard'}}" class="btn">
                 <span class="material-icons-sharp">dashboard</span>
                 <h3>Dashboard</h3>
@@ -29,9 +29,9 @@
                 <span class="material-icons-sharp">person_pin</span>
                 <h3>Professor</h3>
             </a>
-       
+
             <a href="{{ '/Student' }}" class="btn active">
-                <span class="material-icons-sharp">people</span>   
+                <span class="material-icons-sharp">people</span>
                 <h3>Students</h3>
             </a>
 
@@ -45,7 +45,7 @@
                 <span class="material-icons-sharp">settings</span>
                 <h3>Settings</h3>
             </a>
-            
+
                 <form action="/logout" method="POST">
                     @csrf
                     <button class="btn">
@@ -64,7 +64,7 @@
     <div class="content">
        <div class="create-student">
 <!-- Trigger/Open The Modal -->
-<button id="myBtn" class="btn-create"> <span class="material-icons-sharp">add_circle_outline</span> 
+<button id="myBtn" class="btn-create"> <span class="material-icons-sharp">add_circle_outline</span>
     <span class="t">New Student</pan></button>
 
 
@@ -84,10 +84,10 @@
     <input class="input-form" type="text" id="stud_no" name="student_no" placeholder="Your Student number..">
 
     <label for="fname">First Name</label>
-    <input class="input-form" type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input class="input-form" type="text" id="fname" name="first_name" placeholder="Your name..">
 
     <label for="lname">Last Name</label>
-    <input class="input-form" type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input class="input-form" type="text" id="lname" name="last_name" placeholder="Your last name..">
     <label for="age">Age</label>
     <input class="input-form" type="text" id="age" name="age" placeholder="Your age..">
 
@@ -103,18 +103,6 @@
     <label for="contact_no">Contact Number</label>
     <input class="input-form" type="text" id="contact_no" name="contact_no" placeholder="Your contact number..">
 
-    <label for="course">Course</label>
-    <select id="course" name="course">
-      <option value="">..</option>
-      <option value="">..</option>
-    </select>
-
-    <label for="section">Section</label>
-    <select id="section" name="section">
-      <option value="">..</option>
-      <option value="">..</option>
-    </select>
-  
     <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
         add
         </span>Add Student</button>
@@ -141,8 +129,6 @@
                     <th>Gender</th>
                     <th>Email</th>
                     <th>Contact Number</th>
-                    <th>Course</th>
-                    <th>Section</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -157,21 +143,19 @@
                     <td class="primary">{{ $student->gender }}</td>
                     <td class="primary">{{ $student->email }}</td>
                     <td>{{ $student->contact_no }}</td>
-                    <td></td>
-                    <td></td>
                     <td class="warning"><a href="" class="warning">Edit</a></td>
                 </tr>
                 @endforeach
             </tbody>
-            
+
         </table>
 
-       
+
         <ul class="page">
-            <li>{{ $students->links('pagination::bootstrap-4') }}</li>        
+            <li>{{ $students->links('pagination::bootstrap-4') }}</li>
         </ul>
-       
-       
+
+
     </div>
 </main>
 

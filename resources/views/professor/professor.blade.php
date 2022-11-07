@@ -2,17 +2,17 @@
 <div class="container">
     <aside>
         <div class="top">
-            <div class="logo">    
+            <div class="logo">
                     <h2>AM<span class="danger">LAC</span></h2>
-                    <p>Senior High School</p>                
+                    <p>Senior High School</p>
             </div>
             <div class="close" id="close-btn">
                 <span class="material-icons-sharp">close</span>
-            </div> 
+            </div>
         </div>
 
         <div class="sidebar" id="myDiv">
-    
+
             <a href="{{'/Dashboard'}}" class="btn">
                 <span class="material-icons-sharp">dashboard</span>
                 <h3>Dashboard</h3>
@@ -29,9 +29,9 @@
                 <span class="material-icons-sharp">person_pin</span>
                 <h3>Professor</h3>
             </a>
-       
+
             <a href="{{ '/Student' }}" class="btn">
-                <span class="material-icons-sharp">people</span>   
+                <span class="material-icons-sharp">people</span>
                 <h3>Students</h3>
             </a>
             <a href="{{'/Grading'}}" class="btn"">
@@ -42,7 +42,7 @@
                 <span class="material-icons-sharp">settings</span>
                 <h3>Settings</h3>
             </a>
-            
+
                 <form action="/logout" method="POST">
                     @csrf
                     <button class="btn">
@@ -59,48 +59,51 @@
         <div class="content">
            <div class="create-student">
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn" class="btn-create"> <span class="material-icons-sharp">add_circle_outline</span> 
+    <button id="myBtn" class="btn-create"> <span class="material-icons-sharp">add_circle_outline</span>
         <span class="t">New Professor</pan></button></button>
-    
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
-    
+
       <!-- Modal content -->
       <div class="modal-content">
         <span class="closes">&times;</span>
-    
+
         <h1 class="title-stud">Create Professor</h1>
-    
+
     <div class="create-stud">
       <form action="/Professor/create" method="POST">
         @csrf
         <label for="fname">First Name</label>
-        <input class="input-form" type="text" id="fname" name="fname" placeholder="">
-    
+        <input class="input-form" type="text" id="fname" name="fname" placeholder="Given Name">
+
         <label for="lname">Last Name</label>
-        <input class="input-form" type="text" id="lname" name="lname" placeholder="">
+        <input class="input-form" type="text" id="lname" name="lname" placeholder="Family Name">
 
         <label for="gender">Gender</label>
-        <input class="input-form" type="text" id="gender" name="gender" placeholder="">
-    
+        <select id="gender" name="gender">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
         <label for="email">Email</label>
-        <input class="input-form" type="email" id="email" name="email" placeholder="">
- 
+        <input class="input-form" type="email" id="email" name="email" placeholder="sample@gmail.com">
+
         <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
             add
             </span>Add Professor</button>
       </form>
     </div>
-    
+
     </div>
-    
-    
+
+
     </div>
     </div>
-    
+
         <div class="recent-orders">
             <h2>Subject List</h2>
-    
+
             <table>
                 <thead>
                     <tr>
@@ -110,11 +113,11 @@
                         <th>Gender</th>
                         <th>Email</th>
                         <th>Action</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
-                  
+
                     @foreach ($professors as $prof)
                     <tr>
                         <td>{{ $prof->id }}</td>
@@ -125,17 +128,17 @@
                         <td class="warning"><a href="" class="warning">Edit</a></td>
                     </tr>
                     @endforeach
-                 
+
                 </tbody>
-                
+
             </table>
-    
-           
+
+
             <ul class="page">
-                <li></li>        
+                <li></li>
             </ul>
-           
-           
+
+
         </div>
     </main>
 
