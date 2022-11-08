@@ -46,6 +46,9 @@ Route::get('/Class',[ClassController::class,'classResult']);
 Route::get('/Professor',[ProfessorController::class,'list']);
 Route::post('/Professor/create',[ProfessorController::class,'create']);
 
+/*************************************** Route for Create and Display Function for Student  ************************************/
+Route::get('/studentlist',[StudentsController::class,'studlist']);
+Route::post('/Student/create',[StudentsController::class,'create']);
 
 // ****************************************** This Route for Class
 
