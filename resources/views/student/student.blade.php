@@ -78,8 +78,8 @@
     <h1 class="title-stud">Create Student</h1>
 
 <div class="create-stud">
-  <form action="/action_page.php">
-
+<form action="/Student/create" method="POST">
+    @csrf
     <label for="stud_no">Student Number</label>
     <input class="input-form" type="text" id="stud_no" name="student_no" placeholder="Your Student number..">
 
@@ -89,10 +89,11 @@
     <label for="lname">Last Name</label>
     <input class="input-form" type="text" id="lname" name="last_name" placeholder="Your last name..">
     <label for="age">Age</label>
-    <input class="input-form" type="text" id="age" name="age" placeholder="Your age..">
+    <input class="input-form" type="number" id="age" name="age" placeholder="Your age..">
 
     <label for="gender">Gender</label>
-    <select id="gender" name="gender">
+    <select id="gender" name="gender" required>
+      <option value="" selected disabled>Select Gender</option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
     </select>

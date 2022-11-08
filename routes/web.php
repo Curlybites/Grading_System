@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Professor;
 use App\Models\User;
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -26,10 +27,6 @@ Route::post('/login/process',[UserController::class,'process']);
 Route::get('/register',[UserController::class,'register']);
 Route::post('/store',[UserController::class,'store']);
 Route::post('/logout',[UserController::class,'logout']);
-
-// this route for list of student in student nav
-Route::get('/studentlist',[StudentsController::class,'studlist']);
-
 
 // this route is for navbar links
 Route::get('/Dashboard',[DashboardController::class,'dashboard']);
