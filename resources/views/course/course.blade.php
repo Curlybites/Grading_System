@@ -73,20 +73,16 @@
         <h1 class="title-stud">Create Subject</h1>
 
     <div class="create-stud">
-      <form action="/action_page.php">
-
+      <form action="/Course/add" method="post">
+        @csrf
         <label for="subj_name">Subject Name</label>
-        <input class="input-form" type="text" id="subj_name" name="subj_name" placeholder="">
+        <input class="input-form" type="text" id="subj_name" name="subj_name" placeholder="" required>
 
         <label for="subj_code">Subject Code</label>
-        <input class="input-form" type="text" id="subj_code" name="subj_code" placeholder="">
+        <input class="input-form" type="text" id="subj_code" name="subj_code" placeholder="" required>
 
-
-        <label for="prof">Professor</label>
-        <select id="prof" name="prof">
-          <option value="">..</option>
-          <option value="">..</option>
-        </select>
+        <label for="subj_unit">Subject Unit</label>
+        <input class="input-form" type="number" id="subj_unit" name="subj_unit" placeholder="" required>
 
 
         <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
@@ -116,14 +112,16 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    @foreach ( $subject as $row)
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $row ->id }}</td>
+                        <td>{{ $row ->subj_name}}</td>
+                        <td>{{ $row ->subj_code }}</td>
+                        <td>{{ $row ->subj_unit }}</td>
+                        <td><a href="">Edit</a></td>
                     </tr>
+                    @endforeach
+                    
 
                 </tbody>
 

@@ -75,19 +75,19 @@
       <form action="/Professor/create" method="POST">
         @csrf
         <label for="fname">First Name</label>
-        <input class="input-form" type="text" id="fname" name="fname" placeholder="Given Name">
+        <input class="input-form" type="text" id="fname" name="fname" placeholder="Given Name" required>
 
         <label for="lname">Last Name</label>
-        <input class="input-form" type="text" id="lname" name="lname" placeholder="Family Name">
+        <input class="input-form" type="text" id="lname" name="lname" placeholder="Family Name" required>
 
         <label for="gender">Gender</label>
-        <select id="gender" name="gender">
-          <option value="">Select Gender</option>
+        <select id="gender" name="gender" required>
+          <option value="" selected disabled>Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
         </select>
         <label for="email">Email</label>
-        <input class="input-form" type="email" id="email" name="email" placeholder="sample@gmail.com">
+        <input class="input-form" type="email" id="email" name="email" placeholder="sample@gmail.com" required>
 
         <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
             add

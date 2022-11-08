@@ -48,3 +48,14 @@ Route::get('/Class',[ClassController::class,'classResult']);
 /*************************************** Route for Create and Display Function for Professor  ************************************/
 Route::get('/Professor',[ProfessorController::class,'list']);
 Route::post('/Professor/create',[ProfessorController::class,'create']);
+
+
+// ****************************************** This Route for Class
+
+Route::controller(SubjectController::class)->group(function () {
+
+//    Route::get('/Course','display');
+   Route::get('/Course','list');
+   Route::post('/Course/add','create');
+    
+});
