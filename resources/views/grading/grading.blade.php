@@ -55,15 +55,17 @@
     <!-- END OF THE ASIDE  -->
     <main>
 
-        <div class="insights">
+        <h1 style="padding: 30px;">Grading Form</h1>
 
+        <div class="insights" style="padding: 50px;" >
 
+            
             {{-- 1st tab --}}
             <div class="sales">
-                <a href="{{'/sample'}}" class="viewbtn">
+                <a href="{{'/tvl'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
-                        <h3>TVL</h3>
+                        <h3>TVL Track</h3>
                         <small>View TVL Grading</small>
                     </div>
                  </a>
@@ -71,22 +73,22 @@
 
             {{-- 2nd tab --}}
             <div class="expenses">
-                <a href="{{'/sample'}}" class="viewbtn">
+                <a href="{{'/acad'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
-                        <h3>TVL</h3>
-                        <small>View TVL Grading</small>
+                        <h3>Academic Track</h3>
+                        <small>View Academic Track Grading</small>
                     </div>
                  </a>
             </div>
 
             {{-- 3rd tab --}}
             <div class="income">
-                <a href="{{'/sample'}}" class="viewbtn">
+                <a href="{{'/core'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
-                        <h3>TVL</h3>
-                        <small>View TVL Grading</small>
+                        <h3>Core Subject</h3>
+                        <small>View Core Grading</small>
                     </div>
                  </a>
             </div>

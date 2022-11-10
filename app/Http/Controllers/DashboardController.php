@@ -41,8 +41,16 @@ class DashboardController extends Controller
         return view('setting.setting');
     }
 
-    public function sample(){
-        return view ('grading.sample');
+    public function tvlGrading(){
+        return view ('grading.tvl');
+    }
+
+    public function acadGrading(){
+        return view ('grading.acad');
+    }
+
+    public function coreGrading(){
+        return view ('grading.core');
     }
 
 }

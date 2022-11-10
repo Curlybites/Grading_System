@@ -36,7 +36,9 @@ Route::get('/Professor',[DashboardController::class,'professor']);
 Route::get('/Student',[DashboardController::class,'student']);
 Route::get('/Grading',[DashboardController::class,'grading']);
 Route::get('/Setting',[DashboardController::class,'setting']);
-Route::get('/sample',[DashboardController::class,'sample']);
+Route::get('/tvl',[DashboardController::class,'tvlGrading']);
+Route::get('/acad',[DashboardController::class,'acadGrading']);
+Route::get('/core',[DashboardController::class,'coreGrading']);
 
 /*************************************** Route for Create and Display Function for Class  ************************************/
 Route::get('/add/student',[StudentsController::class,'create']);
@@ -65,7 +67,7 @@ Route::controller(SubjectController::class)->group(function () {
 
 Route::controller(ClassController::class)->group(function(){
     Route::get('/class/{id}','show');
-    Route::put('/class/{id}','edit');
+    Route::put('/class/{id}','update');
     Route::post('/store-class','create');
     Route::get('/Class/','classResult');
 });
