@@ -125,7 +125,7 @@
                         <td>{{ $prof->lname }}</td>
                         <td>{{ $prof->gender}}</td>
                         <td>{{ $prof->email }}</td>
-                        <td class="warning"><a href="" class="warning">Edit</a></td>
+                        <td class="warning"><a href="/prof/{{ $prof->id }}" class="warning">Edit</a></td>
                     </tr>
                     @endforeach
 

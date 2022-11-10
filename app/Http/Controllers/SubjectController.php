@@ -27,7 +27,20 @@ class SubjectController extends Controller
         return redirect('/Course')->with('message','Successfully Created');
     }
 
-    // public function display(){
-    //     return view ('course.course');
-    // }
+    public function show($id){
+        $data = Subject::findorFail($id);
+        // dd($data);
+        return view('course.courseEdit',['course' => $data]);
+    }
+
+    public function update(Request $req, Subject $subject){
+        $subject=Subject::find($req->id);
+        $subject->subj_name=$req->subj_name;
+        $subject->subj_code=$req->subj_code;
+        $subject->subj_unit=$req->subj_unit;
+        $subject->save();
+
+         return redirect('/Course')->with('message','Successfully Created');
+
+    }
 }

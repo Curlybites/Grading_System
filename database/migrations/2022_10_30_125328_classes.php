@@ -18,6 +18,13 @@ return new class extends Migration
             $table->string('class_name');
             $table->string('class_num');
             $table->string('class_sec')->unique();
+            $table->string('student_no')->unique();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('age');
+            $table->string('gender');
+            $table->string('contact_no')->unique();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

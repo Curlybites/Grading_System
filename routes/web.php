@@ -59,10 +59,10 @@ Route::put('/Student/create',[StudentsController::class,'create']);
 // ****************************************** This Route for Subject
 
 Route::controller(SubjectController::class)->group(function () {
-
-//    Route::get('/Course','display');
    Route::get('/Course','list');
-   Route::post('/Course/add','create');    
+   Route::post('/Course/add','create');   
+   Route::get('/course/{id}','show'); 
+   Route::put('/course/{id}','update');
 });
 
 Route::controller(ClassController::class)->group(function(){
@@ -71,5 +71,17 @@ Route::controller(ClassController::class)->group(function(){
     Route::post('/store-class','create');
     Route::get('/Class/','classResult');
 });
+
+Route::controller(ProfessorController::class)->group(function(){
+    Route::get('/prof/{id}','show');
+    Route::put('/professor/{id}','update');
+});
+
+Route::controller(StudentsController::class)->group(function(){
+    Route::get('/stud/{id}','show');
+    Route::put('/student/{id}','update');
+});
+
+
 
   
