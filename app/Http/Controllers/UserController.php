@@ -24,6 +24,8 @@ class UserController extends Controller
     }
 
 
+
+
     // for log in process
     public function process(Request $request){
         $validated = $request->validate([

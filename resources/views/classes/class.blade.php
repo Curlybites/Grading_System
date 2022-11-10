@@ -77,13 +77,13 @@
             <form action="/store-class" method="POST">
                 @csrf
                 <label for="stud_no">Class Name</label>
-                <input class="input-form" type="text" id="class_name" name="class_name" placeholder="">
+                <input class="input-form" type="text" id="class_name" name="class_name" placeholder="" required>
             
                 <label for="fname">Class Numeric</label>
-                <input class="input-form" type="text" id="class_num" name="class_num" placeholder="">
+                <input class="input-form" type="text" id="class_num" name="class_num" placeholder="" required>
             
                 <label for="lname">Class Section</label>
-                <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="">
+                <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" required>
             
                 <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
                     add
@@ -107,7 +107,7 @@
                        <th>Class Name</th>
                        <th>Class Numeric</th>
                        <th>Class Section</th>
-                       <th>Action</th>
+                       <th colspan="2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -118,7 +118,8 @@
                         <td class="primary">{{ $class->class_name }}</td>
                         <td class="primary">{{ $class->class_num }}</td>
                         <td class="primary">{{ $class->class_sec }}</td>
-                        <td class="warning"><a href="" class="warning">Edit</a></td>
+                        <td class="warning"><a href="/class/{{ $class->id }}">Edit</a></td>
+                        <td class="warning"><a href="">View</a></td>
                     </tr>
                     @endforeach
                 </tbody>

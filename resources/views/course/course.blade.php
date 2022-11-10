@@ -107,7 +107,7 @@
                         <th>Subject Name</th>
                         <th>Subject Name</th>
                         <th>Subject Name</th>
-                        <th>Action</th>
+                        <th colspan="2">Action</th>
 
                     </tr>
                 </thead>
@@ -119,6 +119,7 @@
                         <td>{{ $row ->subj_code }}</td>
                         <td>{{ $row ->subj_unit }}</td>
                         <td><a href="">Edit</a></td>
+                        <td><a href="">View</a></td>
                     </tr>
                     @endforeach
                     
