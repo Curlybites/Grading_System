@@ -46,4 +46,6 @@ class ClassController extends Controller
         return back()->with('message','Successfully Updated');
     }
 
+    
+
 }

@@ -5,7 +5,9 @@
 <div class="modal-content">
 
     <h1 class="title-stud">Edit Class</h1>
+<?php 
 
+?>
         <div class="create-stud">
         <form action="/class/{{ $class->id }}" method="POST">
             @method('PUT') 

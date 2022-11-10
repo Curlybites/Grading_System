@@ -54,7 +54,25 @@
     </aside>
     <!-- END OF THE ASIDE  -->
     <main>
-    <a href="{{'/sample'}}"><h3>view</h3></a>
+        {{-- first tab --}}
+    <a href="{{'/sample'}}" class="viewbtn">
+       <div class="insights">
+            <div class="sales">
+                <span class="material-icons-sharp">analytics</span>
+                <h3>TVL</h3>
+                <small>View TVL Grading</small>
+            </div>
+        </div>
+    </a>
+
+      {{-- 2nd tab --}}
+
+
+    <style>
+        .viewbtn{
+
+        }
+    </style>
     </main>
     
     <x-profile/>
