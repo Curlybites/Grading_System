@@ -29,7 +29,7 @@
           
                <div class="table-responsive">
 
-                      <table class="table table-bordered table-striped table-hover">
+                      <table class="table table-bordered table-striped table-hover table-sm">
                                 <thead class="">
                                 <tr>
                                     <th class="text-center" rowspan="2" colspan="5">FIRST QUARTER</th>
@@ -80,78 +80,78 @@
                                         <th>WS</th>
                                         <!-- Quarterly Assesment  -->
                                         <th>1</th>
-                                        <th>2</th>
-                                        <th>3</th>
+                                        <th>PS</th>
+                                        <th>WS</th>
                                 </tr>
                                 <tr class="text-center">
                                         <th colspan="5">HPG</th>
                                         <!--Written Task  -->
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th>100.00</td>
-                                        <th>25%</th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th name="wtotal" id="wtotal"></th>
+                                        <th value="100" id="wps" name="wps">100</th>
+                                        <th value="25%" id="wws" name="wws">50%</th>
                                         <!-- performance task -->
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th>100.00</td>
-                                        <th>50%</th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th name="ptotal" id="ptotal"></th>
+                                        <th value="100" id="pps" name="pps">100</th>
+                                        <th value="50%" id="pws" name="pws">50%</th>
                                         <!-- Quarterly Assesment  -->
-                                        <th>1</th>
-                                        <th>100.00</th>
-                                        <th>25%</th>
+                                        <th><input type="text" style="width:30px"; min="1" max="1000"></th>
+                                        <th></th>
+                                        <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <!-- Written Task -->
                                     <td colspan="5">Darlucio, John</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <!-- Performance Task -->
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <!-- Quarterly -->
-                                    <td></td>
+                                    <td><input type="text" style="width:30px"; min="1" max="1000" class="form-control"></td>
                                     <td></td>
                                     <td></td>
                                     <!-- Initial Grade -->
