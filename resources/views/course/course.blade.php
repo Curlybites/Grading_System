@@ -105,8 +105,8 @@
                     <tr>
                         <th>ID</th>
                         <th>Subject Name</th>
-                        <th>Subject Name</th>
-                        <th>Subject Name</th>
+                        <th>Subject Code</th>
+                        <th>Subject Unit</th>
                         <th colspan="2">Action</th>
 
                     </tr>

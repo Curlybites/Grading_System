@@ -55,6 +55,20 @@
           <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="Proj"></td>
           <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="Exam"></td>
         </tr>
+        <tr>
+          <td>1</td>
+          <td>Prince Carlz </td>
+          <td>Darlucio</td>
+          <td>Sample gabril</td>
+          <td><input type="number" class="" id="" name="" style="width: 65px;" min="1" max="1000" placeholder="Act1"></td>
+          <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="Act2"></td>
+          <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="Q1"></td>
+          <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="Q2"></td>
+          <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="A1"></td>
+          <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="A2"></td>
+          <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="Proj"></td>
+          <td><input type="number" class="" id="" name="" style="width: 60px;" min="1" max="1000" placeholder="Exam"></td>
+        </tr>
       </tbody>
     </table>
   </div>
