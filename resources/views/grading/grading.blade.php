@@ -54,7 +54,7 @@
     </aside>
     <!-- END OF THE ASIDE  -->
     <main>
-
+    <a href="{{'/sample'}}"><h3>view</h3></a>
     </main>
     
     <x-profile/>

@@ -135,7 +135,7 @@
 
 
             <ul class="page">
-                <li></li>
+                <li>{{ $professors->links('pagination::bootstrap-4') }}</li>
             </ul>
 
 

@@ -36,6 +36,7 @@ Route::get('/Professor',[DashboardController::class,'professor']);
 Route::get('/Student',[DashboardController::class,'student']);
 Route::get('/Grading',[DashboardController::class,'grading']);
 Route::get('/Setting',[DashboardController::class,'setting']);
+Route::get('/sample',[DashboardController::class,'sample']);
 
 /*************************************** Route for Create and Display Function for Class  ************************************/
 Route::get('/add/student',[StudentsController::class,'create']);

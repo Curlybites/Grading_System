@@ -26,7 +26,7 @@ class ProfessorController extends Controller
 
     public function list(){
 
-        $data = Professor::paginate(15);
+        $data = Professor::paginate(5);
         return view ('professor.professor',['professors'=> $data]);
     }
 }

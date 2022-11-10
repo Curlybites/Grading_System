@@ -41,5 +41,8 @@ class DashboardController extends Controller
         return view('setting.setting');
     }
 
+    public function sample(){
+        return view ('grading.sample');
+    }
 
 }
