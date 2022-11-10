@@ -52,8 +52,25 @@ class StudentsController extends Controller
         return view ('admin.index');
     }
 
-    public function edit(){
-        
+    public function show($id){
+        $data = Student::findorFail($id);
+        // dd($data);
+        return view('student.studentEdit',['stud' => $data]);
+    }
+
+    public function update(Request $req, Student $student){
+        $student=Student::find($req->id);
+        $student->student_no=$req->student_no;
+        $student->first_name=$req->first_name;
+        $student->last_name=$req->last_name;
+        $student->age=$req->age;
+        $student->gender=$req->gender;
+        $student->contact_no=$req->contact_no;
+        $student->email=$req->email;
+        $student->save();
+
+         return redirect('/Student')->with('message','Successfully Created');
+
     }
 
     
