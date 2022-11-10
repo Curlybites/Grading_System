@@ -179,10 +179,5 @@
             $('#myTable').DataTable();
                 } );
        </script>
-       <script>
-            function compute {
-
-            };
-       </script>
 </body>
 </html>
