@@ -39,8 +39,7 @@ Route::get('/Setting',[DashboardController::class,'setting']);
 
 /*************************************** Route for Create and Display Function for Class  ************************************/
 Route::get('/add/student',[StudentsController::class,'create']);
-Route::post('/store-class',[ClassController::class,'create']);
-Route::get('/Class',[ClassController::class,'classResult']);
+
 
 /*************************************** Route for Create and Display Function for Professor  ************************************/
 Route::get('/Professor',[ProfessorController::class,'list']);
@@ -48,14 +47,26 @@ Route::post('/Professor/create',[ProfessorController::class,'create']);
 
 /*************************************** Route for Create and Display Function for Student  ************************************/
 Route::get('/studentlist',[StudentsController::class,'studlist']);
-Route::post('/Student/create',[StudentsController::class,'create']);
+Route::put('/Student/create',[StudentsController::class,'create']);
 
-// ****************************************** This Route for Class
+
+
+
+
+// ****************************************** This Route for Subject
 
 Route::controller(SubjectController::class)->group(function () {
 
 //    Route::get('/Course','display');
    Route::get('/Course','list');
-   Route::post('/Course/add','create');
-    
+   Route::post('/Course/add','create');    
 });
+
+Route::controller(ClassController::class)->group(function(){
+    Route::get('/class/{id}','show');
+    Route::put('/class/{id}','edit');
+    Route::post('/store-class','create');
+    Route::get('/Class/','classResult');
+});
+
+  

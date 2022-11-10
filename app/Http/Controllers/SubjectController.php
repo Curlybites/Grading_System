@@ -13,6 +13,9 @@ class SubjectController extends Controller
     }
 
     public function create(Request $request){
+
+        // dd($request);
+
         $validated = $request->validate([
             "subj_name"=>['required'],
             "subj_code"=>['required'],

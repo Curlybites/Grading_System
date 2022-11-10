@@ -15,4 +15,8 @@ class Professor extends Model
         'gender',
         'email',
     ];
+
+    // protected $guarded = [];
+
+
 }

@@ -14,4 +14,6 @@ class Classes extends Model
         'class_num',
         'class_sec',
     ];
+
+    // protected $guarded = [];
 }
