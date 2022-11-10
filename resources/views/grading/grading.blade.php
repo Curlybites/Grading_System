@@ -34,7 +34,7 @@
                 <span class="material-icons-sharp">people</span>   
                 <h3>Students</h3>
             </a>
-            <a href="{{'/Grading'}}" class="btn active"">
+            <a href="{{'/Grading'}}" class="btn active">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Grading</h3>
             </a>
@@ -54,25 +54,46 @@
     </aside>
     <!-- END OF THE ASIDE  -->
     <main>
-        {{-- first tab --}}
-    <a href="{{'/sample'}}" class="viewbtn">
-       <div class="insights">
+
+        <div class="insights">
+
+
+            {{-- 1st tab --}}
             <div class="sales">
-                <span class="material-icons-sharp">analytics</span>
-                <h3>TVL</h3>
-                <small>View TVL Grading</small>
+                <a href="{{'/sample'}}" class="viewbtn">
+                    <div class="sales">
+                        <span class="material-icons-sharp">analytics</span>
+                        <h3>TVL</h3>
+                        <small>View TVL Grading</small>
+                    </div>
+                 </a>
             </div>
+
+            {{-- 2nd tab --}}
+            <div class="expenses">
+                <a href="{{'/sample'}}" class="viewbtn">
+                    <div class="sales">
+                        <span class="material-icons-sharp">analytics</span>
+                        <h3>TVL</h3>
+                        <small>View TVL Grading</small>
+                    </div>
+                 </a>
+            </div>
+
+            {{-- 3rd tab --}}
+            <div class="income">
+                <a href="{{'/sample'}}" class="viewbtn">
+                    <div class="sales">
+                        <span class="material-icons-sharp">analytics</span>
+                        <h3>TVL</h3>
+                        <small>View TVL Grading</small>
+                    </div>
+                 </a>
+            </div>
+        
         </div>
-    </a>
-
-      {{-- 2nd tab --}}
-
-
-    <style>
-        .viewbtn{
-
-        }
-    </style>
+ 
+   
     </main>
     
     <x-profile/>
