@@ -54,7 +54,7 @@ class ClassController extends Controller
         $class->class_sec=$req->class_sec;
         $class->save();
 
-         return redirect('/Class')->with('message','Successfully Created');
+         return back()->with('message','Successfully Created');
 
     }
 
