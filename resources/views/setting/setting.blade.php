@@ -2,15 +2,20 @@
 <div class="container">
     <aside>
         <div class="top">
-            <div class="logo">    
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">
+                    arrow_back
+                    </span>
+            </div> 
+            <div class="logo">   
+                    <div class="amlac">
+                        <img src="/images/logo.png" alt=""> 
+                    </div>
                     <h2>AM<span class="danger">LAC</span></h2>
                     <p>Senior High School</p>                
             </div>
-            <div class="close" id="close-btn">
-                <span class="material-icons-sharp">close</span>
-            </div> 
+           
         </div>
-
         <div class="sidebar" id="myDiv">
     
             <a href="{{'/Dashboard'}}" class="btn">

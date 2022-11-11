@@ -2,13 +2,19 @@
 <div class="container">
     <aside>
         <div class="top">
-            <div class="logo">    
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">
+                    arrow_back
+                    </span>
+            </div> 
+            <div class="logo">   
+                    <div class="amlac">
+                        <img src="/images/logo.png" alt=""> 
+                    </div>
                     <h2>AM<span class="danger">LAC</span></h2>
                     <p>Senior High School</p>                
             </div>
-            <div class="close" id="close-btn">
-                <span class="material-icons-sharp">close</span>
-            </div> 
+           
         </div>
 
         <div class="sidebar" id="myDiv">
@@ -65,19 +71,19 @@
     <div class="insights">
 
         <div class="sales">
-            <span class="material-icons-sharp">analytics</span>
+            <span class="material-icons-sharp">school</span>
             <div class="middle">
                 <div class="left">
                     <h3>NUMBER OF STUDENTS</h3>
-                    <h1> {{ $students->count() }}</h1>
+                    <h1></h1>
                 </div>
 
                 <div class="progress">
                     <svg>
-                        <circle cx='38' cy='38' r='36'></circle>
+                        <circle cx='40' cy='40' r='36'></circle>
                     </svg>
                     <div class="number">
-                        <p>{{ $students->count() }}</p>
+                       <p>{{ $students->count() }}</p>
                     </div>
                 </div>
             </div>
@@ -87,23 +93,23 @@
         <!-- END OF SALE  -->
 
         <div class="expenses">
-            <span class="material-icons-sharp">bar_chart</span>
+            <span class="material-icons-sharp">person</span>
             <div class="middle">
                 <div class="left">
-                    <h3>Title here</h3>
-                    <h1>00</h1>
+                    <h3>NUMBER OF PROFESSORS</h3>
+                    <h1></h1>
                 </div>
 
                 <div class="progress">
                     <svg>
-                        <circle cx='38' cy='38' r='36'></circle>
+                        <circle cx='40' cy='40' r='36'></circle>
                     </svg>
                     <div class="number">
                         <p>62%</p>
                     </div>
                 </div>
             </div>
-            <small class="text-muted">Title here</small>
+            <small class="text-muted">Amlac Senior High School Professors</small>
         </div>
 
         <!-- END OF EXPENSES  -->
@@ -112,8 +118,8 @@
             <span class="material-icons-sharp">stacked_line_chart</span>
             <div class="middle">
                 <div class="left">
-                    <h3>Title here</h3>
-                    <h1>00</h1>
+                    <h3>NUMBER OF PROFESSORS</h3>
+                    <h1></h1>
                 </div>
 
                 <div class="progress">
@@ -125,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <small class="text-muted">Title here</small>
+            <small class="text-muted">Amlac Senior High School Course</small>
         </div>
 
         <!-- END OF INCOME  -->
