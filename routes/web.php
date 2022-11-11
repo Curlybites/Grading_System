@@ -49,10 +49,6 @@ Route::get('/Professor',[ProfessorController::class,'list']);
 Route::post('/Professor/create',[ProfessorController::class,'create']);
 
 /*************************************** Route for Create and Display Function for Student  ************************************/
-Route::get('/studentlist',[StudentsController::class,'studlist']);
-Route::put('/Student/create',[StudentsController::class,'create']);
-
-
 
 
 
@@ -77,10 +73,28 @@ Route::controller(ProfessorController::class)->group(function(){
     Route::put('/professor/{id}','update');
 });
 
+
+
 Route::controller(StudentsController::class)->group(function(){
-    Route::get('/stud/{id}','show');
+
+    // this route for student count in dashboard 
+    Route::get('/Dashboard','studnum');
+
+    // this route for creating students
+    Route::post('/Student/create','create');
+
+    // this route for update students
     Route::put('/student/{id}','update');
+
+    // this route for student id to show for updates.
+    Route::get('/stud/{id}','show');
+
+    // this route to display list of students
+    Route::get('/studentlist','studlist');
+
 });
+
+
 
 
 

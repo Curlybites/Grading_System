@@ -68,8 +68,8 @@
             <span class="material-icons-sharp">analytics</span>
             <div class="middle">
                 <div class="left">
-                    <h3>Title here</h3>
-                    <h1>00</h1>
+                    <h3>NUMBER OF STUDENTS</h3>
+                    <h1> {{ $students->count() }}</h1>
                 </div>
 
                 <div class="progress">
@@ -77,11 +77,11 @@
                         <circle cx='38' cy='38' r='36'></circle>
                     </svg>
                     <div class="number">
-                        <p>81%</p>
+                        <p>{{ $students->count() }}</p>
                     </div>
                 </div>
             </div>
-            <small class="text-muted">Title here</small>
+            <small class="text-muted">Amlac Senior High School Students</small>
         </div>
 
         <!-- END OF SALE  -->

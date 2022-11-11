@@ -73,6 +73,12 @@ class StudentsController extends Controller
 
     }
 
+    public function studnum(){
+        
+        $student = Student::all();
+        return view('student.dashboard',['students'=>$student]);
+    }
+
     
 
 }
