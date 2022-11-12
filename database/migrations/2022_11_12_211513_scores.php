@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('writtenTask-3');
             $table->integer('writtenTask-4');
             $table->integer('writtenTask-5');
+            $table->integer('writtenTask-6');
             $table->integer('writtenTask-7');
             $table->integer('writtenTask-8');
             $table->integer('writtenTask-9');
