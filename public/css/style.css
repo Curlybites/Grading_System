@@ -270,7 +270,7 @@ aside .sidebar button span{
 
 aside .sidebar button:last-child{
     position: absolute;
-    bottom:2rem;
+    bottom: 10rem;
     width: 100%;
 }
 aside .sidebar button.active{
