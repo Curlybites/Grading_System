@@ -1,16 +1,13 @@
 @include('partials.head')
 
-<a href="/Course">Back</a>
-
-
-<div class="modal-content">
+<main>
+  <div class="edit">
+    <div class="create-student">
+      <a href="/Course" class="back">Back</a>
+    </div>
+    <div class="edit-form">
 
     <h1 class="title-stud">Edit Course</h1>
-<?php 
-
-?>
-       <h1 class="title-stud">Create Subject</h1>
-
 <div class="create-stud">
   <form action="/course/{{ $course->id }}" method="POST">
     @method('PUT')
@@ -29,7 +26,9 @@
         add
         </span>Add Subject</button>
   </form>
-      
+</div>
+
+</main>
 
 
 @include('partials.foot')

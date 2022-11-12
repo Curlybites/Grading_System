@@ -1,16 +1,13 @@
 @include('partials.head')
 
-<a href="/Professor">Back</a>
+<main>
+  <div class="edit">
+    <div class="create-student">
+      <a href="/Professor" class="back">Back</a>
+    </div>
 
-
-<div class="modal-content">
-
-    <h1 class="title-stud">Edit Course</h1>
-<?php 
-
-?>
-       <h1 class="title-stud">Create Professor</h1>
-
+    <div class="edit-form">
+    <h1 class="title-stud">Edit Professor</h1>
 <div class="create-stud">
   <form action="/professor/{{ $prof->id }}" method="POST">
     @method('PUT')
@@ -35,6 +32,9 @@
         </span>Add Professor</button>
   </form>
       
+</div>
+    </div>
 
+</main>
 
 @include('partials.foot')

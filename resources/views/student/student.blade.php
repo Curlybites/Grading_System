@@ -141,14 +141,14 @@
             <tbody>
                 @foreach($students as $student)
                 <tr>
-                    <td>{{ $student->id }}</td>
-                    <td>{{ $student->student_no }}</td>
-                    <td>{{ $student->first_name }}</td>
-                    <td>{{ $student->last_name }}</td>
-                    <td class="warning">{{ $student->age }}</td>
+                    <td class="primary">{{ $student->id }}</td>
+                    <td class="primary">{{ $student->student_no }}</td>
+                    <td class="primary">{{ $student->first_name }}</td>
+                    <td class="primary">{{ $student->last_name }}</td>
+                    <td class="primary">{{ $student->age }}</td>
                     <td class="primary">{{ $student->gender }}</td>
                     <td class="primary">{{ $student->email }}</td>
-                    <td>{{ $student->contact_no }}</td>
+                    <td class="primary">{{ $student->contact_no }}</td>
                     <td class="warning"><a href="/stud/{{ $student->id }}" class="warning">Edit</a></td>
                 </tr>
                 @endforeach

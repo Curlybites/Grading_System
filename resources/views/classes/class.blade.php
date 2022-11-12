@@ -66,7 +66,7 @@
         <div class="content">
            <div class="create-student">
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn" class="btn-create">
+        <button id="myBtn" class="btn-create">
         <span class="material-icons-sharp">add_circle_outline</span> 
         <span class="t">New Class</pan></button>
     
@@ -124,7 +124,7 @@
                         <td class="primary">{{ $class->class_name }}</td>
                         <td class="primary">{{ $class->class_num }}</td>
                         <td class="primary">{{ $class->class_sec }}</td>
-                        <td class="warning"><a href="/class/{{ $class->id }}">Edit</a></td>
+                        <td class="warning"><a href="/class/{{ $class->id }}" class="warning">Edit</a></td>
                         <td class="warning"><a href="">View</a></td>
                     </tr>
                     @endforeach

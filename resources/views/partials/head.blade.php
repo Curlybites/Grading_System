@@ -20,6 +20,8 @@
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="/css/edit.css">
+
     <script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
     
    

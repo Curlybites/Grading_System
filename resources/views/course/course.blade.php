@@ -120,11 +120,11 @@
                 <tbody>
                     @foreach ( $subject as $row)
                     <tr>
-                        <td>{{ $row ->id }}</td>
-                        <td>{{ $row ->subj_name}}</td>
-                        <td>{{ $row ->subj_code }}</td>
-                        <td>{{ $row ->subj_unit }}</td>
-                        <td><a href="/course/{{ $row->id }}">Edit</a></td>
+                        <td class="primary">{{ $row ->id }}</td>
+                        <td class="primary">{{ $row ->subj_name}}</td>
+                        <td class="primary">{{ $row ->subj_code }}</td>
+                        <td class="primary">{{ $row ->subj_unit }}</td>
+                        <td class="warning"><a href="/course/{{ $row->id }}" class="warning">Edit</a></td>
                     </tr>
                     @endforeach
                     

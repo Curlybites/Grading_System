@@ -126,11 +126,11 @@
 
                     @foreach ($professors as $prof)
                     <tr>
-                        <td>{{ $prof->id }}</td>
-                        <td>{{ $prof->fname }}</td>
-                        <td>{{ $prof->lname }}</td>
-                        <td>{{ $prof->gender}}</td>
-                        <td>{{ $prof->email }}</td>
+                        <td class="primary">{{ $prof->id }}</td>
+                        <td class="primary">{{ $prof->fname }}</td>
+                        <td class="primary">{{ $prof->lname }}</td>
+                        <td class="primary">{{ $prof->gender}}</td>
+                        <td class="primary">{{ $prof->email }}</td>
                         <td class="warning"><a href="/prof/{{ $prof->id }}" class="warning">Edit</a></td>
                     </tr>
                     @endforeach
