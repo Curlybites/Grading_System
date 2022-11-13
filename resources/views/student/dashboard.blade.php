@@ -105,7 +105,7 @@
                         <circle cx='40' cy='40' r='36'></circle>
                     </svg>
                     <div class="number">
-                        <p>62%</p>
+                        <p>{{ $prof->count() }}</p>
                     </div>
                 </div>
             </div>

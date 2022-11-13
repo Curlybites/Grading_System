@@ -77,8 +77,6 @@ Route::controller(ProfessorController::class)->group(function(){
 
 Route::controller(StudentsController::class)->group(function(){
 
-    // this route for student count in dashboard 
-    Route::get('/Dashboard','studnum');
 
     // this route for creating students
     Route::post('/Student/create','create');
@@ -94,6 +92,10 @@ Route::controller(StudentsController::class)->group(function(){
 
 });
 
+Route::controller(DashboardController::class)->group(function(){
+
+    Route::get('/Dashboard','studnum');
+});
 
 
 

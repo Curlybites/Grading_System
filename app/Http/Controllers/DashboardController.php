@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Professor;
 use App\Models\Student;
 use App\Models\Users;
 use Illuminate\Http\Request;
@@ -51,6 +53,14 @@ class DashboardController extends Controller
 
     public function coreGrading(){
         return view ('grading.core');
+    }
+
+
+    public function studnum(){
+        
+        $student = Student::all();
+        $professor = Professor::all();
+        return view('student.dashboard',['students'=>$student],['prof'=>$professor]);
     }
 
 }
