@@ -474,7 +474,11 @@ main .insights small{
 
 
 /* =============== RECENT ORDER CSS ================== */
-
+table{
+    position: relative;
+    left: 110px;
+    box-shadow: #000;
+}
 main .recent-orders{
     margin-top: 2rem;
 }
