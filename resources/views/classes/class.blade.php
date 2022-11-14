@@ -106,7 +106,7 @@
         <div class="recent-orders">
             <h2>Class List</h2>
     
-            <table class="table table-bordered table-responsive table-striped">
+            <table class="table tabla table-bordered table-responsive table-striped">
                 <thead>
                     <tr>
                        <th>ID</th>

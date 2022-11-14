@@ -124,7 +124,7 @@
     <div class="recent-orders">
         <h2>Student List</h2>
 
-        <table>
+        <table class="table tabla">
             <thead>
                 <tr>
                     <th>ID</th>

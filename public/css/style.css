@@ -474,7 +474,7 @@ main .insights small{
 
 
 /* =============== RECENT ORDER CSS ================== */
-table{
+.tabla{
     position: relative;
     left: 110px;
     box-shadow: #000;
