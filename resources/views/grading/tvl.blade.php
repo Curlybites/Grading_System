@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>TVL Grading</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="/css/tvl.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <title>Document</title>
 </head>
 <body>
-  
-   <div class="row mt-4">
+
+<div class="row mt-4">
        <div class="col-4  d-flex justify-content-center"> 
        <img src="/images/amlac.png" class="w-25 h-15"></img>
        </div>
@@ -24,179 +26,39 @@
             <img src="/images/Logo-DepEd-1.png" class="w-25 h-15"></img>
        </div>
 
-   </div>
-          
-       <div class="container mt-5">
-          
-               <div class="table-responsive-lg">
-
-                      <table class="table table-bordered table-striped table-hover table-sm">
-                                <thead class="">
-                                <tr>
-                                    <th class="text-center" rowspan="2" colspan="5">FIRST QUARTER</th>
-                                    <th class="" rowspan="2" colspan="13">Grade & Section: <input type="text"></th>
-                                    <th colspan="13">TEACHER: <input type="text"></th>
-                                    <th colspan="5">SUBJECT: <input type="text"></th>
-                                    <tr>
-                                        <th colspan="13">SEMESTER:</th>
-                                        <th colspan="5">TRACK:</th>
-                                    </tr>
-                                </tr>
-                                <tr>
-                                        <th rowspan="2" colspan="5">LEARNER'S NAMES</th>
-                                        <th colspan="13" class="text-center">WRITTEN WORK (25%)</th>
-                                        <th colspan="13" class="text-center">PERFORMANCE TASK (50%)</th>
-                                        <th colspan="3">QUARTERLY ASSESMENT (25%)</th>
-                                        <th rowspan="3">INITIAL GRADE</th>
-                                        <th rowspan="3">QUARTERLY GRADE</th>
-                                        <th rowspan="3">Action</th>
-                                </tr>
-                                <tr class="text-center">
-                                        <!--Written Task  -->
-                                        <th>1</th>
-                                        <th>2</th>
-                                        <th>3</th>
-                                        <th>4</th>
-                                        <th>5</th>
-                                        <th>6</th>
-                                        <th>7</th>
-                                        <th>8</th>
-                                        <th>9</th>
-                                        <th>10</th>
-                                        <th>TOTAL</th>
-                                        <th>PS</td>
-                                        <th>WS</th>
-                                        <!-- performance task -->
-                                        <th>1</th>
-                                        <th>2</th>
-                                        <th>3</th>
-                                        <th>4</th>
-                                        <th>5</th>
-                                        <th>6</th>
-                                        <th>7</th>
-                                        <th>8</th>
-                                        <th>9</th>
-                                        <th>10</th>
-                                        <th>TOTAL</th>
-                                        <th>PS</td>
-                                        <th>WS</th>
-                                        <!-- Quarterly Assesment  -->
-                                        <th>1</th>
-                                        <th>PS</th>
-                                        <th>WS</th>
-                                </tr>
-                                <tr class="text-center">
-                                        <th colspan="5">HPG</th>
-                                        <!--Written Task  -->
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th name="wtotal" id="wtotal"></th>
-                                        <th value="100" id="wps" name="wps">100</th>
-                                        <th value="25%" id="wws" name="wws">50%</th>
-                                        <!-- performance task -->
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th><input type="number" style="width:35px"; min="1" max="1000"></th>
-                                        <th name="ptotal" id="ptotal"></th>
-                                        <th value="100" id="pps" name="pps">100</th>
-                                        <th value="50%" id="pws" name="pws">50%</th>
-                                        <!-- Quarterly Assesment  -->
-                                        <th><input type="text" style="width:35px"; min="1" max="1000"></th>
-                                        <th></th>
-                                        <th></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-
-                                        <script>
-                                         
-                                         
-                                            const act1 = document.querySelector('#act1').value;
-                                            const act2 = document.querySelector('#act2').value;
-                                            document.getElementById("act3").innerHTML = act1 + act2;
-                                      
-                                            
-
-                                            
-                                        </script>
-                                    <!-- Written Task -->
-
-                                    <td colspan="5">Darlucio, John</td>
-                                    <form action="" method="POST">
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class="" id ="act1" name="act1"></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class="" id ="act2" name="act2"></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class="" id="act3"></td>
-                                    </form>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <!-- Performance Task -->
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td><input type="number" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <!-- Quarterly -->
-                                    <td><input type="text" style="width:35px"; min="1" max="1000" class=""></td>
-                                    <td></td>
-                                    <td></td>
-                                    <!-- Initial Grade -->
-                                    <td></td>
-                                    <!-- Quarterly Grade -->
-                                    <td><th><a href="#">input Grade</a></th></td>
-                                    
-                                </tr>
-
-                                
-                                
-                                </tbody>
-                            </table>
-              </div>
+    <div class="talbe-responsive">
+            <div class="container mt-5">     
+                    <table class="table table-bordered table-striped table-hover table-sm" id="example1">
+                        <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Section</th>
+                            <th>Professor</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                            <td>BSIT</td>
+                            <td>SBIT1E</td>
+                            <td>John </td>
+                            <td>John </td>
+                        </tr>
+                        </tbody>
+                    </table>
+        </div>
     </div>
 
-                </div>
-            </div>
-      
-
-       </div>
-       <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-       <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-       <script>
-          $(document).ready( function () {
-            $('#myTable').DataTable();
-                } );
-       </script>
-        
+      <script>
+        $(document).ready( function () {
+    $('#example1').DataTable();
+} );
+      </script>
 </body>
 </html>

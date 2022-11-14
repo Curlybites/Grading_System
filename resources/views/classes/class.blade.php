@@ -113,7 +113,7 @@
                        <th>Class Name</th>
                        <th>Class Numeric</th>
                        <th>Class Section</th>
-                       <th colspan="2">Action</th>
+                       <th colspan="3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -125,6 +125,7 @@
                         <td class="primary">{{ $class->class_num }}</td>
                         <td class="primary">{{ $class->class_sec }}</td>
                         <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit</a></td>
+                        <td class="warning"><a href="" class="btn-info">Add</a></td>
                         <td class="warning"><a href="" class="btn-danger">View</a></td>
                     </tr>
                     @endforeach

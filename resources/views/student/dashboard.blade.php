@@ -162,4 +162,6 @@
             </div>
         </div>
 
+        
+
         @include('partials.foot')

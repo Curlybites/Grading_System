@@ -19,9 +19,6 @@ return new class extends Migration
             $table->string('subj_name');
             $table->string('subj_code');
             $table->integer('subj_unit');
-            $table->string('fname');
-            $table->string('lname');
-            $table->string('email')->unique();
             $table->timestamps();
         });
     }
