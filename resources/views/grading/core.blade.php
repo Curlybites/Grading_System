@@ -34,6 +34,10 @@
                             <th>Firstname</th>
                             <th>Lastname</th>
                             <th>Email</th>
+                            <th>Course</th>
+                            <th>Section</th>
+                            <th>Professor</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -41,16 +45,9 @@
                             <td>John</td>
                             <td>Doe</td>
                             <td>john@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>Mary</td>
-                            <td>Moe</td>
-                            <td>mary@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>July</td>
-                            <td>Dooley</td>
-                            <td>july@example.com</td>
+                            <td>BSIT</td>
+                            <td>SBIT1E</td>
+                            <td>John </td>
                         </tr>
                         </tbody>
                     </table>
