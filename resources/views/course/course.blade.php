@@ -124,7 +124,7 @@
                         <td class="primary">{{ $row ->subj_name}}</td>
                         <td class="primary">{{ $row ->subj_code }}</td>
                         <td class="primary">{{ $row ->subj_unit }}</td>
-                        <td class="warning"><a href="/course/{{ $row->id }}" class="warning">Edit</a></td>
+                        <td class="warning"><a href="/course/{{ $row->id }}" class="btn-warning">Edit</a></td>
                     </tr>
                     @endforeach
                     

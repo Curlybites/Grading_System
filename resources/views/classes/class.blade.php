@@ -124,8 +124,8 @@
                         <td class="primary">{{ $class->class_name }}</td>
                         <td class="primary">{{ $class->class_num }}</td>
                         <td class="primary">{{ $class->class_sec }}</td>
-                        <td class="warning"><a href="/class/{{ $class->id }}" class="warning">Edit</a></td>
-                        <td class="warning"><a href="">View</a></td>
+                        <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit</a></td>
+                        <td class="warning"><a href="" class="btn-danger">View</a></td>
                     </tr>
                     @endforeach
                 </tbody>

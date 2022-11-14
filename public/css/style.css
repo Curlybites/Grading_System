@@ -1016,5 +1016,31 @@ main .date input{
     text-decoration: none;
     cursor: pointer;
   }
-
-  
+/* Button on Classes edit  */
+.btn-warning{
+    color: black ;
+    background-color: darkgrey;
+    border-radius: 25px;
+    padding: 4px;
+}  
+.btn-warning:hover,
+  .btn-warning:focus {
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* Button on Classes View */
+  .btn-danger{
+    color: whitesmoke ;
+    background-color: green;
+    border-radius: 25px;
+    padding: 3px;
+  }
+  .btn-danger:hover,
+  .btn-danger:focus {
+    color: black;
+    background-color: bisque;
+    text-decoration: none;
+    cursor: pointer;
+  }

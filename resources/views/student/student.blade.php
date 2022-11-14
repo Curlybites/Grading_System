@@ -149,7 +149,7 @@
                     <td class="primary">{{ $student->gender }}</td>
                     <td class="primary">{{ $student->email }}</td>
                     <td class="primary">{{ $student->contact_no }}</td>
-                    <td class="warning"><a href="/stud/{{ $student->id }}" class="warning">Edit</a></td>
+                    <td class="warning"><a href="/stud/{{ $student->id }}" class="btn-warning">Edit</a></td>
                 </tr>
                 @endforeach
             </tbody>

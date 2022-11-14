@@ -74,7 +74,6 @@ $(document).ready(function(){
 });
 
 
-
 </script>
 <script src="/javascript/bootstrap.js"></script>
 </body>
