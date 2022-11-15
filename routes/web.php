@@ -66,6 +66,7 @@ Route::controller(ClassController::class)->group(function(){
     Route::put('/class/{id}','update');
     Route::post('/store-class','create');
     Route::get('/Class/','classResult');
+    Route::get('/filterdata','filterdata');
 });
 
 Route::controller(ProfessorController::class)->group(function(){

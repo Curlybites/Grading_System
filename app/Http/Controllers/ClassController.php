@@ -58,4 +58,8 @@ class ClassController extends Controller
 
     }
 
+    public function filterdata(){
+        return view ('classes.filter');
+    }
+
 }
