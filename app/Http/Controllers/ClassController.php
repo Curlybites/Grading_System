@@ -62,4 +62,6 @@ class ClassController extends Controller
         return view ('classes.filter');
     }
 
+
+
 }

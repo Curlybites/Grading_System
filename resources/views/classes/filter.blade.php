@@ -16,8 +16,8 @@
     
       <div class="container mt-5">
       <div class="btn-info">
-            <input type="button" value="Back" class="btn btn-warning">
-            <input type="button" value="Create" class="btn btn-success">
+            <a href="/Class"><input type="button" value="Back" class="btn btn-warning"></a>
+           <a href=""> <input type="button" value="Create" class="btn btn-success"></a>
      <div class="mt-5"></div>
         </div>
 
