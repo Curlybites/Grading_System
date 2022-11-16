@@ -90,7 +90,21 @@
             
                 <label for="lname">Class Section</label>
                 <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" required>
-            
+              
+                <label for="professor">Professor</label>
+                    <select id="professor" name="professor" required>
+                    <option value="" selected disabled>Select Professor</option>
+                    <option value="">NAME</option>
+                    <option value="">NAME</option>
+                    </select>
+
+                 <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                    <option value="" selected disabled>Select Subject</option>
+                    <option value="">Subject</option>
+                    <option value="">Subjecy</option>
+                    </select>
+
                 <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
                     add
                     </span>Add Class</button>

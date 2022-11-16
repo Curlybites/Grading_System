@@ -87,6 +87,28 @@
                             <label for="contact_no">Contact Number</label>
                         </div>
 
+                        <!-- <div class="mb-2 mt-2">
+                        <label class="h6">Professor</label>
+                        <div class="">
+                                <select id="professor" name="professor" class="form-control py-3" required>
+                                <option value="" selected disabled>Select Professor</option>
+                                <option value="">Name</option>
+                                <option value="">Name</option>
+                                </select>
+                        </div>
+                       </div>
+
+                       <div class="mb-2 mt-2">
+                        <label class="h6">Subject</label>
+                        <div class="">
+                                <select id="subject" name="subject" class="form-control py-3" required>
+                                <option value="" selected disabled>Select Subject</option>
+                                <option value="">Subject</option>
+                                <option value="">Subject</option>
+                                </select>
+                        </div>
+                       </div> -->
+
                         
                     </form>
                     </div>

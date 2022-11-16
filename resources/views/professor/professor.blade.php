@@ -92,6 +92,7 @@
           <option value="Male">Male</option>
           <option value="Female">Female</option>
         </select>
+        
         <label for="email">Email</label>
         <input class="input-form" type="email" id="email" name="email" placeholder="sample@gmail.com" required>
 
