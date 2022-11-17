@@ -75,7 +75,6 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/Class/','classResult');
     Route::get('/filterdata','filterdata');
     Route::get('/store-class','showClass');
-    Route::get('/Class','testdata');
 });
 
 Route::controller(ProfessorController::class)->group(function(){
