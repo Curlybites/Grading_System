@@ -46,19 +46,19 @@
 
                         <label class="h6">First Name</label>
                         <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="fname" placeholder="First Name" name="first_name" required>
+                           <input type="text" class="form-control" id="fname" placeholder="First Name" name="first_name" required disabled>
                             <label for="fname">First Name</label>
                         </div>
 
                         <label class="h6">Last Name</label>
                         <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="lname" placeholder="Last Name" name="last_name" required>
+                           <input type="text" class="form-control" id="lname" placeholder="Last Name" name="last_name" required disabled>
                             <label for="lname">Last Name</label>
                         </div>
 
                         <label class="h6">Age</label>
                         <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="age" placeholder="Age" name="age" required>
+                           <input type="text" class="form-control" id="age" placeholder="Age" name="age" required disabled>
                             <label for="age">Age</label>
                         </div>
 
@@ -66,7 +66,7 @@
                        <div class="mb-2 mt-2">
                         <label class="h6">Gender</label>
                         <div class="">
-                                <select id="gender" name="gender" class="form-control py-3" required>
+                                <select id="gender" name="gender" class="form-control py-3" required disabled>
                                 <option value="" selected disabled>Select Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -76,13 +76,13 @@
 
                        <label class="h6">Email</label>
                        <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
+                           <input type="text" class="form-control" id="email" placeholder="Email" name="email" required disabled>
                             <label for="email">Email</label>
                         </div>
 
                         <label class="h6">Contact Number</label>
                         <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="contact_no" placeholder="Contact Number" name="contact_no" required>
+                           <input type="text" class="form-control" id="contact_no" placeholder="Contact Number" name="contact_no" required disabled>
                             <label for="contact_no">Contact Number</label>
                         </div>
 
@@ -92,27 +92,12 @@
                             <label for="Section">Section</label>
                         </div>
 
-                        <!-- <div class="mb-2 mt-2">
-                        <label class="h6">Professor</label>
-                        <div class="">
-                                <select id="professor" name="professor" class="form-control py-3" required>
-                                <option value="" selected disabled>Select Professor</option>
-                                <option value="">Name</option>
-                                <option value="">Name</option>
-                                </select>
-                        </div>
-                       </div>
-
-                       <div class="mb-2 mt-2">
                         <label class="h6">Subject</label>
-                        <div class="">
-                                <select id="subject" name="subject" class="form-control py-3" required>
-                                <option value="" selected disabled>Select Subject</option>
-                                <option value="">Subject</option>
-                                <option value="">Subject</option>
-                                </select>
+                        <div class="form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="class_subj" value="" name="class_subj" required disabled >
+                            <label for="Section">Subject</label>
                         </div>
-                       </div> -->
+
 
                         
                     </form>
