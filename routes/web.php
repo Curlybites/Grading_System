@@ -73,8 +73,10 @@ Route::controller(ClassController::class)->group(function(){
     Route::put('/class/{id}','update');
     Route::post('/store-class','create');
     Route::get('/Class/','classResult');
-    Route::get('/filterdata','filterdata');
+    Route::get('/filterdata','filterdata'); /* Route for the Filter Blade */
     Route::get('/store-class','showClass');
+    Route::get('/filter/{class_sec}','showfilter');
+    Route::post('/push-data','pushdata');
 });
 
 Route::controller(ProfessorController::class)->group(function(){
@@ -105,6 +107,11 @@ Route::controller(DashboardController::class)->group(function(){
 
     Route::get('/Dashboard','studnum');
 });
+
+// Route::controller(FilterController::class)->group(function(){
+//     Route::get('/filter/{id}','showedit');
+    
+// });
 
 
 

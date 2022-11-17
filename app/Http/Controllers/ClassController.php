@@ -9,6 +9,9 @@ use App\Models\Student;
 use App\Models\Subject;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\DashboardController;
+use Mockery\Matcher\Subset;
+
+use function GuzzleHttp\Promise\each;
 
 class ClassController extends Controller
 {
@@ -27,41 +30,7 @@ class ClassController extends Controller
         return redirect('/Class')->with('message','Successfully Created');
     }
 
-
-    public function classResult(){
-        $prof = Professor::all();
-        $subj = Subject::all();
-        $data = Classes::paginate(15);
-        return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
-    }
-
-    public function show($id){
-        $data = Classes::findorFail($id);
-        // dd($data);
-        return view('classes.edit',['class' => $data]);
-    }
-
-    public function filterdata(){
-        
-        return view ('classes.filter');
-    }
-    
-
-    // public function edit(Request $request, Classes $class){
-    //     // dd($request);
-    //     $validated = $request->validate([
-    //         "class_name"=>['required'],
-    //         "class_num"=>['required'],
-    //         "class_sec"=>['required'],
-    //     ]);
-        
-    //      $class->save($validated);
-
-    //     return back()->with('message','Successfully Updated');
-    // }
-
-    
-    public function update(Request $req, Classes $class){
+    public function update(Request $req, Classes $class, Subject $subj){
         $class=Classes::find($req->id);
         $class->class_name=$req->class_name;
         $class->class_num=$req->class_num;
@@ -74,15 +43,63 @@ class ClassController extends Controller
 
     }
 
-    
-
     public function showClass(){
         
-       $professor = Professor::all();
-       $subject = Subject::all();
-       return view('classes.class',['professor' => $professor],['subject' => $subject]);
-    
+        $professor = Professor::all();
+        $subject = Subject::all();
+        return view('classes.class',['professor' => $professor],['subject' => $subject]);
+     
+     }
+
+     public function show($id){
+        $data = Classes::findorFail($id); 
+        return view ('classes.edit',['class' => $data]); 
+     
     }
+
+    public function showfilter($class_sec){
+        $data = Classes::findorFail($class_sec);
+        return view ('classes.filter',['subj' => $data]);
+    }
+
+    public function classResult(){
+        $prof = Professor::all();
+        $subj = Subject::all();
+        $data = Classes::paginate(15);
+        return view ('classes.class',['classes' => $data],['subj' => $subj] + ['professor' => $prof]);
+    }
+
+    public function filterdata(){
+        
+        return view ('classes.filter');
+    }
+
+
+    // public function pushdata(){
+    //     $student = Student::get();
+
+    //     foreach($student as $stud => $value ) {
+    //         Classes::create([
+    //             'student_no' =>$value->student_no,
+    //             'first_name' =>$value->first_name,
+    //             'last_name' =>$value->last_name,
+    //             'age' =>$value->age,
+    //             'gender' =>$value->gender,
+    //             'contact_no' =>$value->contact_no,
+    //             'email' =>$value->email,
+    //         ]);
+
+    //     return redirect('/filterdata')->with('message','Successfully Created');
+        
+    //     }
+    // }
+    
+    
+   
+
+    
+
+    
 
 
 }

@@ -69,7 +69,7 @@
         <button id="myBtn" class="btn-create">
         <span class="material-icons-sharp">add_circle_outline</span> 
         <span class="t">New Class</pan></button>
-    
+        
     <!-- The Modal -->
     <div id="myModal" class="modal">
     
@@ -132,27 +132,34 @@
                        <th>Class Section</th>
                        <th>CLass Professor</th>
                        <th>CLass Subject</th>
-                       <th colspan="3">Action</th>
+                       <th colspan="2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
+                     
+                
                     
-                   @foreach ( $classes as $class )
+                
+                 @forelse ( $classes as $class )
                     <tr>
                         <td class="primary">{{ $class->id }}</td>
                         <td class="primary">{{ $class->class_name }}</td>
                         <td class="primary">{{ $class->class_num }}</td>
                         <td class="primary">{{ $class->class_sec }}</td>
                         <td class="primary">{{ $class->class_prof }}</td>
-                        <td class="primary">{{ $class->class_subj }}</td>
+                        <td class="primary">{{ $class->class_subj }}</td> 
                         <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit Data</a></td>
-                        <td class="warning"><a href="/filterdata/" class="btn-danger">Insert Student</a></td>
+                        <td class="warning"><a href="/filterdata" class="btn-danger">Add Student</a></td>
                     </tr>
-                    @endforeach
+                    @empty
+                    <h2> Empty Data </h2>
+                    @endforelse
+                    
                 </tbody>
                 
             </table>
     
+            
            
             <ul class="page">
                 <li>{{ $classes->links('pagination::bootstrap-4') }}</li>       

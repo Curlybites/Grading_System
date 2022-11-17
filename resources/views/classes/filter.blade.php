@@ -35,82 +35,87 @@
                     </div>
 
                     <!-- Modal body -->
-                    <div class="modal-body">
-                    <form action="" method="POST">
+                    <div class="modal-body"></div>
+                    <form action="/push-data" method="POST">
                         @csrf
-                        <label class="h6">Student number</label>
-                        <div class="form-floating mb-1 mt-1">
-                            <input type="text" class="form-control" id="stud_no" placeholder="Student Number" name="student_no" required>
+                        <label class="container h6">Student number</label>
+                        <div class="container form-floating mb-1 mt-1">
+                            <input type="text" class="form-control" id="stud_no" placeholder="Student Number" name="student_no" value="" required>
                             <label for="student_no">Student Number</label>
                         </div>
 
-                        <label class="h6">First Name</label>
-                        <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="fname" placeholder="First Name" name="first_name" required disabled>
+                        <label class="container h6">First Name</label>
+                        <div class="container form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="fname" placeholder="First Name" name="first_name" value="Sample" required disabled>
                             <label for="fname">First Name</label>
                         </div>
 
-                        <label class="h6">Last Name</label>
-                        <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="lname" placeholder="Last Name" name="last_name" required disabled>
+                        <label class="container h6">Last Name</label>
+                        <div class="container form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="lname" placeholder="Last Name" name="last_name" value="Sample" required disabled>
                             <label for="lname">Last Name</label>
                         </div>
 
-                        <label class="h6">Age</label>
-                        <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="age" placeholder="Age" name="age" required disabled>
+                        <label class="container h6">Age</label>
+                        <div class="container form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="age" placeholder="Age" name="age" value="Sample" required disabled>
                             <label for="age">Age</label>
                         </div>
 
 
-                       <div class="mb-2 mt-2">
-                        <label class="h6">Gender</label>
-                        <div class="">
-                                <select id="gender" name="gender" class="form-control py-3" required disabled>
+                       <!-- <div class="mb-2 mt-2">
+                        <label class="container h6">Gender</label>
+                        <div class="container">
+                                <select id="gender" name="gender" class="container form-control py-3" required disabled>
                                 <option value="" selected disabled>Select Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 </select>
                         </div>
-                       </div>
+                       </div> -->
 
-                       <label class="h6">Email</label>
-                       <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="email" placeholder="Email" name="email" required disabled>
+                       <label class="container h6">Email</label>
+                       <div class="container form-floating mb-2 mt-2">
+                           <input type="text" class="container form-control" id="email" placeholder="Email" name="email" value="Sample" required disabled>
                             <label for="email">Email</label>
                         </div>
 
-                        <label class="h6">Contact Number</label>
-                        <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="contact_no" placeholder="Contact Number" name="contact_no" required disabled>
+                        <label class="container h6">Contact Number</label>
+                        <div class="container form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="contact_no" placeholder="Contact Number" name="contact_no" value="Sample" required disabled>
                             <label for="contact_no">Contact Number</label>
                         </div>
 
-                        <label class="h6">Section</label>
-                        <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="section" value="" name="section" required disabled >
+                        <label class="container h6">Section</label>
+                        <div class="container form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="section" name="section" value="Sample" required disabled >
                             <label for="Section">Section</label>
                         </div>
 
-                        <label class="h6">Subject</label>
-                        <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="class_subj" value="" name="class_subj" required disabled >
+                        <label class="container h6">Subject</label>
+                        <div class="container form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="class_subj"  name="class_subj" value="Sample" required disabled >
                             <label for="Section">Subject</label>
                         </div>
+                        <hr>
+                        <div class="col d-flex justify-content-end mt-3 mb-3">
 
-
-                        
-                    </form>
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                         <button class="btn btn-primary px-4" type="submit">Add Student</button>
+                        <button class="btn btn-primary px-4" type="submit">Add Student</button>
+                        <div class="px-1"></div>
                         <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Close</button>
-                    </div>
+                        <div class="px-1"></div>
+                        </div>
+                    </form>
+                         <!-- Modal footer -->
+                    <!-- <div class="modal-footer">  
+                       
+                        </div> -->
 
-                    </div>
                 </div>
+            </div>
         </div>
+
+       
     
             <div class="container mt-5">
                     <div class="btn-info">
@@ -119,6 +124,7 @@
                         <input type="button" value="Add" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="mt-5"></div>
              </div>
+            
        <!-- Table starts here  -->
            <table class="table table table-bordered" id="myTable">
                 <thead class="bg-info">
@@ -137,34 +143,6 @@
                     <td>Doe</td>
                     <td>Doe</td>
                     <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Mary</td>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>July</td>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>July</td>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>July</td>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
                 </tr>
                 </tbody>
             </table>
