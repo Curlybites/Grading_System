@@ -94,8 +94,9 @@
                 <label for="professor">Professor</label>
                     <select id="professor" name="professor" required>
                     <option value="" selected disabled>Select Professor</option>
-                    <option value="">NAME</option>
-                    <option value="">NAME</option>
+                     @foreach ($professor as $data)
+                    <option value="{{ $data->fname }} {{ $data->lname }}">{{ $data->fname }} {{ $data->lname }}</option>
+                    @endforeach
                     </select>
 
                  <label for="subject">Subject</label>
@@ -127,6 +128,8 @@
                        <th>Class Name</th>
                        <th>Class Numeric</th>
                        <th>Class Section</th>
+                       <th>CLass Professor</th>
+                       <th>CLass Subject</th>
                        <th colspan="3">Action</th>
                     </tr>
                 </thead>
@@ -138,6 +141,8 @@
                         <td class="primary">{{ $class->class_name }}</td>
                         <td class="primary">{{ $class->class_num }}</td>
                         <td class="primary">{{ $class->class_sec }}</td>
+                        <td class="primary"></td>
+                        <td class="primary"></td>
                         <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit</a></td>
                         <td class="warning"><a href="/filterdata/" class="btn-danger">Add</a></td>
                     </tr>

@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('class_name');
             $table->string('class_num');
-            $table->string('class_sec')->unique();
+            $table->string('class_sec');
+            $table->string('professor');
+            $table->string('subject');
             $table->string('student_no')->nullable();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
