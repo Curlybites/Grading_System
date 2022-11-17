@@ -13,11 +13,13 @@ use App\Http\Controllers\DashboardController;
 class ClassController extends Controller
 {
     public function create(Request $request){
+        // dd($request);
         $validated = $request->validate([
             "class_name"=>['required'],
             "class_num"=>['required'],
             "class_sec"=>['required'],
-            "professor"=>['required']
+            "class_prof"=>[ 'required'],
+            "class_subj"=>[ 'required']
         ]);
 
         $class = Classes::create($validated);
@@ -30,7 +32,7 @@ class ClassController extends Controller
         $prof = Professor::all();
         $subj = Subject::all();
         $data = Classes::paginate(15);
-        return view ('classes.class',['classes' => $data]);
+        return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
     }
 
     public function show($id){
@@ -65,6 +67,7 @@ class ClassController extends Controller
         $class->class_num=$req->class_num;
         $class->class_sec=$req->class_sec;
         $class->class_prof=$req->class_prof;
+        $class->class_subj=$req->class_subj;
         $class->save();
 
          return back()->with('message','Successfully Created');

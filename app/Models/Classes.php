@@ -13,7 +13,8 @@ class Classes extends Model
         'class_name',
         'class_num',
         'class_sec',
-        'professor'
+        'class_prof',
+        'class_subj',
     ];
 
     // protected $guarded = [];

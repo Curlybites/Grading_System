@@ -131,7 +131,7 @@
                     <div class="btn-info">
                         <a href="/Class"><input type="button" value="Back" class="btn btn-warning px-4"></a>
                         <!-- Button to Open the Modal -->
-                        <input type="button" value="Create" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#myModal">
+                        <input type="button" value="Add" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="mt-5"></div>
              </div>
        <!-- Table starts here  -->

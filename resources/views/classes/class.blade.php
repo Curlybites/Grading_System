@@ -100,11 +100,12 @@
                     @endforeach
                     </select>
 
-                 <label for="subject">Subject</label>
-                    <select id="subject" name="subject" required>
+                 <label for="class_subj">Subject</label>
+                    <select id="class_subj" name="class_subj" required>
                     <option value="" selected disabled>Select Subject</option>
-                    <option value="">Subject</option>
-                    <option value="">Subjecy</option>
+                    @foreach ($subj as $subject)
+                    <option value="{{ $subject->subj_name }}">{{ $subject->subj_name }}</option>
+                    @endforeach
                     </select>
 
                 <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
@@ -142,10 +143,10 @@
                         <td class="primary">{{ $class->class_name }}</td>
                         <td class="primary">{{ $class->class_num }}</td>
                         <td class="primary">{{ $class->class_sec }}</td>
-                        <td class="primary"></td>
-                        <td class="primary"></td>
-                        <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit</a></td>
-                        <td class="warning"><a href="/filterdata/" class="btn-danger">Add</a></td>
+                        <td class="primary">{{ $class->class_prof }}</td>
+                        <td class="primary">{{ $class->class_subj }}</td>
+                        <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit Data</a></td>
+                        <td class="warning"><a href="/filterdata/" class="btn-danger">Insert Student</a></td>
                     </tr>
                     @endforeach
                 </tbody>
