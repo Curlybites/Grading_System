@@ -92,8 +92,8 @@
                 <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" required>
               
               
-                <label for="professor">Professor</label>
-                    <select id="professor" name="professor" required>
+                <label for="class_prof">Professor</label>
+                    <select id="class_prof" name="class_prof" required>
                     <option value="" selected disabled>Select Professor</option>
                      @foreach ($professor as $data)
                     <option value="{{ $data->fname }} {{ $data->lname }}">{{ $data->fname }} {{ $data->lname }}</option>

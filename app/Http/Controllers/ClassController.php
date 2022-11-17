@@ -64,6 +64,7 @@ class ClassController extends Controller
         $class->class_name=$req->class_name;
         $class->class_num=$req->class_num;
         $class->class_sec=$req->class_sec;
+        $class->class_prof=$req->class_prof;
         $class->save();
 
          return back()->with('message','Successfully Created');

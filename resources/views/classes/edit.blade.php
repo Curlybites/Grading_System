@@ -20,6 +20,8 @@
                 
                     <label for="class_sec">Class Section</label>
                     <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" value="{{ $class->class_sec }}" required>
+                    <label for="class_prof">Class Professor</label>
+                    <input class="input-form" type="text" id="class_prof" name="class_prof" placeholder="" value="{{ $class->professor }}" required>
                 
                     <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
                         update
