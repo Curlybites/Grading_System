@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\ClassController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfessorController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\SubjectController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +74,7 @@ Route::controller(ClassController::class)->group(function(){
     Route::post('/store-class','create');
     Route::get('/Class/','classResult');
     Route::get('/filterdata','filterdata');
+    Route::get('/store-class','showClass');
 });
 
 Route::controller(ProfessorController::class)->group(function(){
