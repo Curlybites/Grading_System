@@ -36,9 +36,8 @@
 
                     <!-- Modal body -->
                     <div class="modal-body">
-                    <form action="/Student/create" method="POST">
+                    <form action="" method="POST">
                         @csrf
-
                         <label class="h6">Student number</label>
                         <div class="form-floating mb-1 mt-1">
                             <input type="text" class="form-control" id="stud_no" placeholder="Student Number" name="student_no" required>
@@ -85,6 +84,12 @@
                         <div class="form-floating mb-2 mt-2">
                            <input type="text" class="form-control" id="contact_no" placeholder="Contact Number" name="contact_no" required>
                             <label for="contact_no">Contact Number</label>
+                        </div>
+
+                        <label class="h6">Section</label>
+                        <div class="form-floating mb-2 mt-2">
+                           <input type="text" class="form-control" id="section" value="" name="section" required disabled >
+                            <label for="Section">Section</label>
                         </div>
 
                         <!-- <div class="mb-2 mt-2">

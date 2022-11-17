@@ -91,6 +91,7 @@
                 <label for="lname">Class Section</label>
                 <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" required>
               
+              
                 <label for="professor">Professor</label>
                     <select id="professor" name="professor" required>
                     <option value="" selected disabled>Select Professor</option>

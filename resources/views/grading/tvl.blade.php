@@ -12,22 +12,24 @@
     <title>Document</title>
 </head>
 <body>
-
-<div class="row mt-4">
-       <div class="col-4  d-flex justify-content-center"> 
-       <img src="/images/amlac.png" class="w-25 h-15"></img>
-       </div>
-       <div class="col-4">
-            <div class="container mt-5 text-center">
-                  <h3>TVL/ Sports/ Arts and Design Track</h3>
-              </div>
-       </div>
-       <div class="col-4 d-flex justify-content-center">
-            <img src="/images/Logo-DepEd-1.png" class="w-25 h-15"></img>
-       </div>
+    <div class="row mt-4">
+            <div class="col-4  d-flex justify-content-center"> 
+            <img src="/images/amlac.png" class="w-25 h-15"></img>
+            </div>
+            <div class="col-4">
+                    <div class="container mt-5 text-center">
+                        <h3>TVL/ Sports/ Arts and Design Track</h3>
+                    </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                    <img src="/images/Logo-DepEd-1.png" class="w-25 h-15"></img>
+            </div>
+    </div>
 
     <div class="talbe-responsive">
-            <div class="container mt-5">     
+        
+            <div class="container mt-5">  
+            <a href="/Grading"><input type="button" value="Back" class="btn btn-warning px-4 mb-3"></a> 
                     <table class="table table-bordered table-striped table-hover table-sm" id="example1">
                         <thead>
                         <tr>

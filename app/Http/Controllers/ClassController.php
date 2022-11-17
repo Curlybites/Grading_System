@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Classes;
 use App\Models\Professor;
+use App\Models\Student;
 use App\Models\Subject;
 use Illuminate\Support\Facades\Redis;
+use App\Http\Controllers\DashboardController;
 
 class ClassController extends Controller
 {
@@ -28,7 +30,7 @@ class ClassController extends Controller
         $prof = Professor::all();
         $subj = Subject::all();
         $data = Classes::paginate(15);
-        return view ('classes.class',['classes'=>$data],['professor'=>$prof],['subj'=>$subj]);
+        return view ('classes.class',['classes' => $data]);
     }
 
     public function show($id){
@@ -36,6 +38,12 @@ class ClassController extends Controller
         // dd($data);
         return view('classes.edit',['class' => $data]);
     }
+
+    public function filterdata(){
+        
+        return view ('classes.filter');
+    }
+    
 
     // public function edit(Request $request, Classes $class){
     //     // dd($request);
@@ -62,10 +70,15 @@ class ClassController extends Controller
 
     }
 
-    public function filterdata(){
-        return view ('classes.filter');
-    }
+    
 
+    public function showClass(){
+        
+       $professor = Professor::all();
+       $subject = Subject::all();
+       return view('classes.class',['professor' => $professor],['subject' => $subject]);
+    
+    }
 
 
 }
