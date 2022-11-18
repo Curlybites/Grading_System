@@ -73,10 +73,13 @@ Route::controller(ClassController::class)->group(function(){
     Route::put('/class/{id}','update');
     Route::post('/store-class','create');
     Route::get('/Class/','classResult');
-    Route::get('/filterdata','filterdata'); /* Route for the Filter Blade */
     Route::get('/store-class','showClass');
-    Route::get('/filter/{class_sec}','showfilter');
-    Route::post('/push-data','pushdata');
+   
+    Route::get('/test/','test');
+   Route::get('/filterdata','filterdata'); /* Route for the Filter Blade */
+   // Route::get('/filter/{class_sec}','showfilter');
+    Route::get('/filterdatas/','getStudent');
+    //  Route::post('/push-data','pushdata');
 });
 
 Route::controller(ProfessorController::class)->group(function(){

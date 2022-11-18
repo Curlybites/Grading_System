@@ -10,6 +10,7 @@ use App\Models\Subject;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\DashboardController;
 use Mockery\Matcher\Subset;
+use Illuminate\Support\Facades\DB;
 
 use function GuzzleHttp\Promise\each;
 
@@ -74,27 +75,46 @@ class ClassController extends Controller
         return view ('classes.filter');
     }
 
-
-    // public function pushdata(){
-    //     $student = Student::get();
-
-    //     foreach($student as $stud => $value ) {
-    //         Classes::create([
-    //             'student_no' =>$value->student_no,
-    //             'first_name' =>$value->first_name,
-    //             'last_name' =>$value->last_name,
-    //             'age' =>$value->age,
-    //             'gender' =>$value->gender,
-    //             'contact_no' =>$value->contact_no,
-    //             'email' =>$value->email,
-    //         ]);
-
-    //     return redirect('/filterdata')->with('message','Successfully Created');
+    public function test(){
         
-    //     }
-    // }
+        return view ('classes.test');
+    }
+
+    public function getStudent() {
+        $p=Student::all();
+        return response()->json($p);
+    }
     
+  /*  public function pushdata(){
+        $student = Student::get();
+
+        foreach($student as $stud => $value ) {
+            Classes::create([
+                'student_no' =>$value->student_no,
+                'first_name' =>$value->first_name,
+                'last_name' =>$value->last_name,
+                'age' =>$value->age,
+                'gender' =>$value->gender,
+                'contact_no' =>$value->contact_no,
+                'email' =>$value->email,
+            ]);
+
+        return redirect('/filterdata')->with('message','Successfully Created');
+        
+        }
+    }
+    */
     
+   /* public function pushdata() {
+            $id = 7;
+            $posts = DB::select('select * from Student where id = 7');
+
+            $past = DB::table('past')
+                ->where('id', $id)
+                ->get();
+            dd($posts);
+    }   */
+
    
 
     
