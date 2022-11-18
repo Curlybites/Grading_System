@@ -149,7 +149,7 @@
                         <td class="primary">{{ $class->class_prof }}</td>
                         <td class="primary">{{ $class->class_subj }}</td> 
                         <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit Data</a></td>
-                        <td class="warning"><a href="/test" class="btn-danger">Add Student</a></td>
+                        <td class="warning"><a href="/filterdata" class="btn-danger">Add Student</a></td>
                     </tr>
                     @empty
                     <h2> Empty Data </h2>

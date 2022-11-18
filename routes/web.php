@@ -75,10 +75,10 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/Class/','classResult');
     Route::get('/store-class','showClass');
    
-    Route::get('/test/','test');
+   // Route::get('/test/','test');
    Route::get('/filterdata','filterdata'); /* Route for the Filter Blade */
+    Route::get('/filterdatas/','getStudent'); /* Search data from another database and populate */
    // Route::get('/filter/{class_sec}','showfilter');
-    Route::get('/filterdatas/','getStudent');
     //  Route::post('/push-data','pushdata');
 });
 
