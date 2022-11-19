@@ -7,6 +7,7 @@ use App\Models\Classes;
 use App\Models\Professor;
 use App\Models\Student;
 use App\Models\Subject;
+use App\Models\Section;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\DashboardController;
 
@@ -27,6 +28,23 @@ class ClassController extends Controller
         return redirect('/Class')->with('message','Successfully Created');
     }
 
+    public function filtercreate(Request $request) {
+        $validated = $request->validate([
+            "student_no"=>['required'],
+            "first_name"=>['required'],
+            "last_name"=>['required'],
+            "age"=>[ 'required'],
+            "gender"=>[ 'required'],
+            "email"=>[ 'required'],
+            "contact_no"=>[ 'required'],
+            "class_sec"=>[ 'required'],
+            "class_subj"=>[ 'required']
+        ]);
+
+        $section = Section::create($validated);
+
+        return back()->with('message','Successfully Created');
+    }
 
     public function classResult(){
         $prof = Professor::all();
@@ -100,7 +118,12 @@ class ClassController extends Controller
     
     }
 
+    public function getStudent() {
+        $p=Student::all();
+        return response()->json($p);
+    }
 
+    
 
 
 

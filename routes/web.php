@@ -72,11 +72,12 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/class/{id}','show');
     Route::put('/class/{id}','update');
     Route::post('/store-class','create');
+    Route::post('/filterdata/','filtercreate');
     Route::get('/Class/','classResult');
     Route::get('/filterdata','filterdata');
     Route::get('/store-class','showClass');
     Route::get('/filterdata/{id}','test');
-    // Route::get('class/{id}','Result');
+    Route::get('/filterdatas/','getStudent');
    
 });
 
