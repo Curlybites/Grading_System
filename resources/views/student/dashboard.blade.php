@@ -71,6 +71,7 @@
     <div class="insights">
 
         <div class="sales">
+         <a href="/Student">
             <span class="material-icons-sharp">school</span>
             <div class="middle">
                 <div class="left">
@@ -88,12 +89,14 @@
                 </div>
             </div>
             <small class="text-muted">Amlac Senior High School Students</small>
+         </a>
         </div>
 
         <!-- END OF SALE  -->
 
         <div class="expenses">
-            <span class="material-icons-sharp">person</span>
+            <a href="/Professor">
+                <span class="material-icons-sharp">person</span>
             <div class="middle">
                 <div class="left">
                     <h3>NUMBER OF PROFESSORS</h3>
@@ -110,28 +113,30 @@
                 </div>
             </div>
             <small class="text-muted">Amlac Senior High School Professors</small>
+            </a>
         </div>
 
         <!-- END OF EXPENSES  -->
 
           <div class="income">
+           <a href="/Course">
             <span class="material-icons-sharp">stacked_line_chart</span>
             <div class="middle">
                 <div class="left">
-                    <h3>NUMBER OF PROFESSORS</h3>
+                    <h3>NUMBER OF SUBJECTS</h3>
                     <h1></h1>
                 </div>
 
                 <div class="progress">
                     <svg>
-                        <circle cx='38' cy='38' r='36'></circle>
+                        <circle cx='40' cy='40' r='36'></circle>
                     </svg>
                     <div class="number">
-                        <p>44%</p>
+                        <p>{{ $subj->count() }}</p>
                     </div>
                 </div>
             </div>
-            <small class="text-muted">Amlac Senior High School Course</small>
+            <small class="text-muted">Amlac Senior High School Course</small></a>
         </div>
 
         <!-- END OF INCOME  -->

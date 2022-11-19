@@ -90,13 +90,14 @@
             
                 <label for="lname">Class Section</label>
                 <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" required>
-              
-              
+             
+             
+
                 <label for="class_prof">Professor</label>
                     <select id="class_prof" name="class_prof" required>
                     <option value="" selected disabled>Select Professor</option>
                      @foreach ($professor as $data)
-                    <option value="{{ $data->fname }} {{ $data->lname }}">{{ $data->fname }} {{ $data->lname }}</option>
+                    <option  value="{{ $data->fname }} {{ $data->lname }}">{{ $data->fname }} {{ $data->lname }}</option>
                     @endforeach
                     </select>
 
@@ -106,8 +107,8 @@
                     @foreach ($subj as $subject)
                     <option value="{{ $subject->subj_name }}">{{ $subject->subj_name }}</option>
                     @endforeach
-                    </select>
-
+                    </select>   
+ 
                 <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
                     add
                     </span>Add Class</button>
@@ -146,7 +147,7 @@
                         <td class="primary">{{ $class->class_prof }}</td>
                         <td class="primary">{{ $class->class_subj }}</td>
                         <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit Data</a></td>
-                        <td class="warning"><a href="/filterdata/" class="btn-danger">Insert Student</a></td>
+                        <td class="warning"><a href="/filterdata/{{ $class->id }}" class="btn-danger">Insert Student</a></td>
                     </tr>
                     @endforeach
                 </tbody>

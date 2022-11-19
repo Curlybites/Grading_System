@@ -10,6 +10,11 @@
     font-weight: 600;
    
 }
+.line{
+    color: #fff;
+    background-color:rgb(168, 177, 169);
+
+}
 
 .back:hover{
     margin: 1rem;

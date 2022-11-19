@@ -31,14 +31,30 @@ class ClassController extends Controller
     public function classResult(){
         $prof = Professor::all();
         $subj = Subject::all();
-        $data = Classes::paginate(15);
+        $data = Classes::paginate(5);
         return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
     }
 
+    
+    // public function Result(){
+    //     $prof = Professor::all();
+    //     $subj = Subject::all();
+    //     $data = Classes::paginate(15);
+    //     return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
+    // }
+
     public function show($id){
         $data = Classes::findorFail($id);
+        $list = Professor::all();
+        $subject = Subject::all();
         // dd($data);
-        return view('classes.edit',['class' => $data]);
+        return view('classes.edit',['class' => $data],['professor'=>$list]+['subject'=>$subject]);
+    }
+
+    public function test($id){
+        $data = Classes::findorFail($id);
+        // dd($data);
+        return view('classes.filter',['class' => $data]);
     }
 
     public function filterdata(){
@@ -83,6 +99,9 @@ class ClassController extends Controller
        return view('classes.class',['professor' => $professor],['subject' => $subject]);
     
     }
+
+
+
 
 
 }

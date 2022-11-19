@@ -36,7 +36,8 @@
 
                     <!-- Modal body -->
                     <div class="modal-body">
-                    <form action="" method="POST">
+                    <form action="/filterdata/" method="POST">
+                        @method('PUT') 
                         @csrf
                         <label class="h6">Student number</label>
                         <div class="form-floating mb-1 mt-1">
@@ -88,13 +89,13 @@
 
                         <label class="h6">Section</label>
                         <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="section" value="" name="section" required disabled >
+                           <input type="text" class="form-control" id="section" value="{{ $class->class_sec }}" name="section" required disabled >
                             <label for="Section">Section</label>
                         </div>
 
                         <label class="h6">Subject</label>
                         <div class="form-floating mb-2 mt-2">
-                           <input type="text" class="form-control" id="class_subj" value="" name="class_subj" required disabled >
+                           <input type="text" class="form-control" id="class_subj" value="{{ $class->class_subj }}" name="class_subj" required disabled >
                             <label for="Section">Subject</label>
                         </div>
 
@@ -128,6 +129,7 @@
                     <th>Lastname</th>
                     <th>Email</th>
                     <th>Section</th>
+                    <th>Subject</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -135,36 +137,41 @@
                     <td>John</td>
                     <td>John</td>
                     <td>Doe</td>
-                    <td>Doe</td>
                     <td>john@example.com</td>
+                    <td>{{ $class->class_sec }}</td>
+                    <td>{{ $class->class_subj }}</td>
                 </tr>
                 <tr>
                     <td>Mary</td>
                     <td>Mary</td>
                     <td>Mary</td>
-                    <td>Moe</td>
                     <td>mary@example.com</td>
+                    <td>{{ $class->class_sec }}</td>
+                    <td>{{ $class->class_subj }}</td>
                 </tr>
                 <tr>
                     <td>July</td>
                     <td>July</td>
                     <td>July</td>
-                    <td>Dooley</td>
                     <td>july@example.com</td>
+                    <td>{{ $class->class_sec }}</td>
+                    <td>{{ $class->class_subj }}</td>
                 </tr>
                 <tr>
                     <td>July</td>
                     <td>July</td>
                     <td>July</td>
-                    <td>Dooley</td>
                     <td>july@example.com</td>
+                    <td>{{ $class->class_sec }}</td>
+                    <td>{{ $class->class_subj }}</td>
                 </tr>
                 <tr>
                     <td>July</td>
                     <td>July</td>
                     <td>July</td>
-                    <td>Dooley</td>
                     <td>july@example.com</td>
+                    <td>{{ $class->class_sec }}</td>
+                    <td>{{ $class->class_subj }}</td>
                 </tr>
                 </tbody>
             </table>

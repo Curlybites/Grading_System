@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Professor;
 use App\Models\Student;
+use App\Models\Subject;
 use App\Models\Users;
 use Illuminate\Http\Request;
 
@@ -60,7 +61,8 @@ class DashboardController extends Controller
         
         $student = Student::all();
         $professor = Professor::all();
-        return view('student.dashboard',['students'=>$student],['prof'=>$professor]);
+        $subject = Subject::all();
+        return view('student.dashboard',['students'=>$student],['prof'=>$professor] + ['subj'=>$subject]);
     }
 
 }

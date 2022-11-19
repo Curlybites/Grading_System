@@ -20,12 +20,22 @@
                 
                     <label for="class_sec">Class Section</label>
                     <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" value="{{ $class->class_sec }}" required>
-                   
+
                     <label for="class_prof">Class Professor</label>
-                    <input class="input-form" type="text" id="class_prof" name="class_prof" placeholder="" value="{{ $class->class_prof }}" required>
+                    <select name="class_prof" id="classprof">
+                        <option value="{{ $class->class_prof }}" class="line">{{ $class->class_prof }}</option>
+                        @foreach ($professor as $prof)
+                        <option value="{{ $prof->fname }} {{ $prof->lname }}">{{ $prof->fname}} {{ $prof->lname }}</option>
+                        @endforeach 
+                    </select>
                 
-                    <label for="class_prof">Class Professor</label>
-                    <input class="input-form" type="text" id="class_prof" name="class_prof" placeholder="" value="{{ $class->class_subj }}" required>
+                    <label for="class_subj">Class Subject</label>
+                    <select name="class_subj" id="class_subj">
+                        <option value="{{ $class->class_subj }}" class="line">{{ $class->class_subj }}</option>
+                        @foreach ($subject as $subj)
+                            <option value="{{ $subj->subj_name }}">{{ $subj->subj_name }}</option>
+                        @endforeach
+                    </select>
 
                     <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
                         update
