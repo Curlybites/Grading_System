@@ -79,7 +79,7 @@
 
             {{-- 2nd tab --}}
             <div class="expenses">
-                <a href="{{'/grading.acad'}}" class="viewbtn">
+                <a href="{{'/acad'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
                         <h3>Academic Track</h3>

@@ -83,9 +83,9 @@
                          
                         </div>
                         <div class="col-md-3">
-                            <input type="button" class="btn save btn-info px-4 mx-2" value="Save" id="save">
-                            <input type="button" class="btn save btn-success px-4 mx-2" value="Save" id="save">
-                            <input type="button" class="btn print btn-danger px-4 mx-2" value="Print" id="print">
+                            <input type="button" class="btn save btn-info px-4 mx-1" value="Save" id="save">
+                            <input type="button" class="btn save btn-success px-4 mx-1" value="excel" id="excel">
+                            <input type="button" class="btn print btn-danger px-4 mx-1" value="Print" id="print">
                         </div>
                            
                 </div>
