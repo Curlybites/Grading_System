@@ -23,8 +23,8 @@
                 background-color: white;
                 height: 100%;
                 width: 100%;
-                position: static;
-                top: 0px;
+                position:relative;
+                top: 0;
                 left: 0px;
                 margin: 0px;
                 padding: 0px;
