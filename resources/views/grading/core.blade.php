@@ -28,6 +28,7 @@
 
     <div class="talbe-responsive">
             <div class="container mt-5">     
+            <a href="/Grading"><input type="button" value="Back" class="btn btn-warning px-4 mb-3"></a> 
                     <table class="table table-bordered table-striped table-hover table-sm" id="example">
                         <thead>
                         <tr>

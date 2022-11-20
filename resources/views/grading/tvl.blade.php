@@ -26,32 +26,59 @@
             </div>
     </div>
 
-    <div class="talbe-responsive">
-        
+    <div class="table-responsive">
             <div class="container mt-5">  
-            <a href="/Grading"><input type="button" value="Back" class="btn btn-warning px-4 mb-3"></a> 
+                <div class="row">
+                        <div class="col-md-1">
+                           <a href="/Grading"><input type="button" value="Back" class="btn btn-warning px-4 mb-3"></a> 
+                        </div>
+                        <div class="col-md-3">
+                            <form action="{{ url('grading.tvl') }}" method="GET">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <select name="sections" class="form-control">
+                                                <option value="" class="text-center">Select Section & Subject</option>
+                                                @foreach ( $section as $sec )
+                                                  <option value="{{ $sec->class_sec }}">{{ $sec->class_sec }} {{ $sec->class_subj }}</option>
+                                                @endforeach
+                                               
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="submit" class="btn btn-primary py-2" value="Filter">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            
                     <table class="table table-bordered table-striped table-hover table-sm" id="example1">
                         <thead>
                         <tr>
+                            <th>Student Number</th>
                             <th>Firstname</th>
                             <th>Lastname</th>
-                            <th>Email</th>
-                            <th>Course</th>
+                            <th>Gender</th>
                             <th>Section</th>
-                            <th>Professor</th>
-                            <th>Action</th>
+                            <th>Subject</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <td>BSIT</td>
-                            <td>SBIT1E</td>
-                            <td>John </td>
-                            <td>John </td>
-                        </tr>
+                        @forelse ( $list as $sec )
+                             <tr>
+                                    <td>{{ $sec->student_no }}</td>
+                                    <td>{{ $sec->first_name }}</td>
+                                    <td>{{ $sec->last_name }}</td>
+                                    <td>{{ $sec->gender }}</td>
+                                    <td>{{ $sec->class_sec }}</td>
+                                    <td>{{ $sec->class_subj }}</td>
+                                </tr>
+                        @empty
+                          <h5>No Section Selected </h5>  
+                        @endforelse
+
                         </tbody>
                     </table>
         </div>

@@ -20,13 +20,6 @@ return new class extends Migration
             $table->string('class_sec');
             $table->string('class_prof')->nullable();
             $table->string('class_subj')->nullable();
-            $table->string('student_no')->nullable();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('age')->nullable();
-            $table->string('gender')->nullable();
-            $table->string('contact_no')->nullable();
-            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

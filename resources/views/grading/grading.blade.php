@@ -68,7 +68,7 @@
             
             {{-- 1st tab --}}
             <div class="sales">
-                <a href="{{'/tvl'}}" class="viewbtn">
+                <a href="{{'/grading.tvl'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
                         <h3>TVL Track</h3>
@@ -79,7 +79,7 @@
 
             {{-- 2nd tab --}}
             <div class="expenses">
-                <a href="{{'/acad'}}" class="viewbtn">
+                <a href="{{'/grading.acad'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
                         <h3>Academic Track</h3>
@@ -90,7 +90,7 @@
 
             {{-- 3rd tab --}}
             <div class="income">
-                <a href="{{'/core'}}" class="viewbtn">
+                <a href="{{'/grading.core'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
                         <h3>Core Subject</h3>

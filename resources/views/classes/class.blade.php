@@ -138,7 +138,7 @@
                 </thead>
                 <tbody>
                     
-                   @foreach ( $classes as $class )
+                   @foreach ( $classes as $class )  
                     <tr>
                         <td class="primary">{{ $class->id }}</td>
                         <td class="primary">{{ $class->class_name }}</td>

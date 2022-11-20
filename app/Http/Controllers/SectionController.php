@@ -12,7 +12,40 @@ class SectionController extends Controller
 {
     public function class_list(){
         $data = Section::all();
-
         return view('classes.filter',['section'=>$data]);
     }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
