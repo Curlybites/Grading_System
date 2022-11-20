@@ -77,7 +77,7 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/filterdata','filterdata');
     Route::get('/store-class','showClass');
     Route::get('/filterdata/{id}','test');
-    Route::get('/filterdata/','getStudent');
+    Route::get('/filterdatas/','getStudent');
     Route::post('filterdata/','filtercreate');
 
    
