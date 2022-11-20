@@ -29,6 +29,7 @@ class ClassController extends Controller
     }
 
     public function filtercreate(Request $request) {
+        //dd($request);
         $validated = $request->validate([
             "student_no"=>['required'],
             "first_name"=>['required'],

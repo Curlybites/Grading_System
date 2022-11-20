@@ -18,19 +18,20 @@
                   <!-- Modal Trigger -->
                   <div class="container mt-5">
                           <a href="/Class" class="waves-effect waves-light amber darken-2 btn">Back</a>
-                          <a class="waves-effect waves-light modal-trigger btn" href="#modal1">Modal</a>
+                          <a class="waves-effect waves-light modal-trigger btn" href="#modal1">Add Student</a>
                   </div>
 
                     <!-- Modal Structure -->
-                    <div id="modal1" class="modal modal-fixed-footer">
+                    <div id="modal1" class="modal modal-footer">
                     <div class="modal-content">
                                 <!-- Modal Header  -->
-                                <h4>Modal Header</h4>
+                               <div class="text-center">
+                                     <h4>ADD STUDENT</h4>
+                                     <hr>
+                               </div>
                                 <!-- Modal Body  -->
                                             <form action="/filterdata/" method="POST">
-                                                @method('PUT') 
                                                 @csrf
-                                            
                                                     <div class="input-field container">
                                                     <label class="h6">Student Number</label>
                                                     <input type="text" class="form-control" id="search_id" placeholder="Search by Student ID " />
@@ -39,60 +40,66 @@
                                                     <div class="row mt-5">
                                                             <div class="col-6">
                                                                 <label class="h6">First Name</label>
-                                                                <input type="text" class="form-control text-dark" id="fname" placeholder="" name="first_name" required disabled>
+                                                                <input type="text" class="form-control text-dark" id="fname" placeholder="" name="first_name" required readonly>
                                                             </div>
 
                                                             <div class="col-6">
                                                                 <label class="h6">Last Name</label>
-                                                                <input type="text" class="form-control text-dark" id="lname" placeholder="" name="last_name" required disabled>
+                                                                <input type="text" class="form-control text-dark" id="lname" placeholder="" name="last_name" required readonly>
                                                             </div>
                                                     </div>
                                                     
                                                     <div class="row mt-5">
-                                                        <div class="col-sm-3">
-                                                            <label class="h6">Age</label>
-                                                            <input type="text" class="form-control text-dark" id="age" placeholder="" name="age" required disabled>
-                                                        </div>
 
-                                                        <div class="col-sm-3">
-                                                            <label class="h6">Gender</label>
-                                                            <input type="text" class="form-control text-dark" id="gender" placeholder="" name="gender" required disabled>
-                                                        </div>
-
-                                                        <div class="col-sm-3">
+                                                    <div class="col-sm-4">
                                                              <label class="h6">Email</label>
-                                                            <input type="text" class="form-control text-dark" id="email" placeholder="" name="email" required disabled>
-                                                        </div>
-                                                           
-                                                         <div class="col-sm-3">
+                                                            <input type="text" class="form-control text-dark" id="email" placeholder="" name="email" required readonly>
+                                                     </div>
+
+                                                     <div class="col-sm-4">
                                                            <label class="h6">Contact Number</label> 
-                                                           <input type="text" class="form-control text-dark" id="contact_no" placeholder="" name="contact_no" required disabled>
-                                                         </div>
+                                                           <input type="text" class="form-control text-dark" id="contact_no" placeholder="" name="contact_no" required readonly>
+                                                     </div>
+
+                                                        <div class="col-sm-2">
+                                                            <label class="h6">Age</label>
+                                                            <input type="text" class="form-control text-dark" id="age" placeholder="" name="age" required readonly>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <label class="h6">Gender</label>
+                                                            <input type="text" class="form-control text-dark" id="gender" placeholder="" name="gender" required readonly>
+                                                        </div>
+     
                                                     </div>
                                                     
                                                     <div class="row mt-5">
                                                         <div class="col-4">
                                                             <label class="h6">Section</label>
-                                                            <input type="text" class="form-control text-dark" id="class_sec" value="{{ $class->class_sec }}" name="class_sec" required disabled>
+                                                            <input type="text" class="form-control text-dark" id="class_sec" value="{{ $class->class_sec }}" name="class_sec" required readonly>
                                                         </div>
 
                                                         <div class="col-8">
                                                             <label class="h6">Subject</label>
-                                                            <input type="text" class="form-control text-dark" id="class_subj" value="{{ $class->class_subj }}" name="class_subj" required disabled>    
+                                                            <input type="text" class="form-control text-dark" id="class_subj" value="{{ $class->class_subj }}" name="class_subj" required readonly>    
                                                         </div>
                                                     </div>  
                                                 
                                                     <div class="container text-center">
-                                                    <label class="text-center h6">Student Number</label>
-                                                <input type="text" class="form-control text-dark text-center" id="student_no" value="" name="student_no" required disabled>    
+                                                        <label class="text-center h6">Student Number</label>
+                                                        <input type="text" class="form-control text-dark text-center" id="student_no" value="" name="student_no" required readonly>    
                                                     </div>
+
+                                                    <div class="modal-footer">
+                                                        <input type="submit" value="Add Student" class="waves-effect waves-green btn-flat">
+                                                        <!-- <button class="waves-effect waves-green btn-flat" type="submit">Add Student</button> -->
+                                                        <a href="#!" class="modal-close waves-effect waves-red btn-flat">Close</a>
+                                                      </div>
                                         </form>  
                          </div>
-                            <div class="modal-footer">
-                                <input type="submit" value="Add Student" class="waves-effect waves-green btn-flat">
-                            <!-- <button class="waves-effect waves-green btn-flat" type="submit">Add Student</button> -->
-                                <a href="#!" class="modal-close waves-effect waves-red btn-flat">Close</a>
-                            </div>
+
+
+                            
                     </div>
 
                     <!-- End of Modal  -->
@@ -168,20 +175,38 @@
                                     var dataStud6 = {};
                                     var dataStud7 = {};
                                     for (var i= 0; i < studArray.length; i++){
-                                        dataStud[studArray[i].student_no] = null;
+                                        dataStud[studArray[i].student_no] = null; 
                                         dataStud2[studArray[i].student_no] = studArray[i];
-                                        dataStud2[studArray[i].student_no] = studArray[i];
-                                        dataStud2[studArray[i].student_no] = studArray[i];
-                                        dataStud2[studArray[i].student_no] = studArray[i];
-                                        dataStud2[studArray[i].student_no] = studArray[i];
-                                        dataStud2[studArray[i].student_no] = studArray[i];
+                                        dataStud3[studArray[i].student_no] = studArray[i];
+                                        dataStud4[studArray[i].student_no] = studArray[i];
+                                        dataStud5[studArray[i].student_no] = studArray[i];
+                                        dataStud6[studArray[i].student_no] = studArray[i];
+                                        dataStud7[studArray[i].student_no] = studArray[i];
                                     }
-                                    console.log("dataStud6");
-                                    console.log(dataStud6);
-                                    console.log(dataStud6);
-                                    console.log(dataStud6);
-                                    console.log(dataStud6);
-                                    console.log(dataStud6);
+                                    for (var i= 0; i < studArray.length; i++){
+                                        dataStud[studArray[i].first_name] = null; 
+                                        dataStud2[studArray[i].first_name] = studArray[i];
+                                        dataStud3[studArray[i].first_name] = studArray[i];
+                                        dataStud4[studArray[i].first_name] = studArray[i];
+                                        dataStud5[studArray[i].first_name] = studArray[i];
+                                        dataStud6[studArray[i].first_name] = studArray[i];
+                                        dataStud7[studArray[i].first_name] = studArray[i];
+                                    }
+                                    for (var i= 0; i < studArray.length; i++){
+                                        dataStud[studArray[i].last_name] = null; 
+                                        dataStud2[studArray[i].last_name] = studArray[i];
+                                        dataStud3[studArray[i].last_name] = studArray[i];
+                                        dataStud4[studArray[i].last_name] = studArray[i];
+                                        dataStud5[studArray[i].last_name] = studArray[i];
+                                        dataStud6[studArray[i].last_name] = studArray[i];
+                                        dataStud7[studArray[i].last_name] = studArray[i];
+                                    }
+                                    console.log("dataStud7");
+                                    console.log(dataStud7);
+                                    console.log(dataStud7);
+                                    console.log(dataStud7);
+                                    console.log(dataStud7);
+                                    console.log(dataStud7);
                                     console.log(dataStud7);
                                     // convert end 
                                     $('input#search_id').autocomplete({

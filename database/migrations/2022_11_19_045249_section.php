@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('subjects', function (Blueprint $table) {
+        Schema::create('section', function (Blueprint $table) {
             $table->id();
-            $table->string('student_no')->nullable();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('age')->nullable();
-            $table->string('gender')->nullable();
-            $table->string('contact_no')->nullable();
-            $table->string('email')->nullable();
-            $table->string('subj_name')->nullable();
-            $table->string('class_sec')->nullable();
+            $table->string('student_no');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('age');
+            $table->string('gender');
+            $table->string('contact_no');
+            $table->string('email');
+            $table->string('subj_name');
+            $table->string('class_sec');
             $table->timestamps();
         });
     }
