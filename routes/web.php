@@ -77,7 +77,9 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/filterdata','filterdata');
     Route::get('/store-class','showClass');
     Route::get('/filterdata/{id}','test');
-    Route::get('/filterdatas/','getStudent');
+    Route::get('/filterdata/','getStudent');
+    Route::post('filterdata/','filtercreate');
+
    
 });
 
@@ -109,6 +111,11 @@ Route::controller(DashboardController::class)->group(function(){
 
     Route::get('/Dashboard','studnum');
 });
+
+Route::controller(SectionController::class)->group(function(){
+
+    Route::get('/filterdata','class_list');
+})
 
 
 

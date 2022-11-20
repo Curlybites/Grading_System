@@ -28,7 +28,7 @@
                                 <h4>Modal Header</h4>
                                 <!-- Modal Body  -->
                                             <form action="/filterdata/" method="POST">
-                                                @method('PUT') 
+                                               
                                                 @csrf
                                             
                                                     <div class="input-field container">
@@ -39,60 +39,64 @@
                                                     <div class="row mt-5">
                                                             <div class="col-6">
                                                                 <label class="h6">First Name</label>
-                                                                <input type="text" class="form-control text-dark" id="fname" placeholder="" name="first_name" required disabled>
+                                                                <input type="text" class="form-control text-dark" id="fname" placeholder="" name="first_name"  readonly>
                                                             </div>
 
                                                             <div class="col-6">
                                                                 <label class="h6">Last Name</label>
-                                                                <input type="text" class="form-control text-dark" id="lname" placeholder="" name="last_name" required disabled>
+                                                                <input type="text" class="form-control text-dark" id="lname" placeholder="" name="last_name"  readonly>
                                                             </div>
                                                     </div>
                                                     
                                                     <div class="row mt-5">
                                                         <div class="col-sm-3">
                                                             <label class="h6">Age</label>
-                                                            <input type="text" class="form-control text-dark" id="age" placeholder="" name="age" required disabled>
+                                                            <input type="text" class="form-control text-dark" id="age" placeholder="" name="age" readonly>
                                                         </div>
 
                                                         <div class="col-sm-3">
                                                             <label class="h6">Gender</label>
-                                                            <input type="text" class="form-control text-dark" id="gender" placeholder="" name="gender" required disabled>
+                                                            <input type="text" class="form-control text-dark" id="gender" placeholder="" name="gender" readonly >
                                                         </div>
 
                                                         <div class="col-sm-3">
                                                              <label class="h6">Email</label>
-                                                            <input type="text" class="form-control text-dark" id="email" placeholder="" name="email" required disabled>
+                                                            <input type="text" class="form-control text-dark" id="email" placeholder="" name="email" readonly >
                                                         </div>
                                                            
                                                          <div class="col-sm-3">
                                                            <label class="h6">Contact Number</label> 
-                                                           <input type="text" class="form-control text-dark" id="contact_no" placeholder="" name="contact_no" required disabled>
+                                                           <input type="text" class="form-control text-dark" id="contact_no" placeholder="" name="contact_no" readonly >
                                                          </div>
                                                     </div>
                                                     
                                                     <div class="row mt-5">
                                                         <div class="col-4">
                                                             <label class="h6">Section</label>
-                                                            <input type="text" class="form-control text-dark" id="class_sec" value="{{ $class->class_sec }}" name="class_sec" required disabled>
+                                                            <input type="text" class="form-control text-dark" id="class_sec" value="{{ $class->class_sec }}" name="class_sec" readonly >
                                                         </div>
 
                                                         <div class="col-8">
                                                             <label class="h6">Subject</label>
-                                                            <input type="text" class="form-control text-dark" id="class_subj" value="{{ $class->class_subj }}" name="class_subj" required disabled>    
+                                                            <input type="text" class="form-control text-dark" id="class_subj" value="{{ $class->class_subj }}" name="class_subj" readonly >    
                                                         </div>
                                                     </div>  
                                                 
                                                     <div class="container text-center">
                                                     <label class="text-center h6">Student Number</label>
-                                                <input type="text" class="form-control text-dark text-center" id="student_no" value="" name="student_no" required disabled>    
+                                                <input type="text" class="form-control text-dark text-center" id="student_no" value="" name="student_no" readonly>    
+                                                
                                                     </div>
+
+                                    
+                                                        <input type="submit" value="Add Student" class="waves-effect waves-green btn-flat">
+                                                    <!-- <button class="waves-effect waves-green btn-flat" type="submit">Add Student</button> -->
+                                                        <a href="#!" class="modal-close waves-effect waves-red btn-flat">Close</a>
+       
+                                         
                                         </form>  
                          </div>
-                            <div class="modal-footer">
-                                <input type="submit" value="Add Student" class="waves-effect waves-green btn-flat">
-                            <!-- <button class="waves-effect waves-green btn-flat" type="submit">Add Student</button> -->
-                                <a href="#!" class="modal-close waves-effect waves-red btn-flat">Close</a>
-                            </div>
+                            
                     </div>
 
                     <!-- End of Modal  -->
@@ -101,6 +105,7 @@
                         <table class="table-bordered highlight centered striped responsive-table">
                             <thead class="">
                             <tr>
+                                <th>Id</th>
                                 <th>Student Number</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
@@ -114,18 +119,21 @@
                             </thead>
                             <tbody>
                             
-                            <tr>
-                                <td>20-2194</td>
-                                <td>John Carlien Trix</td>
-                                <td>Darlucio</td>
-                                <td>21</td>
-                                <td>Male</td>
-                                <td>johnTrix@gmail.com</td>
-                                <td>+639451102461</td>
-                                <td>{{ $class->class_sec }}</td>
-                                <td>{{ $class->class_subj }}</td>
-                            </tr>
-                                        
+                            @foreach ($list as $sec)
+                                <tr>
+                                    <td>{{ $sec->id }}</td>
+                                    <td>{{ $sec->student_no }}</td>
+                                    <td>{{ $sec->first_name }}</td>
+                                    <td>{{ $sec->last_name }}</td>
+                                    <td>{{ $sec->age }}</td>
+                                    <td>{{ $sec->gender }}</td>
+                                    <td>{{ $sec->email }}</td>
+                                    <td>{{ $sec->contact_no }}</td>
+                                    <td>{{ $sec->class_sec }}</td>
+                                    <td>{{ $sec->class_subj }}</td>
+                                </tr>
+                            @endforeach
+                                            
                             </tbody>
                         </table>
                     </div>

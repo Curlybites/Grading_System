@@ -71,8 +71,9 @@ class ClassController extends Controller
 
     public function test($id){
         $data = Classes::findorFail($id);
+        $list = Section::all();
         // dd($data);
-        return view('classes.filter',['class' => $data]);
+        return view('classes.filter',['class' => $data]+['list'=>$list]);
     }
 
     public function filterdata(){
