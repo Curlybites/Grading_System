@@ -108,6 +108,7 @@
                         <table class="table-bordered highlight centered striped responsive-table">
                             <thead class="">
                             <tr>
+                                <th>Id</th>
                                 <th>Student Number</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
@@ -121,18 +122,21 @@
                             </thead>
                             <tbody>
                             
-                            <tr>
-                                <td>20-2194</td>
-                                <td>John Carlien Trix</td>
-                                <td>Darlucio</td>
-                                <td>21</td>
-                                <td>Male</td>
-                                <td>johnTrix@gmail.com</td>
-                                <td>+639451102461</td>
-                                <td>{{ $class->class_sec }}</td>
-                                <td>{{ $class->class_subj }}</td>
-                            </tr>
-                                        
+                            @foreach ($list as $sec)
+                                <tr>
+                                    <td>{{ $sec->id }}</td>
+                                    <td>{{ $sec->student_no }}</td>
+                                    <td>{{ $sec->first_name }}</td>
+                                    <td>{{ $sec->last_name }}</td>
+                                    <td>{{ $sec->age }}</td>
+                                    <td>{{ $sec->gender }}</td>
+                                    <td>{{ $sec->email }}</td>
+                                    <td>{{ $sec->contact_no }}</td>
+                                    <td>{{ $sec->class_sec }}</td>
+                                    <td>{{ $sec->class_subj }}</td>
+                                </tr>
+                            @endforeach
+                                            
                             </tbody>
                         </table>
                     </div>
