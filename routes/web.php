@@ -115,9 +115,5 @@ Route::controller(DashboardController::class)->group(function(){
 Route::controller(SectionController::class)->group(function(){
 
     Route::get('/filterdata','class_list');
-})
+});
 
-
-
-
-  
