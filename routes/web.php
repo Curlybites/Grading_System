@@ -79,8 +79,6 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/filterdata/{id}','test');
     Route::get('/filterdatas/','getStudent');
     Route::post('filterdata/','filtercreate');
-
-   
 });
 
 Route::controller(ProfessorController::class)->group(function(){
@@ -121,7 +119,7 @@ Route::controller(SectionController::class)->group(function(){
 Route::controller(GradingController::class)->group(function(){
 
     Route::get('/grading.tvl','grading_list');
-    Route::get('/editTvl','tvledit');
-    Route::get('/store-grades','storeGrades');
+    // Route::get('/editTvl','tvledit');
+    Route::get('/editTvl/{student_no}','findStudent');
 });
 

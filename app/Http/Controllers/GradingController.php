@@ -17,17 +17,21 @@ class GradingController extends Controller
     {
         $section = Classes::all();
         $data = Section::where('class_sec',Input::get('sections'))->get();
+
         return view('grading.tvl', ['list' => $data]+['section' => $section]);
     }
 
-    public function tvledit(){
+    // public function tvledit(){
         
-        return view ('grading.editTvl');
-    }
+    //     return view ('grading.editTvl');
+    // }
     
     public function findStudent($student_no){
 
         $data = Section::findorfial($student_no);
+        $list = Section::all();
+
+        return view('/grading.editTvl',['sec' => $data],['list' => $list]);
 
     }
 

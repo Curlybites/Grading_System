@@ -66,7 +66,7 @@ class ClassController extends Controller
         $data = Classes::findorFail($id);
         $list = Professor::all();
         $subject = Subject::all();
-        // dd($data);
+        
         return view('classes.edit',['class' => $data],['professor'=>$list]+['subject'=>$subject]);
     }
 
@@ -76,6 +76,7 @@ class ClassController extends Controller
         // dd($data);
         return view('classes.filter',['class' => $data]+['list'=>$list]);
     }
+
 
     public function filterdata(){
         

@@ -18,7 +18,7 @@
         <h2>TVL Grading Form</h2>
           <div class="row mt-5">
                 <div class="col-md-4">
-                    <label class="h5">Student Number:</label>
+                    <label class="h5">Student Number:{{ $list->student_no }}</label>
                 </div>
                 <div class="col-md-4">
                     <label class="h5">Last Name:</label>
@@ -41,7 +41,21 @@
             <div id="modal1" class="modal bottom-sheet">
                 <div class="modal-content">
                 <h4>Assignment</h4>
-                <p>A bunch of text</p>
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                    <input type="text" name="a1" id="a1" class="form-control" placeholder="Score Assignment1">
+                                    <input type="text" name="a2" id="a2" class="form-control" placeholder="Score Assignment2">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="a3" id="a3" class="form-control" placeholder="Score Assignment3">
+                                    <input type="text" name="a4" id="a4" class="form-control" placeholder="Score Assignment4">
+                                </div>
+                                <div class="col-md-4">
+                                <input type="text" name="a5" id="a5" class="form-control" placeholder="Score Assignment5">
+                                </div>
+                           </div>
+                     </div>
                 </div>
                 <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -57,7 +71,21 @@
             <div id="modal2" class="modal bottom-sheet">
                 <div class="modal-content">
                 <h4>Quizzes</h4>
-                <p>A bunch of text</p>
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                    <input type="text" name="q1" id="q1" class="form-control" placeholder="Score Quiz 1">
+                                    <input type="text" name="q2" id="q2" class="form-control" placeholder="Score Quiz 2">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="q3" id="q3" class="form-control" placeholder="Score Quiz 3">
+                                    <input type="text" name="q4" id="q4" class="form-control" placeholder="Score Quiz 4">
+                                </div>
+                                <div class="col-md-4">
+                                <input type="text" name="q5" id="q5" class="form-control" placeholder="Score Quiz 5">
+                                </div>
+                           </div>
+                     </div>
                 </div>
                 <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -73,7 +101,13 @@
             <div id="modal3" class="modal bottom-sheet">
                 <div class="modal-content">
                     <h4>Exam</h4>
-                <p>A bunch of text</p>
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-4">
+                                <input type="text" name="exam" id="exam" class="form-control" placeholder="Score Exam">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -89,7 +123,24 @@
             <div id="modal4" class="modal bottom-sheet">
                 <div class="modal-content">
                 <h4>Activities</h4>
-                <p>A bunch of text</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="act1" id="act1" class="form-control" placeholder="Score Activities 1">
+                            <input type="text" name="act2" id="act2" class="form-control" placeholder="Score Activities 2">
+                            <input type="text" name="act3" id="act3" class="form-control" placeholder="Score Activities 3">
+                            <input type="text" name="act4" id="act4" class="form-control" placeholder="Score Activities 4">
+                            <input type="text" name="act5" id="act5" class="form-control" placeholder="Score Activities 5">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="act6" id="act1" class="form-control" placeholder="Score Activities 6">
+                            <input type="text" name="act7" id="act1" class="form-control" placeholder="Score Activities 7">
+                            <input type="text" name="act8" id="act1" class="form-control" placeholder="Score Activities 8">
+                            <input type="text" name="act9" id="act1" class="form-control" placeholder="Score Activities 9">
+                            <input type="text" name="act10" id="act1" class="form-control" placeholder="Score Activities 10">
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect wavesyellow  btn-flat">Agree</a>
@@ -99,7 +150,7 @@
             </div>
         </div>
         <br><br><br>
-        <form action="/store-grades" method="POST">
+        <form action="/editTvl/{{ $sec->student_no }}" method="POST">
             @method('PUT')
             @csrf
         <div class="row mt-5 mb-5">

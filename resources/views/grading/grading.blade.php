@@ -100,8 +100,6 @@
             </div>
         
         </div>
- 
-   
     </main>
     
     <x-profile/>
