@@ -15,7 +15,7 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js">
     <link rel="shortcut icon" href="/images/amlac.jpg" type="image/x-icon">
-
+    <link rel="stylesheet" href="/css/pagination.css">
      <!-- Matrial Icon link CDN -->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 

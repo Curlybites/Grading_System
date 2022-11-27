@@ -1,0 +1,53 @@
+:root{
+    --color-primary: #4D8243;
+    --color-danger: #85c479;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white:#fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light:rgba(132,139,200,0.18);
+    --color-primary-variant:#677483;
+    --color-dark-variant: #677483;
+    --color-background : #f6f6f9;
+
+
+    --card-border-radius:2rem;
+    --border-radius-1:0.4rem;
+    --border-radius-2:0.8rem;
+    --border-radius-3:1.2rem;
+
+
+    --card-padding:1.8rem;
+    --padding-1:1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+    
+}
+ nav {
+    display: flex;
+    justify-content: center;
+    
+}
+        
+
+.pagination .page-item {
+    
+    display: flex;
+    align-items: center;
+   
+}
+
+.pagination .page-item a{
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-radius: var(--border-radius-2);
+}
+
+.pagination .page-item a:active{
+    background: #363949;
+}
+    

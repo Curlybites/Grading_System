@@ -146,8 +146,12 @@
                         <td class="primary">{{ $class->class_sec }}</td>
                         <td class="primary">{{ $class->class_prof }}</td>
                         <td class="primary">{{ $class->class_subj }}</td>
-                        <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit Data</a></td>
-                        <td class="warning"><a href="/filterdata/{{ $class->id }}" class="btn-danger">Insert Student</a></td>
+                        <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning"><span class="material-icons-sharp">
+                            edit
+                            </span>Edit</a></td>
+                        <td class="warning"><a href="/filterdata/{{ $class->id }}" class="btn-danger"><span class="material-icons-sharp">
+                            add_circle
+                            </span>Insert Student</a></td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -30,14 +30,14 @@ class StudentsController extends Controller
 
     public function studlist(){
 
-        $data = Student::paginate(15);   
+        $data = Student::paginate(5);   
            return view ('student.student',['students'=>$data]);
     }
 
 
     public function index(){
 
-       $data = Student::paginate(15);    
+       $data = Student::paginate(5);    
     //    $data = Student::table('students')->Paginate(5);
        return view ('student.index',['students'=>$data]);
 
