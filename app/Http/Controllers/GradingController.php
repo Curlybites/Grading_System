@@ -26,9 +26,9 @@ class GradingController extends Controller
     //     return view ('grading.editTvl');
     // }
     
-    public function findStudent($student_no){
+    public function findStudent($id){
 
-        $data = Section::findorfial($student_no);
+        $data = Section::findorfail($id);
         $list = Section::all();
 
         return view('grading.editTvl',['sec' => $data],['list' => $list]);

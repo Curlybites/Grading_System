@@ -18,18 +18,18 @@
         <h2>TVL Grading Form</h2>
           <div class="row mt-5">
                 <div class="col-md-4">
-                    <label class="h5">Student Number:{{ $sec->student_no }}</label>
+                    <label class="h5">Student Number: <label class="h3">{{ $sec->student_no }}</label></label>
                 </div>
                 <div class="col-md-4">
-                    <label class="h5">Last Name:{{ $sec->last_name }}</label>
+                    <label class="h5">Last Name: <label class="h3">{{ $sec->last_name }}</label></label>
                 </div>
                 <div class="col-md-4">
-                    <label class="h5">First Name:{{ $sec->first_name }}</label>
+                    <label class="h5">First Name: <label class="h3">{{ $sec->first_name }}</label></label>
                 </div>
           </div>
           <div class="row">
-                    <div class="h5 col-md-6">Section:{{ $sec->class_sec }}</div>
-                    <div class="h5 col-md-6">Subject:{{ $sec->class_subj }}</div>
+                    <div class="col-md-6 h5">Section: <label class="h3">{{ $sec->class_sec }}</label></div>
+                    <div class="col-md-6 h5">Subject: <label class="h3">{{ $sec->class_subj }}</label></div>
             </div>
          <br>
         <div class="row mt-5 mb-5">
@@ -150,7 +150,7 @@
             </div>
         </div>
         <br><br><br>
-        <form action="/editTvl/{{ $sec->student_no }}" method="POST">
+        <form action="/editTvl/{{ $sec->id }}" method="POST">
             @method('PUT')
             @csrf
         <div class="row mt-5 mb-5">

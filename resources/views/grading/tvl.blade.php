@@ -122,7 +122,7 @@
                                     <td id="3rd" name="3rd" value="" placeholder=""></td>
                                     <td id="4th" name="4th" value="" placeholder=""></td>
                                     <td id="final" name="final" value="" placeholder=""></td>
-                                    <td class="text-center"><a href="/editTvl/{{ $sec->student_no }}" class="" p-0><i class="fa-solid fa-pen-to-square"></i></a></td>
+                                    <td class="text-center"><a href="/editTvl/{{ $sec->id }}" class="" p-0><i class="fa-solid fa-pen-to-square"></i></a></td>
                                 </tr>
                         @empty
                           <h4 class="text-center">No Section and Subject Selected </h4>  

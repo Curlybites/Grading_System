@@ -120,6 +120,6 @@ Route::controller(GradingController::class)->group(function(){
 
     Route::get('/grading.tvl','grading_list');
     // Route::get('/editTvl','tvledit');
-    Route::get('/editTvl/{student_no}','findStudent');
+    Route::get('/editTvl/{id}','findStudent');
 });
 
