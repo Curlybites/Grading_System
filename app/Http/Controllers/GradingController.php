@@ -36,7 +36,27 @@ class GradingController extends Controller
     }
 
 
-    public function storeGrade(){
+    public function storeGrade(Request $request){
+
+        $WH1 = $request->input('WH1');
+        $WH2 = $request->input('WH2');
+        $WH3 = $request->input('WH3');
+        $WH4 = $request->input('WH4');
+        $WH5 = $request->input('WH5');
+        $WH6 = $request->input('WH6');
+        $WH7 = $request->input('WH7');
+        $WH8 = $request->input('WH8');
+        $WH9 = $request->input('WH9');
+        $WH10 = $request->input('WH10');
+        $hpg = $request->input('WHTOTAL');
+        $result = 0;
+
+        $WH1 + $WH2 + $WH3 + $WH4 + $WH5 + $WH6 +
+        $WH7 + $WH8 + $WH9 + $WH10 = $hpg ; 
+
+        do{
+
+        }while(null);
 
 
     }
