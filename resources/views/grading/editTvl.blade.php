@@ -18,18 +18,18 @@
         <h2>TVL Grading Form</h2>
           <div class="row mt-5">
                 <div class="col-md-4">
-                    <label class="h5">Student Number:{{ $list->student_no }}</label>
+                    <label class="h5">Student Number:{{ $sec->student_no }}</label>
                 </div>
                 <div class="col-md-4">
-                    <label class="h5">Last Name:</label>
+                    <label class="h5">Last Name:{{ $sec->last_name }}</label>
                 </div>
                 <div class="col-md-4">
-                    <label class="h5">First Name:</label>
+                    <label class="h5">First Name:{{ $sec->first_name }}</label>
                 </div>
           </div>
           <div class="row">
-                    <div class="h5 col-md-6">Section</div>
-                    <div class="h5 col-md-6">Subject</div>
+                    <div class="h5 col-md-6">Section:{{ $sec->class_sec }}</div>
+                    <div class="h5 col-md-6">Subject:{{ $sec->class_subj }}</div>
             </div>
          <br>
         <div class="row mt-5 mb-5">

@@ -31,7 +31,7 @@ class GradingController extends Controller
         $data = Section::findorfial($student_no);
         $list = Section::all();
 
-        return view('/grading.editTvl',['sec' => $data],['list' => $list]);
+        return view('grading.editTvl',['sec' => $data],['list' => $list]);
 
     }
 
