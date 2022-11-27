@@ -20,7 +20,9 @@ class ClassesFactory extends Factory
 
                 'class_name' => fake()->firstName(),
                 'class_num' => fake()->numerify('22-###'),
-                'class_sec' => fake()->lastName()
+                'class_sec' => fake()->lastName(),
+                'class_prof' => fake()->firstName(),
+                'class_subj' => fake()->lastName()
         ];
     }
 }

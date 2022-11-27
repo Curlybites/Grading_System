@@ -122,5 +122,6 @@ Route::controller(GradingController::class)->group(function(){
 
     Route::get('/grading.tvl','grading_list');
     Route::get('/editTvl','tvledit');
+    Route::get('/store-grades','storeGrades');
 });
 

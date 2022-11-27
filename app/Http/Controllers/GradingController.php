@@ -25,5 +25,16 @@ class GradingController extends Controller
         return view ('grading.editTvl');
     }
     
+    public function findStudent($student_no){
+
+        $data = Section::findorfial($student_no);
+
+    }
+
+
+    public function storeGrade(){
+
+
+    }
 
 }

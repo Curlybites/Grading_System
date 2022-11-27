@@ -99,6 +99,9 @@
             </div>
         </div>
         <br><br><br>
+        <form action="/store-grades" method="POST">
+            @method('PUT')
+            @csrf
         <div class="row mt-5 mb-5">
             <div class="col-md-6">
                 <p class="h3 text-center">Written Task</p>
@@ -179,6 +182,7 @@
                 </tr>   
                 </div>
             </div>
+        </form>
     </div>
 
    <!-- Compiled and minified JavaScript -->
