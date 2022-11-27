@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <script src="https://kit.fontawesome.com/99c966d584.js" crossorigin="anonymous"></script>
     <title>TVL Grading</title>
      <style>
         @media print {
@@ -99,17 +100,29 @@
                             <th>Gender</th>
                             <th>Section</th>
                             <th>Subject</th>
+                            <th>1st</th>
+                            <th>2nd</th>
+                            <th>3rd</th>
+                            <th>4th</th>
+                            <th>Final</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         @forelse ( $list as $sec )
                              <tr>
-                                    <td>{{ $sec->student_no }}</td>
+                                    <td class="text-center">{{ $sec->student_no }}</td>
                                     <td>{{ $sec->first_name }}</td>
                                     <td>{{ $sec->last_name }}</td>
                                     <td>{{ $sec->gender }}</td>
                                     <td>{{ $sec->class_sec }}</td>
                                     <td>{{ $sec->class_subj }}</td>
+                                    <td id="1st" name="1st" value="" placeholder=""></td>
+                                    <td id="2nd" name="2nd" value="" placeholder=""></td>
+                                    <td id="3rd" name="3rd" value="" placeholder=""></td>
+                                    <td id="4th" name="4th" value="" placeholder=""></td>
+                                    <td id="final" name="final" value="" placeholder=""></td>
+                                    <td class="text-center"><a href="/editTvl" class="" p-0><i class="fa-solid fa-pen-to-square"></i></a></td>
                                 </tr>
                         @empty
                           <h4 class="text-center">No Section and Subject Selected </h4>  
@@ -119,7 +132,7 @@
                     </table>
         </div>
     </div>
-
+    
       <script>
         $(document).ready( function () {
              $('#example1').DataTable();

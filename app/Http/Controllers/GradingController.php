@@ -20,5 +20,10 @@ class GradingController extends Controller
         return view('grading.tvl', ['list' => $data]+['section' => $section]);
     }
 
+    public function tvledit(){
+        
+        return view ('grading.editTvl');
+    }
+    
 
 }

@@ -90,7 +90,7 @@
 
             {{-- 3rd tab --}}
             <div class="income">
-                <a href="{{'/grading.core'}}" class="viewbtn">
+                <a href="{{'/core'}}" class="viewbtn">
                     <div class="sales">
                         <span class="material-icons-sharp">analytics</span>
                         <h3>Core Subject</h3>

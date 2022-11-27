@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('contact_no');
             $table->string('class_sec');
             $table->string('class_subj');
+            
             $table->timestamps();
         });
         
