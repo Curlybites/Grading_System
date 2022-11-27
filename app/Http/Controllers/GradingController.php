@@ -36,8 +36,9 @@ class GradingController extends Controller
     }
 
 
-    public function storeGrade(Request $request){
+    public function updateScores(Request $request, Section $section){
 
+    /* 
         $WH1 = $request->input('WH1');
         $WH2 = $request->input('WH2');
         $WH3 = $request->input('WH3');
@@ -50,14 +51,30 @@ class GradingController extends Controller
         $WH10 = $request->input('WH10');
         $hpg = $request->input('WHTOTAL');
         $result = 0;
+    */
 
-        $WH1 + $WH2 + $WH3 + $WH4 + $WH5 + $WH6 +
-        $WH7 + $WH8 + $WH9 + $WH10 = $hpg ; 
+    /* do{
+            
+            $WH1 + $WH2 + $WH3 + $WH4 + $WH5 + $WH6 +
+            $WH7 + $WH8 + $WH9 + $WH10 = $hpg ; 
 
-        do{
+        }while($hpg == null);
 
-        }while(null);
+        */
+        $section=Section::find($request->id);
+        $section->WH1=$request->WH1;
+        $section->WH1=$request->WH2;
+        $section->WH1=$request->WH3;
+        $section->WH1=$request->WH4;
+        $section->WH1=$request->WH5;
+        $section->WH1=$request->WH6;
+        $section->WH1=$request->WH7;
+        $section->WH1=$request->WH8;
+        $section->WH1=$request->WH9;
+        $section->WH1=$request->WH10;
+        $section->save();
 
+         return back()->with('message','Successfully Created');
 
     }
 

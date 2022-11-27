@@ -14,7 +14,8 @@
 </head>
 <body>
     <div class="container mt-5 mb-5">
-    <a href="/Grading"><input type="button" value="Back" class="btn pink lighten-1 px-4"></a> 
+    <a href="/Grading"><input type="button" value="Back" class="btn pink lighten-1 px-4"></a>
+     
         <h2>TVL Grading Form</h2>
          <div class="container-fluid">
             <div class="row mt-5">
@@ -233,8 +234,11 @@
                 <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Exam">    
                 <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
                 </tr>   
+                <br><br>
+                <input type="submit" value="Submit" class="btn btn-success">
                 </div>
             </div>
+
         </form>
     </div>
 

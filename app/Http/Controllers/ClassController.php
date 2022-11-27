@@ -98,13 +98,13 @@ class ClassController extends Controller
     // }
 
     
-    public function update(Request $req, Classes $class){
-        $class=Classes::find($req->id);
-        $class->class_name=$req->class_name;
-        $class->class_num=$req->class_num;
-        $class->class_sec=$req->class_sec;
-        $class->class_prof=$req->class_prof;
-        $class->class_subj=$req->class_subj;
+    public function update(Request $request, Classes $class){
+        $class=Classes::find($request->id);
+        $class->class_name=$request->class_name;
+        $class->class_num=$request->class_num;
+        $class->class_sec=$request->class_sec;
+        $class->class_prof=$request->class_prof;
+        $class->class_subj=$request->class_subj;
         $class->save();
 
          return back()->with('message','Successfully Created');
