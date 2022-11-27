@@ -31,7 +31,7 @@
                     <div class="h5 col-md-6">Section</div>
                     <div class="h5 col-md-6">Subject</div>
             </div>
-         <br><br>
+         <br><
         <div class="row mt-5 mb-5">
             <div class="col-md-3 text-center">
                 <p class="h3 text-center">Assignment</p>
@@ -102,6 +102,8 @@
         <div class="row mt-5 mb-5">
             <div class="col-md-6">
                 <p class="h3 text-center">Written Task</p>
+                <tr>
+                    <div class="text-center h3"><label>HPG</label></div>
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W1">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W2">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W3">
@@ -113,9 +115,27 @@
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W9">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W10">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
+                </tr>
+                <tr>
+                    <div class="text-center h3"><label>Scores</label></div>
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W1">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W2">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W3">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W4">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W5">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W6">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W7">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W8">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W9">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="W10">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
+                </tr>
+                    
             </div>
             <div class="col-md-6 text-center">
                 <p class="h3">Performance Task</p>
+                <tr>
+                    <div class="text-center h3"><label>HPG</label></div>
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P1">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P2">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P3">
@@ -127,11 +147,38 @@
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P9">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P10">
                     <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
-            </div>
-            <div class="row">
-
+                </tr>
+                <tr>
+                    <div class="text-center h3"><label>Scores</label></div>
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P1">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P2">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P3">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P4">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P5">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P6">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P7">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P8">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P9">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="P10">
+                    <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
+                </tr>
             </div>
         </div>
+        <div class="row text-center">
+                <div class="col-md text-center">
+                <tr>
+                <div class="text-center h3"><label>HPG</label></div>
+                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Exam">    
+                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
+                </tr>
+                
+                <tr>
+                <div class="text-center h3"><label>Scores</label></div>
+                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Exam">    
+                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
+                </tr>   
+                </div>
+            </div>
     </div>
 
    <!-- Compiled and minified JavaScript -->
