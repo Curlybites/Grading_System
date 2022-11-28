@@ -157,88 +157,92 @@
             @method('PUT')
             @csrf
         <div class="row mt-5 mb-5">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <p class="h3 text-center">Written Task</p>
                 <tr>
                     <div class="text-center h3"><label>HPG</label></div>
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH1" id="WH1" claH="text-center" placeholder="W1">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH2" id="WH2" claHs="text-center" placeholder="W2">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH3" id="WH3" class="text-center" placeholder="W3">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH4" id="WH4" class="text-center" placeholder="W4">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH5" id="WH5" class="text-center" placeholder="W5">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH6" id="WH6" class="text-center" placeholder="W6">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH7" id="WH7" class="text-center" placeholder="W7">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH8" id="WH8" class="text-center" placeholder="W8">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH9" id="WH9" class="text-center" placeholder="W9">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WH10" id="WH10" class="text-center" placeholder="W10">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WHTOTAL" id="WHTOTAL" class="text-center" placeholder="Total">
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH1" id="WH1" class="writtenHpg text-center" placeholder="W1" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH2" id="WH2" class="writtenHpg text-center" placeholder="W2" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH3" id="WH3" class="writtenHpg text-center" placeholder="W3" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH4" id="WH4" class="writtenHpg text-center" placeholder="W4" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH5" id="WH5" class="writtenHpg text-center" placeholder="W5" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH6" id="WH6" class="writtenHpg text-center" placeholder="W6" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH7" id="WH7" class="writtenHpg text-center" placeholder="W7" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH8" id="WH8" class="writtenHpg text-center" placeholder="W8" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH9" id="WH9" class="writtenHpg text-center" placeholder="W9" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WH10" id="WH10" class="writtenHpg text-center" placeholder="W10" onkeypress='validate(event)'>
+                    <input type="text" style="width:50px"; min="1" max="1000" name="WHTOTAL" id="WHTOTAL" class="text-center" placeholder="Total" readonly>
                 </tr>
                 <tr>
                     <div class="text-center h3"><label>Scores</label></div>
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS1" id="WS1" class="text-center" placeholder="W1">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS2" id="WS2" class="text-center" placeholder="W2">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS3" id="WS3" class="text-center" placeholder="W3">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS4" id="WS4" class="text-center" placeholder="W4">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS5" id="WS5" class="text-center" placeholder="W5">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS6" id="WS6" class="text-center" placeholder="W6">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS7" id="WS7" class="text-center" placeholder="W7">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS8" id="WS8" class="text-center" placeholder="W8">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS9" id="WS9" class="text-center" placeholder="W9">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="WS10" id="WS10" class="text-center" placeholder="W10">
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS1" id="WS1" class="writtenScores text-center" placeholder="W1" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS2" id="WS2" class="writtenScores text-center" placeholder="W2" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS3" id="WS3" class="writtenScores text-center" placeholder="W3" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS4" id="WS4" class="writtenScores text-center" placeholder="W4" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS5" id="WS5" class="writtenScores text-center" placeholder="W5" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS6" id="WS6" class="writtenScores text-center" placeholder="W6" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS7" id="WS7" class="writtenScores text-center" placeholder="W7" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS8" id="WS8" class="writtenScores text-center" placeholder="W8" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS9" id="WS9" class="writtenScores text-center" placeholder="W9" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="WS10" id="WS10" class="writtenScores text-center" placeholder="W10" onkeypress='validate(event)'>
                     <input type="text" style="width:50px"; min="1" max="1000" name="WSTOTAL" id="WSTOTAL" class="text-center" placeholder="Total">
                 </tr>
                     
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-5 text-center">
                 <p class="h3">Performance Task</p>
                 <tr>
                     <div class="text-center h3"><label>HPG</label></div>
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH1" id="PH1" class="text-center" placeholder="P1">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH2" id="PH2" class="text-center" placeholder="P2">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH3" id="PH3" class="text-center" placeholder="P3">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH4" id="PH4" class="text-center" placeholder="P4">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH5" id="PH5" class="text-center" placeholder="P5">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH6" id="PH6" class="text-center" placeholder="P6">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH7" id="PH7" class="text-center" placeholder="P7">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH8" id="PH8" class="text-center" placeholder="P8">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH9" id="PH9" class="text-center" placeholder="P9">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PH10" id="PH10" class="text-center" placeholder="P10">
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH1" id="PH1" class="performanceHpg text-center" placeholder="P1" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH2" id="PH2" class="performanceHpg text-center" placeholder="P2" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH3" id="PH3" class="performanceHpg text-center" placeholder="P3" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH4" id="PH4" class="performanceHpg text-center" placeholder="P4" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH5" id="PH5" class="performanceHpg text-center" placeholder="P5" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH6" id="PH6" class="performanceHpg text-center" placeholder="P6" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH7" id="PH7" class="performanceHpg text-center" placeholder="P7" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH8" id="PH8" class="performanceHpg text-center" placeholder="P8" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH9" id="PH9" class="performanceHpg text-center" placeholder="P9" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PH10" id="PH10" class="performanceHpg text-center" placeholder="P10" onkeypress='validate(event)'>
                     <input type="text" style="width:50px"; min="1" max="1000" name="PHTOTAL" id="PHTOTAL" class="text-center" placeholder="Total">
                 </tr>
                 <tr>
                     <div class="text-center h3"><label>Scores</label></div>
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS1" id="PS1" class="text-center" placeholder="P1">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS2" id="PS2" class="text-center" placeholder="P2">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS3" id="PS3" class="text-center" placeholder="P3">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS4" id="PS4" class="text-center" placeholder="P4">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS5" id="PS5" class="text-center" placeholder="P5">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS6" id="PS6" class="text-center" placeholder="P6">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS7" id="PS7" class="text-center" placeholder="P7">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS8" id="PS8" class="text-center" placeholder="P8">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS9" id="PS9" class="text-center" placeholder="P9">
-                    <input type="text" style="width:50px"; min="1" max="1000" name="PS10" id="PS10" class="text-center" placeholder="P10">
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS1" id="PS1" class="performanceScores text-center" placeholder="P1" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS2" id="PS2" class="performanceScores text-center" placeholder="P2" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS3" id="PS3" class="performanceScores text-center" placeholder="P3" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS4" id="PS4" class="performanceScores text-center" placeholder="P4" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS5" id="PS5" class="performanceScores text-center" placeholder="P5" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS6" id="PS6" class="performanceScores text-center" placeholder="P6" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS7" id="PS7" class="performanceScores text-center" placeholder="P7" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS8" id="PS8" class="performanceScores text-center" placeholder="P8" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS9" id="PS9" class="performanceScores text-center" placeholder="P9" onkeypress='validate(event)'>
+                    <input type="text" style="width:40px"; min="1" max="1000" name="PS10" id="PS10" class="performanceScores text-center" placeholder="P10" onkeypress='validate(event)'>
                     <input type="text" style="width:50px"; min="1" max="1000" name="PSTOTAL" id="PSTOTAL" class="text-center" placeholder="Total">
                 </tr>
             </div>
-        </div>
-        <div class="row text-center">
-                <div class="col-md text-center">
+            <div class="col-md-1 text-center">
+               <p class="h3">Exam</p>
                 <tr>
                 <div class="text-center h3"><label>HPG</label></div>
-                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Exam">    
-                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
+                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Exam" onkeypress='validate(event)'>    
                 </tr>
                 
                 <tr>
                 <div class="text-center h3"><label>Scores</label></div>
-                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Exam">    
-                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Total">
+                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="Exam" onkeypress='validate(event)'>    
                 </tr>   
                 <br><br>
-                <input type="submit" value="Submit" class="btn btn-success">
                 </div>
-            </div>
-
+                <div class="col-md-1 text-center">
+                <p class="h3">Grade</p>
+                <tr>
+                    <br><br>
+                <div class="text-center h3"><label>Final Grade</label></div>
+                <input type="text" style="width:50px"; min="1" max="1000" class="text-center" placeholder="?" readonly>
+                </tr>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-success mt-2">
+        </div>
         </form>
     </div>
 
@@ -305,5 +309,62 @@
         });
     </script>
     <!-- End of Modal Activities  -->
+    <!-- Start Auto Compute -->
+    <Script>
+        // Written HPG Computation
+        $('.writtenHpg').keyup(function() {
+            var sum = 0;
+         $('.writtenHpg').each(function() {
+            sum += Number($(this).val());
+         });
+         $('#WHTOTAL').val(sum);  
+        });
+        // Written Scores Computation 
+        $('.writtenScores').keyup(function() {
+            var sum = 0;
+         $('.writtenScores').each(function() {
+            sum += Number($(this).val());
+         });
+         $('#WSTOTAL').val(sum);  
+        });
+        // Performance HPG Auto Compute 
+        $('.performanceHpg').keyup(function() {
+            var sum = 0;
+         $('.performanceHpg').each(function() {
+            sum += Number($(this).val());
+         });
+         $('#PHTOTAL').val(sum);  
+        });
+        // Performance Scores Auto Compute 
+        $('.performanceScores').keyup(function() {
+            var sum = 0;
+         $('.performanceScores').each(function() {
+            sum += Number($(this).val());
+         });
+         $('#PSTOTAL').val(sum);  
+        });
+    </Script>
+    <!-- End Auto Compute -->
+    <!-- Validate numbers only  -->
+    <script>
+     function validate(evt) {
+            var theEvent = evt || window.event;
+
+            // Handle paste
+            if (theEvent.type === 'paste') {
+                key = event.clipboardData.getData('text/plain');
+            } else {
+            // Handle key press
+                var key = theEvent.keyCode || theEvent.which;
+                key = String.fromCharCode(key);
+            }
+            var regex = /[0-9]|\./;
+            if( !regex.test(key) ) {
+                theEvent.returnValue = false;
+                if(theEvent.preventDefault) theEvent.preventDefault();
+            }
+            }
+    </script>
+    <!-- End of Validate Numbers -->
 </body>
 </html>
