@@ -36,46 +36,36 @@ class GradingController extends Controller
     }
 
 
-    public function updateScores(Request $request, Section $section){
+    public function updateScores(Request $request){
+        // dd($request);
+            $validated = $request->validate([
+                "WS1"=>[ 'required'],
+                "WS2"=>[ 'required'],
+                "WS3"=>[ 'required'],
+                "WS4"=>[ 'required'],
+                "WS5"=>[ 'required'],
+                "WS6"=>[ 'required'],
+                "WS7"=>[ 'required'],
+                "WS8"=>[ 'required'],
+                "WS9"=>[ 'required'],
+                "WS10"=>[ 'required'],
+                "PS1"=>[ 'required'],
+                "PS2"=>[ 'required'],
+                "PS3"=>[ 'required'],
+                "PS4"=>[ 'required'],
+                "PS5"=>[ 'required'],
+                "PS6"=>[ 'required'],
+                "PS7"=>[ 'required'],
+                "PS8"=>[ 'required'],
+                "PS9"=>[ 'required'],
+                "PS10"=>[ 'required'],
+                "exam"=>['required'],
+                'grade'=>['required']
+            ]);
 
-    /* 
-        $WH1 = $request->input('WH1');
-        $WH2 = $request->input('WH2');
-        $WH3 = $request->input('WH3');
-        $WH4 = $request->input('WH4');
-        $WH5 = $request->input('WH5');
-        $WH6 = $request->input('WH6');
-        $WH7 = $request->input('WH7');
-        $WH8 = $request->input('WH8');
-        $WH9 = $request->input('WH9');
-        $WH10 = $request->input('WH10');
-        $hpg = $request->input('WHTOTAL');
-        $result = 0;
-    */
+            $section = Section::create($validated);
+    
+            return redirect('/Grading')->with('message','Successfully Created');
 
-    /* do{
-            
-            $WH1 + $WH2 + $WH3 + $WH4 + $WH5 + $WH6 +
-            $WH7 + $WH8 + $WH9 + $WH10 = $hpg ; 
-
-        }while($hpg == null);
-
-        */
-        $section=Section::find($request->id);
-        $section->WH1=$request->WH1;
-        $section->WH1=$request->WH2;
-        $section->WH1=$request->WH3;
-        $section->WH1=$request->WH4;
-        $section->WH1=$request->WH5;
-        $section->WH1=$request->WH6;
-        $section->WH1=$request->WH7;
-        $section->WH1=$request->WH8;
-        $section->WH1=$request->WH9;
-        $section->WH1=$request->WH10;
-        $section->save();
-
-         return back()->with('message','Successfully Created');
-
-    }
-
+       }
 }
