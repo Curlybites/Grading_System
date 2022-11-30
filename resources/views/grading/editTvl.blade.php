@@ -161,7 +161,7 @@
                 <p class="h3 text-center">Written Task</p>
                 <tr>
                     <div class="text-center h3"><label>HPG</label></div>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WH1" id="WH1" class="writtenHpg text-center" placeholder="W1" onkeypress='validate(event)'>
+                    <input type="text" style="width:34px"; min="1" max="1000" value="" name="WH1" id="WH1" class="writtenHpg text-center" placeholder="W1" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="WH2" id="WH2" class="writtenHpg text-center" placeholder="W2" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="WH3" id="WH3" class="writtenHpg text-center" placeholder="W3" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="WH4" id="WH4" class="writtenHpg text-center" placeholder="W4" onkeypress='validate(event)'>
