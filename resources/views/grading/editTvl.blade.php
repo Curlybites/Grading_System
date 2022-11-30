@@ -172,8 +172,8 @@
                     <input type="text" style="width:34px"; min="1" max="1000" name="WH9" id="WH9" class="writtenHpg text-center" placeholder="W9" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="WH10" id="WH10" class="writtenHpg text-center" placeholder="W10" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="WHTOTAL" id="WHTOTAL" class="text-center WHTOTAL" placeholder="Total" readonly>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WHPS" id="WHPS" class="text-center" placeholder="PS" readonly>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WHWS" id="WHWS" class="text-center" placeholder="WS" readonly>
+                    <input type="text" style="width:34px"; min="1" max="1000" value="100" name="WHPGPS" id="WHPGPS" class="text-center" placeholder="PS" readonly>
+                    <input type="text" style="width:34px"; min="1" max="1000" value="30%" name="WHPGWS" id="WHPGWS" class="text-center" placeholder="WS" readonly>
                 </tr>
                 <tr>
                     <div class="text-center h3"><label>Scores</label></div>
@@ -188,8 +188,8 @@
                     <input type="text" style="width:34px"; min="1" max="1000" name="WS9" id="WS9" class="writtenScores text-center" placeholder="W9" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="WS10" id="WS10" class="writtenScores text-center" placeholder="W10" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="WSTOTAL" id="WSTOTAL" class="text-center WSTOTAL" placeholder="Total" readonly>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WSPS" id="WSPS" class="text-center WSPS" placeholder="PS">
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WSWS" id="WSWS" class="text-center" placeholder="WS" readonly>
+                    <input type="text" style="width:34px"; min="1" max="1000" name="WSCPS" id="WSCPS" class="text-center WSPS" placeholder="PS">
+                    <input type="text" style="width:34px"; min="1" max="1000" name="WSCWS" id="WSCWS" class="text-center" placeholder="WS" readonly>
                 </tr>
                     
             </div>
@@ -208,8 +208,8 @@
                     <input type="text" style="width:34px"; min="1" max="1000" name="PH9" id="PH9" class="performanceHpg text-center" placeholder="P9" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="PH10" id="PH10" class="performanceHpg text-center" placeholder="P10" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="PHTOTAL" id="PHTOTAL" class="text-center" placeholder="Total" readonly>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WSTOTAL" id="WSTOTAL" class="text-center" placeholder="PS" readonly>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WSTOTAL" id="WSTOTAL" class="text-center" placeholder="WS" readonly>
+                    <input type="text" style="width:34px"; min="1" max="1000" value="100" name="PHPGPS" id="PHPGPS" class="text-center" placeholder="PS" readonly>
+                    <input type="text" style="width:34px"; min="1" max="1000" value="50%" name="PHPGWS" id="PPHGWS" class="text-center" placeholder="WS" readonly>
                 </tr>
                 <tr>
                     <div class="text-center h3"><label>Scores</label></div>
@@ -224,8 +224,8 @@
                     <input type="text" style="width:34px"; min="1" max="1000" name="PS9" id="PS9" class="performanceScores text-center" placeholder="P9" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="PS10" id="PS10" class="performanceScores text-center" placeholder="P10" onkeypress='validate(event)'>
                     <input type="text" style="width:34px"; min="1" max="1000" name="PSTOTAL" id="PSTOTAL" class="text-center" placeholder="Total" readonly>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WSTOTAL" id="WSTOTAL" class="text-center" placeholder="PS" readonly>
-                    <input type="text" style="width:34px"; min="1" max="1000" name="WSTOTAL" id="WSTOTAL" class="text-center" placeholder="WS" readonly>
+                    <input type="text" style="width:34px"; min="1" max="1000" name="PPSCPS" id="PPSCPS" class="text-center" placeholder="PS" readonly>
+                    <input type="text" style="width:34px"; min="1" max="1000" name="PPSCWS" id="PPSCWS" class="text-center" placeholder="WS" readonly>
                 </tr>
             </div>
             <div class="col-md-1 text-center">
@@ -322,20 +322,25 @@
     <Script>
         // Written HPG Computation
         $('.writtenHpg').keyup(function() {
-            var sum = 0;
+            var writtenHpgScores = 0;
          $('.writtenHpg').each(function() {
-            sum += Number($(this).val());
+            writtenHpgScores += Number($(this).val());
+            
          });
-         $('#WHTOTAL').val(sum);  
-        });
+         $('#WHTOTAL').val(writtenHpgScores);  
+        
+
         // Written Scores Computation 
         $('.writtenScores').keyup(function() {
-            var sum = 0;
+            var writtenScores = 0;
          $('.writtenScores').each(function() {
-            sum += Number($(this).val());
+            writtenScores += Number($(this).val());
+         wps = writtenScores / writtenHpgScores * 100 ; 
          });
-         $('#WSTOTAL').val(sum);  
+         $('#WSTOTAL').val(writtenScores);
+         $('#WSCPS').val(wps);    
         });
+    });
         // Performance HPG Auto Compute 
         $('.performanceHpg').keyup(function() {
             var sum = 0;
@@ -344,6 +349,7 @@
          });
          $('#PHTOTAL').val(sum);  
         });
+
         // Performance Scores Auto Compute 
         $('.performanceScores').keyup(function() {
             var sum = 0;
