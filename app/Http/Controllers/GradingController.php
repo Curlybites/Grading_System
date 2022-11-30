@@ -70,7 +70,7 @@ class GradingController extends Controller
           $section->PH3=$request->PH3;
           $section->PH4=$request->PH4;
           $section->PH5=$request->PH5;
-        //   $section->PH6=$request->PH6;
+          $section->PH6=$request->PH6;
         //   $section->PH7=$request->PH7;
         //   $section->PH8=$request->PH8;
         //   $section->PH9=$request->PH9;
@@ -83,7 +83,7 @@ class GradingController extends Controller
           $section->PS3=$request->PS3;
           $section->PS4=$request->PS4;
           $section->PS5=$request->PS5;
-        //   $section->PS6=$request->PS6;
+          $section->PS6=$request->PS6;
         //   $section->PS7=$request->PS7;
         //   $section->PS8=$request->PS8;
         //   $section->PS9=$request->PS9;

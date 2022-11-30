@@ -334,30 +334,39 @@
         $('.writtenScores').keyup(function() {
             var writtenScores = 0;
          $('.writtenScores').each(function() {
-            writtenScores += Number($(this).val());
+         writtenScores += Number($(this).val());
          wps = writtenScores / writtenHpgScores * 100 ; 
+         percentage = 30;
+         wws = (percentage / 100) * wps;
          });
          $('#WSTOTAL').val(writtenScores);
-         $('#WSCPS').val(wps);    
+         $('#WSCPS').val(wps); 
+         $('#WSCWS').val(wws);     
         });
     });
         // Performance HPG Auto Compute 
         $('.performanceHpg').keyup(function() {
-            var sum = 0;
+            var performanceHpg = 0;
          $('.performanceHpg').each(function() {
-            sum += Number($(this).val());
+            performanceHpg += Number($(this).val());
          });
-         $('#PHTOTAL').val(sum);  
-        });
-
+         $('#PHTOTAL').val(performanceHpg);  
+        
         // Performance Scores Auto Compute 
         $('.performanceScores').keyup(function() {
-            var sum = 0;
+            var performanceScores = 0;
          $('.performanceScores').each(function() {
-            sum += Number($(this).val());
+            performanceScores += Number($(this).val());
+            pps = performanceScores / performanceHpg * 100 ;
+            percentage = 50 ;
+            pws = (percentage / 100 ) * pps ;
+
          });
-         $('#PSTOTAL').val(sum);  
+         $('#PSTOTAL').val(performanceScores);  
+         $('#PPSCPS').val(pps);  
+         $('#PPSCWS').val(pws);  
         });
+    });
     </Script>
     <!-- End Auto Compute -->
     <!-- PS AND WS Computation  -->

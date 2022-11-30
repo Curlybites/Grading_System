@@ -61,7 +61,7 @@ return new class extends Migration
             $table->string('PH3')->nullable();
             $table->string('PH4')->nullable();
             $table->string('PH5')->nullable();
-            // $table->string('PH6')->nullable();
+            $table->string('PH6')->nullable();
             // $table->string('PH7')->nullable();
             // $table->string('PH8')->nullable();
             // $table->string('PH9')->nullable();
@@ -74,7 +74,7 @@ return new class extends Migration
             $table->string('PS3')->nullable();
             $table->string('PS4')->nullable();
             $table->string('PS5')->nullable();
-            // $table->string('PS6')->nullable();
+            $table->string('PS6')->nullable();
             // $table->string('PS7')->nullable();
             // $table->string('PS8')->nullable();
             // $table->string('PS9')->nullable();
