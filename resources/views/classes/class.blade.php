@@ -105,7 +105,7 @@
                     <select id="class_subj" name="class_subj" required>
                     <option value="" selected disabled>Select Subject</option>
                     @foreach ($subj as $subject)
-                    <option value="{{ $subject->subj_name }}">{{ $subject->subj_name }}</option>
+                    <option value="{{ $subject->subjectName }}">{{ $subject->subjectName }}</option>
                     @endforeach
                     </select>   
  

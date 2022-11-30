@@ -10,8 +10,8 @@ class Professor extends Model
     use HasFactory;
 
     protected $fillable = [
-        'fname',
-        'lname',
+        'firstName',
+        'lastName',
         'gender',
         'email',
     ];

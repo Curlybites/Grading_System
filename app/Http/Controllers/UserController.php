@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Student;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 use Illuminate\Support\Fascades\Hash;
 use Illuminate\Support\Fascades\View;
@@ -56,12 +57,12 @@ class UserController extends Controller
 // for storing registration 
 // the variable like firstname,lastname etc are came from from in the html not in the database.
    public function store(Request $request){
+   // dd($request);
     $validated = $request->validate([
-        "firstname"=>['required','min:4'],
-        "lastname"=>['required', 'min:4'],
+        "firstName"=>['required','min:4'],
+        "lastName"=>['required', 'min:4'],
         "email"=>['required','email',Rule::unique('users','email')],
-        "password" => 'required|confirmed|min:6'
-
+        "password" => 'required|confirmed|min:4'
     ]);
                             //Hash::make($validated['password']);
     $validated['password'] = bcrypt($validated['password']);

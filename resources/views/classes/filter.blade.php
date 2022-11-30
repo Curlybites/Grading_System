@@ -131,9 +131,9 @@
                             @foreach ($list as $sec)
                                 <tr>
                                     <td>{{ $sec->id }}</td>
-                                    <td>{{ $sec->student_no }}</td>
-                                    <td>{{ $sec->first_name }}</td>
-                                    <td>{{ $sec->last_name }}</td>
+                                    <td>{{ $sec->studentID }}</td>
+                                    <td>{{ $sec->firstName }}</td>
+                                    <td>{{ $sec->lastName }}</td>
                                     <td>{{ $sec->age }}</td>
                                     <td>{{ $sec->gender }}</td>
                                     <td>{{ $sec->email }}</td>
@@ -187,31 +187,31 @@
                                     var dataStud6 = {};
                                     var dataStud7 = {};
                                     for (var i= 0; i < studArray.length; i++){
-                                        dataStud[studArray[i].student_no] = null; 
-                                        dataStud2[studArray[i].student_no] = studArray[i];
-                                        dataStud3[studArray[i].student_no] = studArray[i];
-                                        dataStud4[studArray[i].student_no] = studArray[i];
-                                        dataStud5[studArray[i].student_no] = studArray[i];
-                                        dataStud6[studArray[i].student_no] = studArray[i];
-                                        dataStud7[studArray[i].student_no] = studArray[i];
+                                        dataStud[studArray[i].studentID] = null; 
+                                        dataStud2[studArray[i].studentID] = studArray[i];
+                                        dataStud3[studArray[i].studentID] = studArray[i];
+                                        dataStud4[studArray[i].studentID] = studArray[i];
+                                        dataStud5[studArray[i].studentID] = studArray[i];
+                                        dataStud6[studArray[i].studentID] = studArray[i];
+                                        dataStud7[studArray[i].studentID] = studArray[i];
                                     }
                                     for (var i= 0; i < studArray.length; i++){
-                                        dataStud[studArray[i].first_name] = null; 
-                                        dataStud2[studArray[i].first_name] = studArray[i];
-                                        dataStud3[studArray[i].first_name] = studArray[i];
-                                        dataStud4[studArray[i].first_name] = studArray[i];
-                                        dataStud5[studArray[i].first_name] = studArray[i];
-                                        dataStud6[studArray[i].first_name] = studArray[i];
-                                        dataStud7[studArray[i].first_name] = studArray[i];
+                                        dataStud[studArray[i].firstName] = null; 
+                                        dataStud2[studArray[i].firstName] = studArray[i];
+                                        dataStud3[studArray[i].firstName] = studArray[i];
+                                        dataStud4[studArray[i].firstName] = studArray[i];
+                                        dataStud5[studArray[i].firstName] = studArray[i];
+                                        dataStud6[studArray[i].firstName] = studArray[i];
+                                        dataStud7[studArray[i].firstName] = studArray[i];
                                     }
                                     for (var i= 0; i < studArray.length; i++){
-                                        dataStud[studArray[i].last_name] = null; 
-                                        dataStud2[studArray[i].last_name] = studArray[i];
-                                        dataStud3[studArray[i].last_name] = studArray[i];
-                                        dataStud4[studArray[i].last_name] = studArray[i];
-                                        dataStud5[studArray[i].last_name] = studArray[i];
-                                        dataStud6[studArray[i].last_name] = studArray[i];
-                                        dataStud7[studArray[i].last_name] = studArray[i];
+                                        dataStud[studArray[i].lastName] = null; 
+                                        dataStud2[studArray[i].lastName] = studArray[i];
+                                        dataStud3[studArray[i].lastName] = studArray[i];
+                                        dataStud4[studArray[i].lastName] = studArray[i];
+                                        dataStud5[studArray[i].lastName] = studArray[i];
+                                        dataStud6[studArray[i].lastName] = studArray[i];
+                                        dataStud7[studArray[i].lastName] = studArray[i];
                                     }
                                     console.log("dataStud7");
                                     console.log(dataStud7);
@@ -225,13 +225,13 @@
                                     data: dataStud,
                                     onAutocomplete:function(reqdata){
                                         console.log(reqdata);
-                                        $('#fname').val(dataStud2[reqdata]['first_name']);
-                                        $('#lname').val(dataStud2[reqdata]['last_name']);
+                                        $('#fname').val(dataStud2[reqdata]['firstName']);
+                                        $('#lname').val(dataStud2[reqdata]['lastName']);
                                         $('#age').val(dataStud2[reqdata]['age']);
                                         $('#gender').val(dataStud2[reqdata]['gender']);
                                         $('#email').val(dataStud2[reqdata]['email']);
                                         $('#contact_no').val(dataStud2[reqdata]['contact_no']);
-                                        $('#student_no').val(dataStud2[reqdata]['student_no']);
+                                        $('#student_no').val(dataStud2[reqdata]['studentID']);
                                     }
                                 });
                                 // end 

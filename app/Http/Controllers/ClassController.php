@@ -8,6 +8,7 @@ use App\Models\Professor;
 use App\Models\Student;
 use App\Models\Subject;
 use App\Models\Section;
+use App\Models\Faculties;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\DashboardController;
 
@@ -48,7 +49,7 @@ class ClassController extends Controller
     }
 
     public function classResult(){
-        $prof = Professor::all();
+        $prof = Faculties::all();
         $subj = Subject::all();
         $data = Classes::paginate(5);
         return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
@@ -64,7 +65,7 @@ class ClassController extends Controller
 
     public function show($id){
         $data = Classes::findorFail($id);
-        $list = Professor::all();
+        $list = Faculties::all();
         $subject = Subject::all();
         
         return view('classes.edit',['class' => $data],['professor'=>$list]+['subject'=>$subject]);
@@ -115,7 +116,7 @@ class ClassController extends Controller
 
     public function showClass(){
         
-       $professor = Professor::all();
+       $professor = Faculties::all();
        $subject = Subject::all();
        return view('classes.class',['professor' => $professor],['subject' => $subject]);
     

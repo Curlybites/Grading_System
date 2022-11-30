@@ -14,8 +14,8 @@
     
     <form action="/store" method ="POST" enctype="multipart/form-data" class="flex flex-col ">
         @csrf
-        <input type="text" name="firstname" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="First Name" required>
-        <input type="text" name="lastname" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Last Name" required>
+        <input type="text" name="firstName" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="First Name" required>
+        <input type="text" name="lastName" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Last Name" required>
 
         <input type="email" name="email" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Email" required>
 

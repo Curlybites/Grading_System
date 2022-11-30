@@ -18,8 +18,8 @@ class ProfessorFactory extends Factory
     {
         return [
 
-                'fname' => fake()->firstname(),
-                'lname' => fake()->lastname(),
+                'firstName' => fake()->firstname(),
+                'lastName' => fake()->lastname(),
                 'gender' => fake()->randomElement(['Male', 'Female']),
                 'email' => fake()->safeEmail(),
 

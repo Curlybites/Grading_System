@@ -17,9 +17,9 @@ class SubjectFactory extends Factory
     public function definition()
     {
         return [
-            'subj_name' => fake()->name(),
-            'subj_code' => fake()->numerify(),
-            'subj_unit' => fake()->numerify($min=1,$max=10),
+            'subjectName' => fake()->name(),
+            'subjectCode' => fake()->numerify(),
+            'subjectUnit' => fake()->numerify($min=1,$max=10),
         ];
     }
 }

@@ -42,12 +42,12 @@
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="firstname" placeholder="First Name" required/>
+              <input type="text" name="firstName" placeholder="First Name" required/>
             </div>
 
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="lastname" placeholder="Last Name" required/>
+                <input type="text" name="lastName" placeholder="Last Name" required/>
               </div>
 
             <div class="input-field">
@@ -65,10 +65,10 @@
                 <input type="password" name="password_confirmation" minlength="8" placeholder="Confirmed Password" required />
               </div>
               
-              <div class="input-field">
+              <!-- <div class="input-field">
                 <i class="fas fa-file"></i>
                 <input class="file-input" type="file" placeholder="" name="image" />
-              </div>
+              </div> -->
             <input type="submit" class="btn" value="Sign up" />
           </form>
         </div>

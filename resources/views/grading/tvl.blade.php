@@ -111,9 +111,9 @@
                         <tbody>
                         @forelse ( $list as $sec )
                              <tr>
-                                    <td class="text-center">{{ $sec->student_no }}</td>
-                                    <td>{{ $sec->first_name }}</td>
-                                    <td>{{ $sec->last_name }}</td>
+                                    <td class="text-center">{{ $sec->studentID }}</td>
+                                    <td>{{ $sec->firstName }}</td>
+                                    <td>{{ $sec->lastName }}</td>
                                     <td>{{ $sec->gender }}</td>
                                     <td>{{ $sec->class_sec }}</td>
                                     <td>{{ $sec->class_subj }}</td>

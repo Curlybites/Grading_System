@@ -157,7 +157,7 @@
 
             <div class="profile">
                 <div class="info">
-                    <p>hey, <b>{{ Auth::user()->firstname }}</b></p>
+                    <p>hey, <b>{{ Auth::user()->firstName }}</b></p>
                     <small class="text-muted">Admin</small>
                 </div>
 

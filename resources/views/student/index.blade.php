@@ -98,8 +98,8 @@
                             @foreach($students as $student)
                             <tr>
                                 <td>{{ $student->id }}</td>
-                                <td>{{ $student->first_name }}</td>
-                                <td>{{ $student->last_name }}</td>
+                                <td>{{ $student->firstName }}</td>
+                                <td>{{ $student->lastName }}</td>
                                 <td class="warning">{{ $student->age }}</td>
                                 <td class="primary">{{ $student->gender }}</td>
                                 <td class="primary">{{ $student->email }}</td>

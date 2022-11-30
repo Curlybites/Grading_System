@@ -20,13 +20,13 @@
          <div class="container">
             <div class="row mt-5">
                     <div class="col-md-4">
-                        <label class="h3 text-center">Student Number: <label class="h3">{{ $sec->student_no }}</label></label>
+                        <label class="h3 text-center">Student Number: <label class="h3">{{ $sec->studentID }}</label></label>
                     </div>
                     <div class="col-md-4">
-                        <label class="h3 text-center">Last Name: <label class="h3">{{ $sec->last_name }}</label></label>
+                        <label class="h3 text-center">Last Name: <label class="h3">{{ $sec->lastName }}</label></label>
                     </div>
                     <div class="col-md-4">
-                        <label class="h3 text-center">First Name: <label class="h3">{{ $sec->first_name }}</label></label>
+                        <label class="h3 text-center">First Name: <label class="h3">{{ $sec->firstName }}</label></label>
                     </div>
             </div>
             <div class="row container">

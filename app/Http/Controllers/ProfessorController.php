@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Professor;
+use App\Models\Faculties;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Fascades\Hash;
 use Illuminate\Support\Fascades\View;
@@ -19,27 +19,27 @@ class ProfessorController extends Controller
             "email"=>['required','email',Rule::unique('professors','email')]
         ]);
 
-        $prof = Professor::create($validated);
+        $prof = Faculties::create($validated);
 
         return redirect('/Professor')->with('message','Successfully Created');
     }
 
     public function list(){
 
-        $data = Professor::paginate(5);
+        $data = Faculties::paginate(5);
         return view ('professor.professor',['professors'=> $data]);
     }
 
     public function show($id){
-        $data = Professor::findorFail($id);
+        $data = Faculties::findorFail($id);
         // dd($data);
         return view('professor.profEdit',['prof' => $data]);
     }
 
-    public function update(Request $req, Professor $professor){
-        $professor=Professor::find($req->id);
-        $professor->fname=$req->fname;
-        $professor->lname=$req->lname;
+    public function update(Request $req, Faculties $professor){
+        $professor=Faculties::find($req->id);
+        $professor->firstName=$req->firstName;
+        $professor->lastName=$req->lastName;
         $professor->gender=$req->gender;
         $professor->email=$req->email;
         $professor->save();

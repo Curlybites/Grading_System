@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Professor;
+use App\Models\Faculties;
 use App\Models\Student;
 use App\Models\Subject;
 use App\Models\Users;
@@ -60,7 +60,7 @@ class DashboardController extends Controller
     public function studnum(){
         
         $student = Student::all();
-        $professor = Professor::all();
+        $professor = Faculties::all();
         $subject = Subject::all();
         return view('student.dashboard',['students'=>$student],['prof'=>$professor] + ['subj'=>$subject]);
     }
