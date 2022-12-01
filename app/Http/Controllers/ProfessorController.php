@@ -13,8 +13,8 @@ class ProfessorController extends Controller
 {
     public function create(Request $request){
         $validated = $request->validate([
-            "fname"=>['required'],
-            "lname"=>['required'],
+            "firstName"=>['required'],
+            "lastName"=>['required'],
             "gender"=>['required'],
             "email"=>['required','email',Rule::unique('professors','email')]
         ]);

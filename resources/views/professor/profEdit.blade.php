@@ -13,10 +13,10 @@
     @method('PUT')
     @csrf
     <label for="fname">First Name</label>
-    <input class="input-form" type="text" id="fname" name="fname" placeholder="Given Name" value="{{ $prof->firstName }}" required>
+    <input class="input-form" type="text" id="firstName" name="firstName" placeholder="Given Name" value="{{ $prof->firstName }}" required>
 
     <label for="lname">Last Name</label>
-    <input class="input-form" type="text" id="lname" name="lname" placeholder="Family Name"   value="{{ $prof->lastName }}" required>
+    <input class="input-form" type="text" id="lastName" name="lastName" placeholder="Family Name"   value="{{ $prof->lastName }}" required>
 
     <label for="gender">Gender</label>
     <select id="gender" name="gender"  required>

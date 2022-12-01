@@ -82,13 +82,13 @@
       <form action="/Course/add" method="post">
         @csrf
         <label for="subj_name">Subject Name</label>
-        <input class="input-form" type="text" id="subj_name" name="subj_name" placeholder="" required>
+        <input class="input-form" type="text" id="subjectName" name="subjectName" placeholder="" required>
 
         <label for="subj_code">Subject Code</label>
-        <input class="input-form" type="text" id="subj_code" name="subj_code" placeholder="" required>
+        <input class="input-form" type="text" id="subjectCode" name="subjectCode" placeholder="" required>
 
         <label for="subj_unit">Subject Unit</label>
-        <input class="input-form" type="number" id="subj_unit" name="subj_unit" placeholder="" required>
+        <input class="input-form" type="number" id="subjectUnit" name="subjectUnit" placeholder="" required>
 
 
         <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
@@ -135,7 +135,7 @@
 
 
             <ul class="page">
-                <li></li>
+                <li>{{ $subject->links('pagination::bootstrap-4') }}</li>
             </ul>
 
 

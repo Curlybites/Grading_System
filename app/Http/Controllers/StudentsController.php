@@ -13,9 +13,9 @@ class StudentsController extends Controller
 {
     public function create(Request $request){
         $validated = $request->validate([
-            "student_no"=>['required'],
-            "first_name"=>['required'],
-            "last_name"=>['required'],
+            "studentID"=>['required'],
+            "firstName"=>['required'],
+            "lastName"=>['required'],
             "age"=>['required'],
             "gender"=>['required'],
             "contact_no"=>['required'],
@@ -60,9 +60,9 @@ class StudentsController extends Controller
 
     public function update(Request $req, Student $student){
         $student=Student::find($req->id);
-        $student->student_no=$req->student_no;
-        $student->first_name=$req->first_name;
-        $student->last_name=$req->last_name;
+        $student->studentID=$req->studentID;
+        $student->firstName=$req->firstName;
+        $student->lastName=$req->lastName;
         $student->age=$req->age;
         $student->gender=$req->gender;
         $student->contact_no=$req->contact_no;

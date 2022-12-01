@@ -17,9 +17,9 @@ class SubjectController extends Controller
         // dd($request);
 
         $validated = $request->validate([
-            "subj_name"=>['required'],
-            "subj_code"=>['required'],
-            "subj_unit"=>['required']
+            "subjectName"=>['required'],
+            "subjectCode"=>['required'],
+            "subjectUnit"=>['required']
         ]);
 
         $prof = Subject::create($validated);
@@ -35,9 +35,9 @@ class SubjectController extends Controller
 
     public function update(Request $req, Subject $subject){
         $subject=Subject::find($req->id);
-        $subject->subj_name=$req->subj_name;
-        $subject->subj_code=$req->subj_code;
-        $subject->subj_unit=$req->subj_unit;
+        $subject->subjectName=$req->subjectName;
+        $subject->subjectCode=$req->subjectCode;
+        $subject->subjectUnit=$req->subjectUnit;
         $subject->save();
 
          return redirect('/Course')->with('message','Successfully Created');

@@ -81,10 +81,10 @@
       <form action="/Professor/create" method="POST">
         @csrf
         <label for="fname">First Name</label>
-        <input class="input-form" type="text" id="fname" name="fname" placeholder="Given Name" required>
+        <input class="input-form" type="text" id="fitstName" name="fitstName" placeholder="Given Name" required>
 
         <label for="lname">Last Name</label>
-        <input class="input-form" type="text" id="lname" name="lname" placeholder="Family Name" required>
+        <input class="input-form" type="text" id="lastName" name="lastName" placeholder="Family Name" required>
 
         <label for="gender">Gender</label>
         <select id="gender" name="gender" required>

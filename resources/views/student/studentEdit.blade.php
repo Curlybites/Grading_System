@@ -10,13 +10,13 @@
           @method('PUT')
           @csrf
           <label for="stud_no">Student Number</label>
-          <input class="input-form" type="text" id="stud_no" name="student_no" placeholder="Your Student number.." value="{{ $stud->student_no }}" required>
+          <input class="input-form" type="text" id="studentID" name="studentID" placeholder="Your Student number.." value="{{ $stud->studentID }}" required>
       
           <label for="fname">First Name</label>
-          <input class="input-form" type="text" id="fname" name="first_name" placeholder="Your name.." value="{{ $stud->first_name }}" required>
+          <input class="input-form" type="text" id="firstName" name="firstName" placeholder="Your name.." value="{{ $stud->firstName }}" required>
       
           <label for="lname">Last Name</label>
-          <input class="input-form" type="text" id="lname" name="last_name" placeholder="Your last name.." value="{{ $stud->last_name }}" required>
+          <input class="input-form" type="text" id="lastName" name="lastName" placeholder="Your last name.." value="{{ $stud->lastName }}" required>
           <label for="age">Age</label>
           <input class="input-form" type="number" id="age" name="age" placeholder="Your age.." value="{{ $stud->age }}" required>
       

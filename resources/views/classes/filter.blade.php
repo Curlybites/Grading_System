@@ -46,12 +46,12 @@
                                                     <div class="row mt-5">
                                                             <div class="col-6">
                                                                 <label class="h6">First Name</label>
-                                                                <input type="text" class="form-control text-dark" id="fname" placeholder="" name="first_name" required readonly>
+                                                                <input type="text" class="form-control text-dark" id="firstName" placeholder="" name="firstName" required readonly>
                                                             </div>
 
                                                             <div class="col-6">
                                                                 <label class="h6">Last Name</label>
-                                                                <input type="text" class="form-control text-dark" id="lname" placeholder="" name="last_name" required readonly>
+                                                                <input type="text" class="form-control text-dark" id="lastName" placeholder="" name="lastName   " required readonly>
                                                             </div>
                                                     </div>
                                                     
@@ -93,7 +93,7 @@
                                                 
                                                     <div class="container text-center">
                                                         <label class="text-center h6">Student Number</label>
-                                                        <input type="text" class="form-control text-dark text-center" id="student_no" value="" name="student_no" required readonly>    
+                                                        <input type="text" class="form-control text-dark text-center" id="studentID" value="" name="studentID" required readonly>    
                                                     </div>
 
                                                     <div class="modal-footer">
@@ -225,13 +225,13 @@
                                     data: dataStud,
                                     onAutocomplete:function(reqdata){
                                         console.log(reqdata);
-                                        $('#fname').val(dataStud2[reqdata]['firstName']);
-                                        $('#lname').val(dataStud2[reqdata]['lastName']);
-                                        $('#age').val(dataStud2[reqdata]['age']);
-                                        $('#gender').val(dataStud2[reqdata]['gender']);
-                                        $('#email').val(dataStud2[reqdata]['email']);
-                                        $('#contact_no').val(dataStud2[reqdata]['contact_no']);
-                                        $('#student_no').val(dataStud2[reqdata]['studentID']);
+                                        $('#firstName').val(dataStud7[reqdata]['firstName']);
+                                        $('#lastName').val(dataStud7[reqdata]['lastName']);
+                                        $('#age').val(dataStud7[reqdata]['age']);
+                                        $('#gender').val(dataStud7[reqdata]['gender']);
+                                        $('#email').val(dataStud7[reqdata]['email']);
+                                        $('#contact_no').val(dataStud7[reqdata]['contact_no']);
+                                        $('#studentID').val(dataStud7[reqdata]['studentID']);
                                     }
                                 });
                                 // end 

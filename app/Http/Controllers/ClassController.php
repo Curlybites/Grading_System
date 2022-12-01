@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Classes;
-use App\Models\Professor;
 use App\Models\Student;
 use App\Models\Subject;
 use App\Models\Section;
@@ -32,9 +31,9 @@ class ClassController extends Controller
     public function filtercreate(Request $request) {
         //dd($request);
         $validated = $request->validate([
-            "student_no"=>['required'],
-            "first_name"=>['required'],
-            "last_name"=>['required'],
+            "studentID"=>['required'],
+            "firstName"=>['required'],
+            "lastName"=>['required'],
             "age"=>[ 'required'],
             "gender"=>[ 'required'],
             "email"=>[ 'required'],
@@ -55,13 +54,6 @@ class ClassController extends Controller
         return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
     }
 
-    
-    // public function Result(){
-    //     $prof = Professor::all();
-    //     $subj = Subject::all();
-    //     $data = Classes::paginate(15);
-    //     return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
-    // }
 
     public function show($id){
         $data = Classes::findorFail($id);
@@ -84,20 +76,6 @@ class ClassController extends Controller
         return view ('classes.filter');
     }
     
-
-    // public function edit(Request $request, Classes $class){
-    //     // dd($request);
-    //     $validated = $request->validate([
-    //         "class_name"=>['required'],
-    //         "class_num"=>['required'],
-    //         "class_sec"=>['required'],
-    //     ]);
-        
-    //      $class->save($validated);
-
-    //     return back()->with('message','Successfully Updated');
-    // }
-
     
     public function update(Request $request, Classes $class){
         $class=Classes::find($request->id);

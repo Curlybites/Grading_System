@@ -25,7 +25,7 @@
                     <select name="class_prof" id="classprof">
                         <option value="{{ $class->class_prof }}" class="line">{{ $class->class_prof }}</option>
                         @foreach ($professor as $prof)
-                        <option value="{{ $prof->fname }} {{ $prof->lname }}">{{ $prof->fname}} {{ $prof->lname }}</option>
+                        <option value="{{ $prof->firstName }} {{ $prof->lastName }}">{{ $prof->firstName}} {{ $prof->lastName }}</option>
                         @endforeach 
                     </select>
                 
@@ -33,7 +33,7 @@
                     <select name="class_subj" id="class_subj">
                         <option value="{{ $class->class_subj }}" class="line">{{ $class->class_subj }}</option>
                         @foreach ($subject as $subj)
-                            <option value="{{ $subj->subj_name }}">{{ $subj->subj_name }}</option>
+                            <option value="{{ $subj->subjectName }}">{{ $subj->subjectName }}</option>
                         @endforeach
                     </select>
 
