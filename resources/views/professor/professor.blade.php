@@ -80,10 +80,10 @@
     <div class="create-stud">
       <form action="/Professor/create" method="POST">
         @csrf
-        <label for="fname">First Name</label>
-        <input class="input-form" type="text" id="fitstName" name="fitstName" placeholder="Given Name" required>
+        <label for="fitstName">First Name</label>
+        <input class="input-form" type="text" id="firstName" name="firstName" placeholder="Given Name" required>
 
-        <label for="lname">Last Name</label>
+        <label for="lastName">Last Name</label>
         <input class="input-form" type="text" id="lastName" name="lastName" placeholder="Family Name" required>
 
         <label for="gender">Gender</label>

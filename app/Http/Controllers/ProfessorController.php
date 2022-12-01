@@ -16,7 +16,7 @@ class ProfessorController extends Controller
             "firstName"=>['required'],
             "lastName"=>['required'],
             "gender"=>['required'],
-            "email"=>['required','email',Rule::unique('professors','email')]
+            "email"=>['required','email',Rule::unique('Faculties','email')]
         ]);
 
         $prof = Faculties::create($validated);

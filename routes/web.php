@@ -71,13 +71,13 @@ Route::controller(SubjectController::class)->group(function () {
 Route::controller(ClassController::class)->group(function(){
     Route::get('/class/{id}','show');
     Route::put('/class/{id}','update');
-    Route::post('/store-class','create');
     Route::get('/Class/','classResult');
     Route::get('/filterdata','filterdata');
     Route::get('/store-class','showClass');
     Route::get('/filterdata/{id}','test');
     Route::get('/filterdatas/','getStudent');
-    Route::post('/filterdata/','filtercreate');
+    Route::post('/store-class','create');
+   // Route::post('/filterdata/','filtercreate');
     Route::post('filterdata/','filtercreate');
 });
 
@@ -119,9 +119,7 @@ Route::controller(SectionController::class)->group(function(){
 Route::controller(GradingController::class)->group(function(){
 
     Route::get('/grading.tvl','grading_list');
-    // Route::get('/editTvl','tvledit');
     Route::get('/editTvl/{id}','findStudent');
-   // Route::put('/editTvl/{id}','updateScores');
     Route::put('/editTvl/{id}','updateScores');
 });
 
