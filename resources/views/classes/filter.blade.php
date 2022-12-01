@@ -51,7 +51,7 @@
 
                                                             <div class="col-6">
                                                                 <label class="h6">Last Name</label>
-                                                                <input type="text" class="form-control text-dark" id="lastName" placeholder="" name="lastName   " required readonly>
+                                                                <input type="text" class="form-control text-dark" id="lastName" placeholder="" name="lastName" required readonly>
                                                             </div>
                                                     </div>
                                                     
@@ -93,7 +93,7 @@
                                                 
                                                     <div class="container text-center">
                                                         <label class="text-center h6">Student Number</label>
-                                                        <input type="text" class="form-control text-dark text-center" id="studentID" value="" name="studentID" required readonly>    
+                                                        <input type="text" class="form-control text-dark text-center" id="studentID" name="studentID" required readonly>    
                                                     </div>
 
                                                     <div class="modal-footer">

@@ -78,7 +78,7 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/filterdatas/','getStudent');
     Route::post('/store-class','create');
    // Route::post('/filterdata/','filtercreate');
-    Route::post('filterdata/','filtercreate');
+    Route::post('/filterdata/','filtercreate');
 });
 
 Route::controller(ProfessorController::class)->group(function(){
