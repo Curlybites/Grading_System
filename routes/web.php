@@ -48,7 +48,7 @@ Route::get('/acad',[DashboardController::class,'acadGrading']);
 Route::get('/core',[DashboardController::class,'coreGrading']);
 
 /*************************************** Route for Create and Display Function for Class  ************************************/
-Route::get('/add/student',[StudentsController::class,'create']);
+Route::get('/z/student',[StudentsController::class,'create']);
 
 
 /*************************************** Route for Create and Display Function for Professor  ************************************/

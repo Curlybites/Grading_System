@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('class_sec');
             $table->string('class_prof')->nullable();
             $table->string('class_subj')->nullable();
+            $table->string('sectionID')->nullable();
+            $table->string('subjectID')->nullable();
             $table->timestamps();
         });
     }

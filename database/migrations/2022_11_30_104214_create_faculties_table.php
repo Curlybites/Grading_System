@@ -23,7 +23,6 @@ return new class extends Migration
                 $table->string('username')->nullable();
                 $table->string('password')->nullable();
                 $table->string('department')->nullable();
-                $table->string('email')->nullable();
                 $table->timestamps();
         });
     }

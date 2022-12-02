@@ -131,7 +131,7 @@
                         <td class="primary">{{ $prof->firstName }}</td>
                         <td class="primary">{{ $prof->lastName }}</td>
                         <td class="primary">{{ $prof->gender}}</td>
-                        <td class="primary">{{ $prof->email }}</td>
+                        <td class="primary">{{ $prof->username }}</td>
                         <td class="warning"><a href="/prof/{{ $prof->id }}" class="btn-warning">Edit</a></td>
                     </tr>
                     @endforeach

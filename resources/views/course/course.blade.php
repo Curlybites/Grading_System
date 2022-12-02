@@ -85,7 +85,7 @@
         <input class="input-form" type="text" id="subjectName" name="subjectName" placeholder="" required>
 
         <label for="subj_code">Subject Code</label>
-        <input class="input-form" type="text" id="subjectCode" name="subjectCode" placeholder="" required>
+        <input class="input-form" type="text" id="subjectID" name="subjectID" placeholder="" required>
 
         <label for="subj_unit">Subject Unit</label>
         <input class="input-form" type="number" id="subjectUnit" name="subjectUnit" placeholder="" required>
@@ -122,7 +122,7 @@
                     <tr>
                         <td class="primary">{{ $row ->id }}</td>
                         <td class="primary">{{ $row ->subjectName}}</td>
-                        <td class="primary">{{ $row ->subjectCode }}</td>
+                        <td class="primary">{{ $row ->subjectID }}</td>
                         <td class="primary">{{ $row ->subjectUnit }}</td>
                         <td class="warning"><a href="/course/{{ $row->id }}" class="btn-warning">Edit</a></td>
                     </tr>

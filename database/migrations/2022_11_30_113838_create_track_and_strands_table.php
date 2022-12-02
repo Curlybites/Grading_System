@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('track_and_strand', function (Blueprint $table) {
+        Schema::create('track_and_strands', function (Blueprint $table) {
             $table->id();
             $table->string('track')->unique();
             $table->string('strandName');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('track_and_strand');
+        Schema::dropIfExists('track_and_strands');
     }
 };

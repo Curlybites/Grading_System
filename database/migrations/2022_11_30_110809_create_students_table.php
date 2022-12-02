@@ -19,10 +19,11 @@ return new class extends Migration
             $table->string('firstName');
             $table->string('middleName')->nullable();
             $table->string('lastName');
-		    $table->string('age');
-            $table->string('gender');
+		    $table->string('age')->nullable();
+            $table->string('gender')->nullable();
             $table->string('dateOfBirth')->nullable();
             $table->string('address')->nullable();
+            $table->string('track')->nullable();
             $table->string('strandID')->nullable();
             $table->string('sectionID')->nullable();
 	     	$table->string('contact_no');

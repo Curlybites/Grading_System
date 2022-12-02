@@ -18,7 +18,7 @@ class SubjectController extends Controller
 
         $validated = $request->validate([
             "subjectName"=>['required'],
-            "subjectCode"=>['required'],
+            "subjectID"=>['required'],
             "subjectUnit"=>['required']
         ]);
 
@@ -36,7 +36,7 @@ class SubjectController extends Controller
     public function update(Request $req, Subject $subject){
         $subject=Subject::find($req->id);
         $subject->subjectName=$req->subjectName;
-        $subject->subjectCode=$req->subjectCode;
+        $subject->subjectID=$req->subjectID;
         $subject->subjectUnit=$req->subjectUnit;
         $subject->save();
 
