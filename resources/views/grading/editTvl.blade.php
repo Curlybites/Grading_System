@@ -230,8 +230,7 @@
          $('#WSTOTAL').val(writtenScores);
          $('#WSCPS').val(wps); 
          $('#WSCWS').val(wws);     
-        });
-    });
+      //
         // Performance HPG Auto Compute 
         $('.performanceHpg').keyup(function() {
             var performanceHpg = 0;
@@ -253,9 +252,7 @@
          $('#PSTOTAL').val(performanceScores);  
          $('#PPSCPS').val(pps);  
          $('#PPSCWS').val(pws);  
-        });
-    });
-
+     //
       $('#hpgexam').keyup(function() {
         var hpgexam = $(this).val();
             
@@ -266,24 +263,15 @@
               ws = (percentage / 100) * ps ;
               $('#sps').val(ps);
               $('#sws').val(ws);
-            }); 
-    });
-
-    $('#WSCWS').keyup(function() {
-        var WSCWS = $(this).val();
-
-        $('#PPSCWS').keyup(function() {
-        var PPSCWS = $(this).val();
-
-        $('#sws').keyup(function() {
-         var sexam = $(this).val();
-
-         total = WSCWS + PPSCWS +  sexam ; 
-         $('#grade').val(ws);
+            total = wws + pws + ws 
+              $('#grade').val(total);
+                        }); 
+                    });
+                 });
             });
         });
     });
-    
+
     </Script>   
     <!-- End Auto Compute -->
  
