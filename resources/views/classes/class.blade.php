@@ -96,7 +96,7 @@
                 <label for="class_prof">Professor</label>
                     <select id="class_prof" name="class_prof" required>
                     <option value="" selected disabled>Select Professor</option>
-                     @foreach ($professor as $data)
+                     @foreach ($faculties as $data)
                     <option  value="{{ $data->firstName }} {{ $data->lastName }}">{{ $data->firstName }} {{ $data->lastName }}</option>
                     @endforeach
                     </select>
@@ -104,7 +104,7 @@
                  <label for="class_subj">Subject</label>
                     <select id="class_subj" name="class_subj" required>
                     <option value="" selected disabled>Select Subject</option>
-                    @foreach ($subj as $subject)
+                    @foreach ($subjects as $subject)
                     <option value="{{ $subject->subjectName }}">{{ $subject->subjectName }}</option>
                     @endforeach
                     </select>   
@@ -128,24 +128,24 @@
                 <thead>
                     <tr>
                        <th>ID</th>
-                       <th>Class Name</th>
-                       <th>Class Numeric</th>
-                       <th>Class Section</th>
-                       <th>CLass Professor</th>
-                       <th>CLass Subject</th>
+                       <th>Section ID</th>
+                       <th>Section Namec</th>
+                       <th>Grade Level</th>
+                       <th>Faculty</th>
+                       <th>Subject</th>
                        <th colspan="3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     
-                   @foreach ( $classes as $class )  
+                   @foreach ( $gradeandsections as $class )  
                     <tr>
                         <td class="primary">{{ $class->id }}</td>
-                        <td class="primary">{{ $class->class_name }}</td>
-                        <td class="primary">{{ $class->class_num }}</td>
-                        <td class="primary">{{ $class->class_sec }}</td>
-                        <td class="primary">{{ $class->class_prof }}</td>
-                        <td class="primary">{{ $class->class_subj }}</td>
+                        <td class="primary">{{ $class->sectionID }}</td>
+                        <td class="primary">{{ $class->sectionName }}</td>
+                        <td class="primary">{{ $class->gradeLevel }}</td>
+                        <td class="primary">{{ $class->faculty }}</td>
+                        <td class="primary">{{ $class->subjectID }}</td>
                         <td class="warning"><a href="/class/{{ $class->id }}" class="btn-warning">Edit Data</a></td>
                         <td class="warning"><a href="/filterdata/{{ $class->id }}" class="btn-danger">Insert Student</a></td>
                     </tr>
@@ -156,7 +156,7 @@
     
            
             <ul class="page">
-                <li>{{ $classes->links('pagination::bootstrap-4') }}</li>       
+                <li></li>       
             </ul>
            
            

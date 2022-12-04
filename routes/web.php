@@ -15,6 +15,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\GradeAndSectionController;
 
 
 /*
@@ -52,8 +53,8 @@ Route::get('/z/student',[StudentsController::class,'create']);
 
 
 /*************************************** Route for Create and Display Function for Professor  ************************************/
-Route::get('/Professor',[ProfessorController::class,'list']);
-Route::post('/Professor/create',[ProfessorController::class,'create']);
+//Route::get('/Professor',[ProfessorController::class,'list']);
+//Route::post('/Professor/create',[ProfessorController::class,'create']);
 
 /*************************************** Route for Create and Display Function for Student  ************************************/
 
@@ -84,6 +85,8 @@ Route::controller(ClassController::class)->group(function(){
 Route::controller(ProfessorController::class)->group(function(){
     Route::get('/prof/{id}','show');
     Route::put('/professor/{id}','update');
+    Route::get('/Professor','list');
+    Route::post('/Professor/create','create');
 });
 
 
@@ -123,3 +126,4 @@ Route::controller(GradingController::class)->group(function(){
     Route::put('/editTvl/{id}','updateScores');
 });
 
+Route::get('/Class',[GradeAndSectionController::class,'index']);

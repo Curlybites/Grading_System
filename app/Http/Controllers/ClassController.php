@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Classes;
-use App\Models\Student;
+use App\Models\Students;
 use App\Models\Subject;
 use App\Models\Section;
 use App\Models\Faculties;
@@ -101,7 +101,7 @@ class ClassController extends Controller
     }
 
     public function getStudent() {
-        $p=Student::all();
+        $p=Students::all();
         return response()->json($p);
     }
 
