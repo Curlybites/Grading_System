@@ -132,4 +132,5 @@ Route::controller(GradeAndSectionController::class)->group(function(){
        Route::get('/filterdata/{id}','test');
        Route::get('/filterdatas/','getStudent');
        Route::get('/grading.tvl','grading_list');
+       Route::get('/editTvl/{id}','findStudent');
 });

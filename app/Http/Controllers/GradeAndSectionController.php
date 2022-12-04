@@ -10,6 +10,7 @@ use App\Models\Faculties;
 use App\Models\Subjects;
 use App\Models\Classes;
 use App\Models\Section;
+use App\Models\Student;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request as Input;
 
@@ -110,5 +111,14 @@ class GradeAndSectionController extends Controller
         $data = Students::where('sectionID',Input::get('sections'))->get();
 
         return view('grading.tvl', ['list' => $data]+['section' => $section]);
+    }
+
+    public function findStudent($id){
+
+        $data = Students::findorfail($id);
+        $list = Students::all();
+
+        return view('grading.editTvl',['sec' => $data],['list' => $list]);
+
     }
 }
