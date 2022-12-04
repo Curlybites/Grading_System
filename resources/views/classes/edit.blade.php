@@ -12,28 +12,28 @@
                 <form action="/class/{{ $class->id }}" method="POST">
                     @method('PUT') 
                     @csrf
-                    <label for="class_name">Class Name</label>
-                    <input class="input-form" type="text" id="class_name" name="class_name" placeholder="" value="{{ $class->class_name }}" required>
+                    <label for="class_name">Section ID</label>
+                    <input class="input-form" type="text" id="sectionID" name="sectionID" placeholder="" value="{{ $class->sectionID }}" required>
                 
-                    <label for="class_num">Class Numeric</label>
-                    <input class="input-form" type="text" id="class_num" name="class_num" placeholder="" value="{{ $class->class_num }}" required>
+                    <label for="class_num">Section Name</label>
+                    <input class="input-form" type="text" id="sectionName" name="sectionName" placeholder="" value="{{ $class->sectionName }}" required>
                 
-                    <label for="class_sec">Class Section</label>
-                    <input class="input-form" type="text" id="class_sec" name="class_sec" placeholder="" value="{{ $class->class_sec }}" required>
+                    <label for="class_sec">Grade Level</label>
+                    <input class="input-form" type="text" id="gradeLevel" name="gradeLevel" placeholder="" value="{{ $class->gradeLevel }}" required>
 
-                    <label for="class_prof">Class Professor</label>
-                    <select name="class_prof" id="classprof">
-                        <option value="{{ $class->class_prof }}" class="line">{{ $class->class_prof }}</option>
-                        @foreach ($professor as $prof)
+                    <label for="faculty">Faculty</label>
+                    <select name="faculty" id="faculty">
+                    <option value="{{ $class->faculty }}" class="line" select disabled>{{ $class->firstName }} {{ $class->lastName }}</option>
+                    @foreach ($professor as $prof)
                         <option value="{{ $prof->firstName }} {{ $prof->lastName }}">{{ $prof->firstName}} {{ $prof->lastName }}</option>
                         @endforeach 
                     </select>
                 
-                    <label for="class_subj">Class Subject</label>
-                    <select name="class_subj" id="class_subj">
-                        <option value="{{ $class->class_subj }}" class="line">{{ $class->class_subj }}</option>
+                    <label for="subjectID">Section Subject</label>
+                    <select name="subjectID" id="subjectID">
+                        <option  value="{{ $class->subjectID }}" class="line" selected disabled>{{ $class->subjectID }}</option>
                         @foreach ($subject as $subj)
-                            <option value="{{ $subj->subjectName }}">{{ $subj->subjectName }}</option>
+                            <option value="{{ $subj->subjectID }}">{{ $subj->subjectID }}</option>
                         @endforeach
                     </select>
 

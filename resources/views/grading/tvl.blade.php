@@ -68,7 +68,7 @@
                                             <select name="sections" class="form-control select mx-4">
                                                 <option value="" class="text-center">Select Section & Subject</option>
                                                 @foreach ( $section as $sec )
-                                                  <option value="{{ $sec->class_sec }}" class="text-center">{{ $sec->class_sec }} {{ $sec->class_subj }}</option>
+                                                  <option value="{{ $sec->sectionID }}" class="text-center">{{ $sec->sectionID }} {{ $sec->subjectID }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -115,8 +115,8 @@
                                     <td>{{ $sec->firstName }}</td>
                                     <td>{{ $sec->lastName }}</td>
                                     <td>{{ $sec->gender }}</td>
-                                    <td>{{ $sec->class_sec }}</td>
-                                    <td>{{ $sec->class_subj }}</td>
+                                    <td>{{ $sec->subjectID }}</td>
+                                    <td>{{ $sec->strandID }}</td>
                                     <td id="1st" name="1st" value="" placeholder=""></td>
                                     <td id="2nd" name="2nd" value="" placeholder=""></td>
                                     <td id="3rd" name="3rd" value="" placeholder=""></td>

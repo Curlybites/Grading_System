@@ -62,7 +62,7 @@
                                                             <input type="text" class="form-control text-dark" id="email" placeholder="" name="email" required readonly>
                                                      </div>
 
-                                                     <div class="col-sm-4">
+                                                     <!-- <div class="col-sm-4">
                                                            <label class="h6">Contact Number</label> 
                                                            <input type="text" class="form-control text-dark" id="contact_no" placeholder="" name="contact_no" required readonly>
                                                      </div>
@@ -70,7 +70,7 @@
                                                         <div class="col-sm-2">
                                                             <label class="h6">Age</label>
                                                             <input type="text" class="form-control text-dark" id="age" placeholder="" name="age" required readonly>
-                                                        </div>
+                                                        </div> -->
 
                                                         <div class="col-sm-2">
                                                             <label class="h6">Gender</label>
@@ -82,12 +82,12 @@
                                                     <div class="row mt-5">
                                                         <div class="col-4">
                                                             <label class="h6">Section</label>
-                                                            <input type="text" class="form-control text-dark" id="class_sec" value="{{ $class->class_sec }}" name="class_sec" required readonly>
+                                                            <input type="text" class="form-control text-dark" id="sectionID" value="{{ $class->sectionID }}" name="sectionID" required readonly>
                                                         </div>
 
                                                         <div class="col-8">
                                                             <label class="h6">Subject</label>
-                                                            <input type="text" class="form-control text-dark" id="class_subj" value="{{ $class->class_subj }}" name="class_subj" required readonly>    
+                                                            <input type="text" class="form-control text-dark" id="subjectID" value="{{ $class->subjectID }}" name="subjectID" required readonly>    
                                                         </div>
                                                     </div>  
                                                 
@@ -121,7 +121,7 @@
                                 <th>Age</th>
                                 <th>Gender</th>
                                 <th>Email</th>
-                                <th>Contact Number</th>
+                              
                                 <th>Section</th>
                                 <th>Subject</th>
                             </tr>
@@ -137,9 +137,9 @@
                                     <td>{{ $sec->age }}</td>
                                     <td>{{ $sec->gender }}</td>
                                     <td>{{ $sec->email }}</td>
-                                    <td>{{ $sec->contact_no }}</td>
-                                    <td>{{ $sec->class_sec }}</td>
-                                    <td>{{ $sec->class_subj }}</td>
+                                  
+                                    <td>{{ $sec->sectionID }}</td>
+                                    <td>{{ $sec->strandID }}</td>
                                 </tr>
                             @endforeach
                                             
@@ -230,7 +230,7 @@
                                         $('#age').val(dataStud7[reqdata]['age']);
                                         $('#gender').val(dataStud7[reqdata]['gender']);
                                         $('#email').val(dataStud7[reqdata]['email']);
-                                        $('#contact_no').val(dataStud7[reqdata]['contact_no']);
+                                   
                                         $('#studentID').val(dataStud7[reqdata]['studentID']);
                                     }
                                 });

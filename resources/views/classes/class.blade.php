@@ -129,7 +129,7 @@
                     <tr>
                        <th>ID</th>
                        <th>Section ID</th>
-                       <th>Section Namec</th>
+                       <th>Section Name</th>
                        <th>Grade Level</th>
                        <th>Faculty</th>
                        <th>Subject</th>

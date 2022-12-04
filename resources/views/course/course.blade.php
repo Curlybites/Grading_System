@@ -111,8 +111,8 @@
                     <tr>
                         <th>ID</th>
                         <th>Subject Name</th>
-                        <th>Subject Name</th>
-                        <th>Subject Name</th>
+                        <th>Subject Code</th>
+                        <th>Subject Unit</th>
                         <th>Action</th>
 
                     </tr>
@@ -123,7 +123,7 @@
                         <td class="primary">{{ $row ->id }}</td>
                         <td class="primary">{{ $row ->subjectName}}</td>
                         <td class="primary">{{ $row ->subjectID }}</td>
-                        <td class="primary">{{ $row ->subjectUnit }}</td>
+                        <td class="primary">{{ $row ->strandID }}</td>
                         <td class="warning"><a href="/course/{{ $row->id }}" class="btn-warning">Edit</a></td>
                     </tr>
                     @endforeach

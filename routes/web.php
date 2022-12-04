@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\ClassController;
-use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\UserController;
@@ -78,7 +78,6 @@ Route::controller(ClassController::class)->group(function(){
     Route::get('/filterdata/{id}','test');
     Route::get('/filterdatas/','getStudent');
     Route::post('/store-class','create');
-   // Route::post('/filterdata/','filtercreate');
     Route::post('/filterdata/','filtercreate');
 });
 
@@ -126,4 +125,11 @@ Route::controller(GradingController::class)->group(function(){
     Route::put('/editTvl/{id}','updateScores');
 });
 
-Route::get('/Class',[GradeAndSectionController::class,'index']);
+
+Route::controller(GradeAndSectionController::class)->group(function(){
+       Route::get('/Class','index');
+       Route::get('/class/{id}','show');
+       Route::get('/filterdata/{id}','test');
+       Route::get('/filterdatas/','getStudent');
+       Route::get('/grading.tvl','grading_list');
+});
