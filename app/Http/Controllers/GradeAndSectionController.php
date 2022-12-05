@@ -108,6 +108,7 @@ class GradeAndSectionController extends Controller
     public function grading_list()
     {
         $section = GradeAndSection::all();
+        $sub = Subjects::all();
         $data = Students::where('sectionID',Input::get('sections'))->get();
 
         return view('grading.tvl', ['list' => $data]+['section' => $section]);
@@ -117,7 +118,7 @@ class GradeAndSectionController extends Controller
 
         $data = Students::findorfail($id);
         $list = Students::all();
-
+        $sub = Subjects::all();
         return view('grading.editTvl',['sec' => $data],['list' => $list]);
 
     }

@@ -20,22 +20,54 @@
          <div class="container">
             <div class="row mt-5">
                     <div class="col-md-4">
-                        <label class="h3 text-center">Student Number: <label class="h3">{{ $sec->student_no }}</label></label>
+                        <label class="h3 text-center">Student Number: <label class="h3">{{ $sec->studentID }}</label></label>
                     </div>
                     <div class="col-md-4">
-                        <label class="h3 text-center">Last Name: <label class="h3">{{ $sec->last_name }}</label></label>
+                        <label class="h3 text-center">Last Name: <label class="h3">{{ $sec->lastName }}</label></label>
                     </div>
                     <div class="col-md-4">
-                        <label class="h3 text-center">First Name: <label class="h3">{{ $sec->first_name }}</label></label>
+                        <label class="h3 text-center">First Name: <label class="h3">{{ $sec->firstName }}</label></label>
                     </div>
             </div>
             <div class="row container">
-                        <div class="col-md-6 h3 text-center">Section: <label class="h3">{{ $sec->class_sec }}</label></div>
-                        <div class="col-md-6 h3 text-center">Subject: <label class="h3">{{ $sec->class_subj }}</label></div>
+                        <div class="col-md-6 h3 text-center">Section: <label class="h3">{{ $sec->sectionID }}</label></div>
+                        <!-- <div class="col-md-6 h3 text-center">Subject: <label class="h3">{{ $sec->sectionName }}</label></div> -->
                 </div>
          </div>
     </div>
 
+    <div class="container">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Assignments</th>
+                    <th>Quizzes</th>
+                    <th>Activity</th>
+                    <th>Exam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>25</td>
+                    <td>35</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>30</td>
+                    <td>15</td>
+                    <td>25</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
         <div class="container">
         <form action="/editTvl/{{ $sec->id }}" method="POST">
             @method('PUT')
