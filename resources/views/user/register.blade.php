@@ -21,7 +21,7 @@
 
         <input type="password" name="password" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Password" required>
         <input type="password" name="password_confirmation" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Confirm Password" required>
-        <input type="file" name="image" id="image"class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500">
+        
         <a href="/login">
         <p class="text-center text-gray-400 mt-3 hover:text-blue-500 mt-5">Already have an account? sign in</p>
         </a>

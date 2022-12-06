@@ -65,10 +65,7 @@
                 <input type="password" name="password_confirmation" minlength="8" placeholder="Confirmed Password" required />
               </div>
               
-              <div class="input-field">
-                <i class="fas fa-file"></i>
-                <input class="file-input" type="file" placeholder="" name="image" />
-              </div>
+      
             <input type="submit" class="btn" value="Sign up" />
           </form>
         </div>
