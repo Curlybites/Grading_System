@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('msg')->nullable();
             $table->string('read1')->nullable();
-            $table->string('times')->nullable();
+            $table->string('time')->nullable();
             $table->timestamps();
         });
     }

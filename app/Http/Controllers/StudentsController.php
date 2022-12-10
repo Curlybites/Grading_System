@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
+use App\Models\Std_registration;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Fascades\Hash;
@@ -14,7 +14,7 @@ class StudentsController extends Controller
     public function create(Request $request){
         $validated = $request->validate([
             "student_no"=>['required'],
-            "first_name"=>['required'],
+            "name"=>['required'],
             "last_name"=>['required'],
             "age"=>['required'],
             "gender"=>['required'],
@@ -23,21 +23,21 @@ class StudentsController extends Controller
             
         ]);
 
-        $stud = Student::create($validated);
+        $stud = Std_registration::create($validated);
 
         return redirect('/Student')->with('message','Successfully Created');
     }
 
     public function studlist(){
 
-        $data = Student::paginate(15);   
+        $data = Std_registration::paginate(15);   
            return view ('student.student',['students'=>$data]);
     }
 
 
     public function index(){
 
-       $data = Student::paginate(15);    
+       $data = Std_registration::paginate(15);    
     //    $data = Student::table('students')->Paginate(5);
        return view ('student.index',['students'=>$data]);
 
@@ -53,15 +53,15 @@ class StudentsController extends Controller
     }
 
     public function show($id){
-        $data = Student::findorFail($id);
+        $data = Std_registration::findorFail($id);
         // dd($data);
         return view('student.studentEdit',['stud' => $data]);
     }
 
-    public function update(Request $req, Student $student){
-        $student=Student::find($req->id);
+    public function update(Request $req, Std_registration $student){
+        $student=Std_registration::find($req->id);
         $student->student_no=$req->student_no;
-        $student->first_name=$req->first_name;
+        $student->name=$req->first_name;
         $student->last_name=$req->last_name;
         $student->age=$req->age;
         $student->gender=$req->gender;
