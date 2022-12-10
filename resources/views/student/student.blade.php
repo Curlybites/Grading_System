@@ -97,6 +97,8 @@
     <label for="a">Email</label>
     <input class="input-form" type="email" id="email" name="email" placeholder="Your Email.." required>
 
+    <label for="password">Password</label>
+    <input class="input-form" type="password" id="password" name="password" placeholder="Your Password.." required>
 
     <label for="phone">Phone</label>
     <input class="input-form" type="text" id="phone" name="phone" placeholder="Your Phone.." required>
@@ -187,7 +189,7 @@
 
         <div class="profile">
             <div class="info">
-                <p>hey, <b>{{ Auth::user()->firstname }}</b></p>
+                <p>hey, <b>{{ Auth::user()->name }}</b></p>
                 <small class="text-muted">Admin</small>
             </div>
 

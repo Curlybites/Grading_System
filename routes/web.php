@@ -105,6 +105,8 @@ Route::controller(StudentsController::class)->group(function(){
     // this route to display list of students
     Route::get('/studentlist','studlist');
 
+    Route::get('student','studlist');
+
 });
 
 Route::controller(DashboardController::class)->group(function(){

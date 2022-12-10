@@ -87,10 +87,10 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                                <th>Gender</th>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>phone</th>
+                                <th>Semester</th>
                                 <th>Email</th>
                             </tr>
                         </thead>
@@ -98,10 +98,10 @@
                             @foreach($students as $student)
                             <tr>
                                 <td>{{ $student->id }}</td>
-                                <td>{{ $student->firstName }}</td>
-                                <td>{{ $student->lastName }}</td>
-                                <td class="warning">{{ $student->age }}</td>
-                                <td class="primary">{{ $student->gender }}</td>
+                                <td>{{ $student->name }}</td>
+                                <td>{{ $student->username }}</td>
+                                <td class="warning">{{ $student->phone }}</td>
+                                <td class="primary">{{ $student->sem }}</td>
                                 <td class="primary">{{ $student->email }}</td>
                             </tr>
                             @endforeach
