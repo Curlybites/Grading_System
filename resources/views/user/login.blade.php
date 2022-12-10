@@ -50,6 +50,11 @@
                 <input type="text" name="lastname" placeholder="Last Name" required/>
               </div>
 
+              <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" name="username" placeholder="Username" required/>
+            </div>
+
             <div class="input-field">
               <i class="fas fa-envelope"></i>
               <input type="email" name="email" placeholder="Email" required />

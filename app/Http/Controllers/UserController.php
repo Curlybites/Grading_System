@@ -59,12 +59,13 @@ class UserController extends Controller
     $validated = $request->validate([
         "firstname"=>['required','min:4'],
         "lastname"=>['required', 'min:4'],
+        "username"=>['required', 'min:4'],
         "email"=>['required','email',Rule::unique('users','email')],
         "password" => 'required|confirmed|min:6'
 
     ]);
                             //Hash::make($validated['password']);
-    $validated['password'] = bcrypt($validated['password']);
+    $validated['password'] = ($validated['password']);
 
     $user = User::create($validated); // create a variable and call the User model and then create ($validated);
 
