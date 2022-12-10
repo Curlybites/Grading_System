@@ -14,14 +14,14 @@
     
     <form action="/store" method ="POST" enctype="multipart/form-data" class="flex flex-col ">
         @csrf
-        <input type="text" name="firstName" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="First Name" required>
-        <input type="text" name="lastName" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Last Name" required>
+        <input type="text" name="name" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="First Name" required>
+        <input type="text" name="username" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Last Name" required>
 
         <input type="email" name="email" class="mt-5 bg-gray-200 rounded w-full text-gray-700 p-4 outline-offset-2 outline-blue-500" placeholder="Email" required>
 
         <input type="password" name="password" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Password" required>
         <input type="password" name="password_confirmation" class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500" placeholder="Confirm Password" required>
-        <input type="file" name="image" id="image"class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500">
+        <!-- <input type="file" name="image" id="image"class="bg-gray-200 rounded w-full text-gray-700 p-4 mt-4 outline-offset-2 outline-blue-500"> -->
         <a href="/login">
         <p class="text-center text-gray-400 mt-3 hover:text-blue-500 mt-5">Already have an account? sign in</p>
         </a>

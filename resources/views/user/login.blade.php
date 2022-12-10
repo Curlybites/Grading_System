@@ -42,12 +42,12 @@
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="firstName" placeholder="First Name" required/>
+              <input type="text" name="name" placeholder="Name" required/>
             </div>
 
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="lastName" placeholder="Last Name" required/>
+                <input type="text" name="username" placeholder="Username" required/>
               </div>
 
             <div class="input-field">
