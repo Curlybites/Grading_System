@@ -85,29 +85,34 @@
 <div class="create-stud">
 <form action="/Student/create" method="POST">
     @csrf
-    <label for="stud_no">Student Number</label>
-    <input class="input-form" type="text" id="studentID" name="studentID" placeholder="Your Student number.." required>
+    <label for="regno">Student Number</label>
+    <input class="input-form" type="text" id="regno" name="regno" placeholder="Your Student number.." required>
 
-    <label for="fname">First Name</label>
-    <input class="input-form" type="text" id="firstName" name="firstName" placeholder="Your name.." required>
+    <label for="name">Name</label>
+    <input class="input-form" type="text" id="name" name="name" placeholder="Your name.." required>
 
-    <label for="lname">Last Name</label>
-    <input class="input-form" type="text" id="lastName" name="lastName" placeholder="Your last name.." required>
-    <label for="age">Age</label>
-    <input class="input-form" type="number" id="age" name="age" placeholder="Your age.." required>
+    <label for="username">Username</label>
+    <input class="input-form" type="text" id="username" name="username" placeholder="Your Username.." required>
 
-    <label for="gender">Gender</label>
-    <select id="gender" name="gender" required>
-      <option value="" selected disabled>Select Gender</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-    </select>
+    <label for="a">Email</label>
+    <input class="input-form" type="email" id="email" name="email" placeholder="Your Email.." required>
 
-    <label for="email">Email</label>
-    <input class="input-form" type="email" id="email" name="email" placeholder="Your email.." required>
 
-    <label for="contact_no">Contact Number</label>
-    <input class="input-form" type="text" id="contact_no" name="contact_no" placeholder="Your contact number.." required>
+    <label for="phone">Phone</label>
+    <input class="input-form" type="text" id="phone" name="phone" placeholder="Your Phone.." required>
+
+    <label for="sem">Semester</label>
+    <input class="input-form" type="text" id="sem" name="sem" placeholder="Your Semester.." required>
+
+    <label for="dept">Department</label>
+    <input class="input-form" type="text" id="dept" name="dept" placeholder="Your Department.." required>
+
+    <label for="address">Address</label>
+    <input class="input-form" type="text" id="address" name="address" placeholder="Your Address.." required>
+
+    <label for="utype">Utype</label>
+    <input class="input-form" type="text" id="utype" name="utype" placeholder="Your Utype.." required>
+
 
     <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
         add
@@ -129,12 +134,14 @@
                 <tr>
                     <th>ID</th>
                     <th>Student Number</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-
-                    <th>Gender</th>
+                    <th>Name</th>
+                    <th>Username</th>
                     <th>Email</th>
-                    
+                    <th>Phone</th>
+                    <th>Semester</th>
+                    <th>Department</th>
+                    <th>Address</th>
+                    <th>Utype</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -142,13 +149,15 @@
                 @foreach($students as $student)
                 <tr>
                     <td class="primary">{{ $student->id }}</td>
-                    <td class="primary">{{ $student->studentID }}</td>
-                    <td class="primary">{{ $student->firstName }}</td>
-                    <td class="primary">{{ $student->lastName }}</td>
-               
-                    <td class="primary">{{ $student->gender }}</td>
+                    <td class="primary">{{ $student->regno }}</td>
+                    <td class="primary">{{ $student->name }}</td>
+                    <td class="primary">{{ $student->username }}</td>
                     <td class="primary">{{ $student->email }}</td>
-                  
+                    <td class="primary">{{ $student->phone }}</td>
+                    <td class="primary">{{ $student->sem }}</td>
+                    <td class="primary">{{ $student->dept }}</td>
+                    <td class="primary">{{ $student->address }}</td>
+                    <td class="primary">{{ $student->utype }}</td>
                     <td class="warning"><a href="/stud/{{ $student->id }}" class="btn-warning">Edit</a></td>
                 </tr>
                 @endforeach

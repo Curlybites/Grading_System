@@ -59,13 +59,13 @@ class UserController extends Controller
    public function store(Request $request){
    // dd($request);
     $validated = $request->validate([
-        "firstName"=>['required','min:4'],
-        "lastName"=>['required', 'min:4'],
+        "name"=>['required','min:4'],
+        "username"=>['required', 'min:4'],
         "email"=>['required','email',Rule::unique('users','email')],
         "password" => 'required|confirmed|min:4'
     ]);
                             //Hash::make($validated['password']);
-    $validated['password'] = bcrypt($validated['password']);
+    $validated['password'] = md5($validated['password']);
 
     $user = User::create($validated); // create a variable and call the User model and then create ($validated);
 

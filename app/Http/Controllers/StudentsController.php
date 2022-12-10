@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\std_registration;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Fascades\Hash;
@@ -13,24 +14,26 @@ class StudentsController extends Controller
 {
     public function create(Request $request){
         $validated = $request->validate([
-            "studentID"=>['required'],
-            "firstName"=>['required'],
-            "lastName"=>['required'],
-            "age"=>['required'],
-            "gender"=>['required'],
-            "contact_no"=>['required'],
-            "email"=>['required','email',Rule::unique('students','email')]
+            "regno"=>['required'],
+            "name"=>['required'],
+            "username"=>['required'],
+            "phone"=>['required'],
+            "sem"=>['required'],
+            "dept"=>['required'],
+            "address"=>['required'],
+            "utype"=>['required'],
+            "email"=>['required','email',Rule::unique('std_registration','email')]
             
         ]);
 
-        $stud = Student::create($validated);
+        $stud = std_registration::create($validated);
 
         return redirect('/Student')->with('message','Successfully Created');
     }
 
     public function studlist(){
 
-        $data = Student::paginate(15);   
+        $data = std_registration::paginate(15);     
            return view ('student.student',['students'=>$data]);
     }
 
