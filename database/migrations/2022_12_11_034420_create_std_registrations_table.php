@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('std_registration', function (Blueprint $table) {
+        Schema::create('std_registrations', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');
             $table->string('username');
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('std_registration');
+        Schema::dropIfExists('std_registrations');
     }
 };

@@ -13,19 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('std_registration', function (Blueprint $table) {
+        Schema::create('lib_registrations', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');
             $table->string('username');
-            $table->string('password');
-            $table->string('email');
             $table->string('phone');
-            $table->string('sem');
-            $table->string('dept');
-            $table->string('regno');
             $table->string('address');
-            $table->string('utype');
             $table->string('photo');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -37,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('std_registration');
+        Schema::dropIfExists('lib_registrations');
     }
 };
