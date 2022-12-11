@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('regno');
             $table->string('address');
             $table->string('utype');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

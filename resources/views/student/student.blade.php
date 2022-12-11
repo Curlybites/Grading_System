@@ -100,6 +100,15 @@
     <label for="address">Address</label>
     <input class="input-form" type="text" id="address" name="address" placeholder="Your Address.." required>
 
+    <label for="sem">Semester</label>
+    <input class="input-form" type="text" id="sem" name="sem" placeholder="Your Semester.." required>
+
+    <label for="dept">Department</label>
+    <input class="input-form" type="text" id="dept" name="dept" placeholder="Your Department.." required>
+
+    <label for="utype">Type</label>
+    <input class="input-form" type="text" id="utype" name="utype" value="Student" placeholder="" readonly>
+
     <label for="email">Email</label>
     <input class="input-form" type="email" id="email" name="email" placeholder="Your email.." required>
 
@@ -130,6 +139,8 @@
                     <th>Username</th>
                     <th>phone</th>
                     <th>address</th>
+                    <th>Semester</th>
+                    <th>Department</th>
                     <th>Email</th>
                     <th>Action</th>
                 </tr>
@@ -143,6 +154,8 @@
                     <td class="primary">{{ $student->username }}</td>
                     <td class="primary">{{ $student->phone }}</td>
                     <td class="primary">{{ $student->address }}</td>
+                    <td class="primary">{{ $student->sem }}</td>
+                    <td class="primary">{{ $student->dept }}</td>
                     <td class="primary">{{ $student->email }}</td>
                     <td class="warning"><a href="/stud/{{ $student->id }}" class="btn-warning">Edit</a></td>
                 </tr>

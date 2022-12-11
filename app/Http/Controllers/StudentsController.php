@@ -18,7 +18,10 @@ class StudentsController extends Controller
             "username"=>['required'],
             "phone"=>['required'],
             "address"=>['required'],
+            "sem"=>['required'],
+            "dept"=>['required'],
             "password"=>['required'],
+            "utype"=>['required'],
             "email"=>['required','email',Rule::unique('std_registration','email')]
             
         ]);
@@ -66,6 +69,8 @@ class StudentsController extends Controller
         $student->phone=$req->phone;
         $student->gender=$req->gender;
         $student->address=$req->address;
+        $student->sem=$req->sem;
+        $student->dept=$req->dept;
         $student->email=$req->email;
         $student->save();
 
