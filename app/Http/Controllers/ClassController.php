@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Classes;
 use App\Models\Professor;
-use App\Models\Student;
+use App\Models\std_registration;
 use App\Models\Subject;
 use App\Models\Section;
 use Illuminate\Support\Facades\Redis;
@@ -122,7 +122,7 @@ class ClassController extends Controller
     }
 
     public function getStudent() {
-        $p=Student::all();
+        $p=std_registration::all();
         return response()->json($p);
     }
 

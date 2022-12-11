@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class std_registration extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'username',
+        'password',
+        'email',
+        'phone',
+        'sem',
+        'dept',
+        'regno',
+        'address',
+        'utype',
+        'photo',
+    ];
+}

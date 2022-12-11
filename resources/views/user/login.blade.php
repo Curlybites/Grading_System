@@ -42,12 +42,22 @@
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="firstname" placeholder="First Name" required/>
+              <input type="text" name="name" placeholder="Name" required/>
             </div>
 
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="lastname" placeholder="Last Name" required/>
+                <input type="text" name="username" placeholder="Username" required/>
+              </div>
+
+              <div class="input-field">
+                <i class="fas fa-phone"></i>
+                <input type="text" name="phone" placeholder="Phone" required/>
+              </div>
+
+              <div class="input-field">
+                <i class="fas fa-home"></i>
+                <input type="text" name="address" placeholder="Address" required/>
               </div>
 
             <div class="input-field">
@@ -64,6 +74,11 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" name="password_confirmation" minlength="8" placeholder="Confirmed Password" required />
               </div>
+
+              <div class="input-field">
+              <i class="fas fa-file"></i>
+              <input type="file" name="photo" placeholder="Photo" required />
+            </div>
               
       
             <input type="submit" class="btn" value="Sign up" />

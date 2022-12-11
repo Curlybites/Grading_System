@@ -129,12 +129,11 @@
                 <tr>
                     <th>ID</th>
                     <th>Student Number</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>phone</th>
+                    <th>address</th>
                     <th>Email</th>
-                    <th>Contact Number</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -142,11 +141,11 @@
                 @foreach($students as $student)
                 <tr>
                     <td class="primary">{{ $student->id }}</td>
-                    <td class="primary">{{ $student->student_no }}</td>
-                    <td class="primary">{{ $student->first_name }}</td>
-                    <td class="primary">{{ $student->last_name }}</td>
-                    <td class="primary">{{ $student->age }}</td>
-                    <td class="primary">{{ $student->gender }}</td>
+                    <td class="primary">{{ $student->regno }}</td>
+                    <td class="primary">{{ $student->name }}</td>
+                    <td class="primary">{{ $student->username }}</td>
+                    <td class="primary">{{ $student->phone }}</td>
+                    <td class="primary">{{ $student->address }}</td>
                     <td class="primary">{{ $student->email }}</td>
                     <td class="primary">{{ $student->contact_no }}</td>
                     <td class="warning"><a href="/stud/{{ $student->id }}" class="btn-warning">Edit</a></td>

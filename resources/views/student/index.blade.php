@@ -87,21 +87,21 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                               
-                                <th>Gender</th>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>phone</th>
+                                <th>address</th>
                                 <th>Email</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($students as $student)
                             <tr>
-                                <td>{{ $student->id }}</td>
-                                <td>{{ $student->first_name }}</td>
-                                <td>{{ $student->last_name }}</td>
-                                <td class="warning">{{ $student->age }}</td>
-                                <td class="primary">{{ $student->gender }}</td>
+                                <td>{{ $student->regno }}</td>
+                                <td>{{ $student->name }}</td>
+                                <td>{{ $student->username }}</td>
+                                <td class="warning">{{ $student->phone }}</td>
+                                <td class="primary">{{ $student->address }}</td>
                                 <td class="primary">{{ $student->email }}</td>
                             </tr>
                             @endforeach

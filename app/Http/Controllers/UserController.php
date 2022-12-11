@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Student;
+use App\Models\lib_registration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Fascades\Hash;
 use Illuminate\Support\Fascades\View;
@@ -57,16 +57,19 @@ class UserController extends Controller
 // the variable like firstname,lastname etc are came from from in the html not in the database.
    public function store(Request $request){
     $validated = $request->validate([
-        "firstname"=>['required','min:4'],
-        "lastname"=>['required', 'min:4'],
-        "email"=>['required','email',Rule::unique('users','email')],
+        "name"=>['required','min:4'],
+        "username"=>['required', 'min:4'],
+        "phone"=>['required'],
+        "address"=>['required'],
+        "photo"=>['nullable'],
+        "email"=>['required','email',Rule::unique('lib_registration','email')],
         "password" => 'required|confirmed|min:6'
 
     ]);
                             //Hash::make($validated['password']);
-    $validated['password'] = bcrypt($validated['password']);
+    $validated['password'] = md5($validated['password']);
 
-    $user = User::create($validated); // create a variable and call the User model and then create ($validated);
+    $user = lib_registration::create($validated); // create a variable and call the User model and then create ($validated);
 
     auth()->login($user);
     return redirect('/login')->with('message','Register successful');

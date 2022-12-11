@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Professor;
-use App\Models\Student;
+use App\Models\std_registration;
 use App\Models\Subject;
 use App\Models\Users;
 use Illuminate\Http\Request;
@@ -30,7 +30,7 @@ class DashboardController extends Controller
     // this is for pagination for Studentlist in Student navigation
     public function student(){
     
-         $data = Student::paginate(10);
+         $data = std_registration::paginate(10);
 
          return view ('student.student',['students'=>$data]);
     
@@ -59,7 +59,7 @@ class DashboardController extends Controller
 
     public function studnum(){
         
-        $student = Student::all();
+        $student = std_registration::all();
         $professor = Professor::all();
         $subject = Subject::all();
         return view('student.dashboard',['students'=>$student],['prof'=>$professor] + ['subj'=>$subject]);
