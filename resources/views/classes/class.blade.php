@@ -97,7 +97,7 @@
                     <select id="class_prof" name="class_prof" required>
                     <option value="" selected disabled>Select Professor</option>
                      @foreach ($professor as $data)
-                    <option  value="{{ $data->fname }} {{ $data->lname }}">{{ $data->fname }} {{ $data->lname }}</option>
+                    <option  value="{{ $data->name }}">{{ $data->name }}</option>
                     @endforeach
                     </select>
 

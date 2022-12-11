@@ -95,9 +95,9 @@
                         <thead>
                         <tr>
                             <th>Student Number</th>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Gender</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
                             <th>Section</th>
                             <th>Subject</th>
                             <th>1st</th>
@@ -111,10 +111,10 @@
                         <tbody>
                         @forelse ( $list as $sec )
                              <tr>
-                                    <td class="text-center">{{ $sec->student_no }}</td>
-                                    <td>{{ $sec->first_name }}</td>
-                                    <td>{{ $sec->last_name }}</td>
-                                    <td>{{ $sec->gender }}</td>
+                                    <td class="text-center">{{ $sec->regno }}</td>
+                                    <td>{{ $sec->name }}</td>
+                                    <td>{{ $sec->username }}</td>
+                                    <td>{{ $sec->email }}</td>
                                     <td>{{ $sec->class_sec }}</td>
                                     <td>{{ $sec->class_subj }}</td>
                                     <td id="1st" name="1st" value="" placeholder=""></td>

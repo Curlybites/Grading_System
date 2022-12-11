@@ -12,20 +12,36 @@
   <form action="/professor/{{ $prof->id }}" method="POST">
     @method('PUT')
     @csrf
-    <label for="fname">First Name</label>
-    <input class="input-form" type="text" id="fname" name="fname" placeholder="Given Name" value="{{ $prof->fname }}" required>
+    <label for="idno">ID NO</label>
+    <input class="input-form" type="text" id="idno" name="idno" placeholder="ID NO" value="{{ $prof->idno }}" required>
 
-    <label for="lname">Last Name</label>
-    <input class="input-form" type="text" id="lname" name="lname" placeholder="Family Name"   value="{{ $prof->lname }}" required>
+    <label for="name">Name</label>
+    <input class="input-form" type="text" id="name" name="name" placeholder="Name" value="{{ $prof->name }}" required>
 
-    <label for="gender">Gender</label>
-    <select id="gender" name="gender"  required>
-      <option value="" selected disabled>Select Gender</option>
-      <option value="Male" {{ $prof->gender }}>Male</option>
-      <option value="Female" {{ $prof->gender }}>Female</option>
-    </select>
+    <label for="username">Username</label>
+    <input class="input-form" type="text" id="username" name="username" placeholder="Username"   value="{{ $prof->username }}" required>
+
+    <label for="phone">Phone</label>
+    <input class="input-form" type="text" id="phone" name="phone" placeholder="Phone"   value="{{ $prof->phone }}" required>
+
+    <label for="password">Password</label>
+    <input class="input-form" type="password" id="password" name="password" placeholder="Password"   value="{{ $prof->password }}" readonly>
+
+    <label for="address">Address</label>
+    <input class="input-form" type="text" id="address" name="address" placeholder="Address"   value="{{ $prof->address }}" required>
+
+    <label for="lecturer">Lecturer</label>
+    <input class="input-form" type="text" id="lecturer" name="lecturer" placeholder="Lecturer"   value="{{ $prof->lecturer }}" required>
+
     <label for="email">Email</label>
     <input class="input-form" type="email" id="email" name="email" placeholder="sample@gmail.com"  value="{{ $prof->email }}" required>
+
+    <label for="utype">Gender</label>
+    <select id="utype" name="utype"  required>
+      <option value="" selected disabled>Select Gender</option>
+      <option value="Student" {{ $prof->utype }}>Student</option>
+      <option value="Teacher" {{ $prof->utype }}>Teacher</option>
+    </select>
 
     <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
         add

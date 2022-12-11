@@ -45,13 +45,13 @@
                                                     
                                                     <div class="row mt-5">
                                                             <div class="col-6">
-                                                                <label class="h6">First Name</label>
-                                                                <input type="text" class="form-control text-dark" id="fname" placeholder="" name="first_name" required readonly>
+                                                                <label class="h6">Name</label>
+                                                                <input type="text" class="form-control text-dark" id="name" placeholder="" name="name" required readonly>
                                                             </div>
 
                                                             <div class="col-6">
-                                                                <label class="h6">Last Name</label>
-                                                                <input type="text" class="form-control text-dark" id="lname" placeholder="" name="last_name" required readonly>
+                                                                <label class="h6">Username</label>
+                                                                <input type="text" class="form-control text-dark" id="username" placeholder="" name="username" required readonly>
                                                             </div>
                                                     </div>
                                                     
@@ -63,18 +63,18 @@
                                                      </div>
 
                                                      <div class="col-sm-4">
-                                                           <label class="h6">Contact Number</label> 
-                                                           <input type="text" class="form-control text-dark" id="contact_no" placeholder="" name="contact_no" required readonly>
+                                                           <label class="h6">Type</label> 
+                                                           <input type="text" class="form-control text-dark" id="utype" placeholder="" name="utype" required readonly>
                                                      </div>
 
                                                         <div class="col-sm-2">
-                                                            <label class="h6">Age</label>
-                                                            <input type="text" class="form-control text-dark" id="age" placeholder="" name="age" required readonly>
+                                                            <label class="h6">Phone</label>
+                                                            <input type="text" class="form-control text-dark" id="phone" placeholder="" name="phone" required readonly>
                                                         </div>
 
                                                         <div class="col-sm-2">
-                                                            <label class="h6">Gender</label>
-                                                            <input type="text" class="form-control text-dark" id="gender" placeholder="" name="gender" required readonly>
+                                                            <label class="h6">Address</label>
+                                                            <input type="text" class="form-control text-dark" id="address" placeholder="" name="address" required readonly>
                                                         </div>
      
                                                     </div>
@@ -93,7 +93,7 @@
                                                 
                                                     <div class="container text-center">
                                                         <label class="text-center h6">Student Number</label>
-                                                        <input type="text" class="form-control text-dark text-center" id="student_no" value="" name="student_no" required readonly>    
+                                                        <input type="text" class="form-control text-dark text-center" id="regno" value="" name="regno" required readonly>    
                                                     </div>
 
                                                     <div class="modal-footer">
@@ -116,12 +116,12 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Student Number</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                                <th>Gender</th>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>phone</th>
+                                <th>address</th>
                                 <th>Email</th>
-                                <th>Contact Number</th>
+                                <th>Type</th>
                                 <th>Section</th>
                                 <th>Subject</th>
                             </tr>
@@ -131,13 +131,13 @@
                             @foreach ($list as $sec)
                                 <tr>
                                     <td>{{ $sec->id }}</td>
-                                    <td>{{ $sec->student_no }}</td>
-                                    <td>{{ $sec->first_name }}</td>
-                                    <td>{{ $sec->last_name }}</td>
-                                    <td>{{ $sec->age }}</td>
-                                    <td>{{ $sec->gender }}</td>
+                                    <td>{{ $sec->regno }}</td>
+                                    <td>{{ $sec->name }}</td>
+                                    <td>{{ $sec->username }}</td>
+                                    <td>{{ $sec->phone }}</td>
+                                    <td>{{ $sec->address }}</td>
                                     <td>{{ $sec->email }}</td>
-                                    <td>{{ $sec->contact_no }}</td>
+                                    <td>{{ $sec->utype }}</td>
                                     <td>{{ $sec->class_sec }}</td>
                                     <td>{{ $sec->class_subj }}</td>
                                 </tr>
@@ -187,16 +187,16 @@
                                     var dataStud6 = {};
                                     var dataStud7 = {};
                                     for (var i= 0; i < studArray.length; i++){
-                                        dataStud[studArray[i].student_no] = null; 
-                                        dataStud2[studArray[i].student_no] = studArray[i];
-                                        dataStud3[studArray[i].student_no] = studArray[i];
-                                        dataStud4[studArray[i].student_no] = studArray[i];
-                                        dataStud5[studArray[i].student_no] = studArray[i];
-                                        dataStud6[studArray[i].student_no] = studArray[i];
-                                        dataStud7[studArray[i].student_no] = studArray[i];
+                                        dataStud[studArray[i].idno] = null; 
+                                        dataStud2[studArray[i].idno] = studArray[i];
+                                        dataStud3[studArray[i].idno] = studArray[i];
+                                        dataStud4[studArray[i].idno] = studArray[i];
+                                        dataStud5[studArray[i].idno] = studArray[i];
+                                        dataStud6[studArray[i].idno] = studArray[i];
+                                        dataStud7[studArray[i].idno] = studArray[i];
                                     }
                                     for (var i= 0; i < studArray.length; i++){
-                                        dataStud[studArray[i].first_name] = null; 
+                                        dataStud[studArray[i].name] = null; 
                                         dataStud2[studArray[i].first_name] = studArray[i];
                                         dataStud3[studArray[i].first_name] = studArray[i];
                                         dataStud4[studArray[i].first_name] = studArray[i];
@@ -205,13 +205,13 @@
                                         dataStud7[studArray[i].first_name] = studArray[i];
                                     }
                                     for (var i= 0; i < studArray.length; i++){
-                                        dataStud[studArray[i].last_name] = null; 
-                                        dataStud2[studArray[i].last_name] = studArray[i];
-                                        dataStud3[studArray[i].last_name] = studArray[i];
-                                        dataStud4[studArray[i].last_name] = studArray[i];
-                                        dataStud5[studArray[i].last_name] = studArray[i];
-                                        dataStud6[studArray[i].last_name] = studArray[i];
-                                        dataStud7[studArray[i].last_name] = studArray[i];
+                                        dataStud[studArray[i].username] = null; 
+                                        dataStud2[studArray[i].username] = studArray[i];
+                                        dataStud3[studArray[i].username] = studArray[i];
+                                        dataStud4[studArray[i].username] = studArray[i];
+                                        dataStud5[studArray[i].username] = studArray[i];
+                                        dataStud6[studArray[i].username] = studArray[i];
+                                        dataStud7[studArray[i].username] = studArray[i];
                                     }
                                     console.log("dataStud7");
                                     console.log(dataStud7);
@@ -225,13 +225,13 @@
                                     data: dataStud,
                                     onAutocomplete:function(reqdata){
                                         console.log(reqdata);
-                                        $('#fname').val(dataStud2[reqdata]['first_name']);
-                                        $('#lname').val(dataStud2[reqdata]['last_name']);
-                                        $('#age').val(dataStud2[reqdata]['age']);
-                                        $('#gender').val(dataStud2[reqdata]['gender']);
+                                        $('#name').val(dataStud2[reqdata]['name']);
+                                        $('#username').val(dataStud2[reqdata]['username']);
+                                        $('#phone').val(dataStud2[reqdata]['phone']);
+                                        $('#address').val(dataStud2[reqdata]['address']);
                                         $('#email').val(dataStud2[reqdata]['email']);
-                                        $('#contact_no').val(dataStud2[reqdata]['contact_no']);
-                                        $('#student_no').val(dataStud2[reqdata]['student_no']);
+                                        $('#utype').val(dataStud2[reqdata]['utype']);
+                                        $('#regno').val(dataStud2[reqdata]['regno']);
                                     }
                                 });
                                 // end 

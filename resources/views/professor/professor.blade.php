@@ -80,19 +80,34 @@
     <div class="create-stud">
       <form action="/Professor/create" method="POST">
         @csrf
-        <label for="fname">First Name</label>
-        <input class="input-form" type="text" id="fname" name="fname" placeholder="Given Name" required>
+        <label for="name">Name</label>
+        <input class="input-form" type="text" id="name" name="name" placeholder="Name" required>
 
-        <label for="lname">Last Name</label>
-        <input class="input-form" type="text" id="lname" name="lname" placeholder="Family Name" required>
+        <label for="username">Username</label>
+        <input class="input-form" type="text" id="username" name="username" placeholder="Username" required>
 
-        <label for="gender">Gender</label>
-        <select id="gender" name="gender" required>
-          <option value="" selected disabled>Select Gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-        
+        <label for="password">Password</label>
+        <input class="input-form" type="password" id="password" name="password" placeholder="Password" required>
+
+        <label for="phone">Phone</label>
+        <input class="input-form" type="text" id="phone" name="phone" placeholder="Phone Number" required>
+
+        <label for="address">Address</label>
+        <input class="input-form" type="text" id="address" name="address" placeholder="Address" required>
+
+        <label for="lecturer">Lecturer</label>
+        <input class="input-form" type="text" id="lecturer" name="lecturer" placeholder="Lecturer" required>
+
+        <label for="idno">ID NO</label>
+        <input class="input-form" type="text" id="idno" name="idno" placeholder="ID NO" required>
+
+        <label for="utype">Type</label>
+    <select   select id="utype" name="utype"  required>
+      <option value="" selected disabled>Select Type</option>
+      <option value="Student">Student</option>
+      <option value="Teacher">Teacher</option>
+    </select>
+  
         <label for="email">Email</label>
         <input class="input-form" type="email" id="email" name="email" placeholder="sample@gmail.com" required>
 
@@ -115,10 +130,13 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Gender</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Phone</th>
+                        <th>address</th>
+                        <th>Lecturer</th>
                         <th>Email</th>
+                        <th>Type</th>
                         <th>Action</th>
 
                     </tr>
@@ -127,11 +145,15 @@
 
                     @foreach ($professors as $prof)
                     <tr>
-                        <td class="primary">{{ $prof->id }}</td>
-                        <td class="primary">{{ $prof->fname }}</td>
-                        <td class="primary">{{ $prof->lname }}</td>
-                        <td class="primary">{{ $prof->gender}}</td>
+                        <td class="primary">{{ $prof->idno }}</td>
+                        <td class="primary">{{ $prof->name }}</td>
+                        <td class="primary">{{ $prof->username }}</td>
+                        <td class="primary">{{ $prof->phone}}</td>
+                        <td class="primary">{{ $prof->address}}</td>
+                        <td class="primary">{{ $prof->lecturer}}</td>
                         <td class="primary">{{ $prof->email }}</td>
+                        <td class="primary">{{ $prof->utype}}</td>
+                        
                         <td class="warning"><a href="/prof/{{ $prof->id }}" class="btn-warning">Edit</a></td>
                     </tr>
                     @endforeach

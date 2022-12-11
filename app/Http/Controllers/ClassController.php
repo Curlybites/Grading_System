@@ -31,13 +31,13 @@ class ClassController extends Controller
     public function filtercreate(Request $request) {
         //dd($request);
         $validated = $request->validate([
-            "student_no"=>['required'],
-            "first_name"=>['required'],
-            "last_name"=>['required'],
-            "age"=>[ 'required'],
-            "gender"=>[ 'required'],
+            "regno"=>['required'],
+            "name"=>['required'],
+            "username"=>['required'],
+            "phone"=>[ 'required'],
+            "address"=>[ 'required'],
             "email"=>[ 'required'],
-            "contact_no"=>[ 'required'],
+            "utype"=>[ 'required'],
             "class_sec"=>[ 'required'],
             "class_subj"=>[ 'required']
         ]);
@@ -48,7 +48,7 @@ class ClassController extends Controller
     }
 
     public function classResult(){
-        $prof = Professor::all();
+        $prof = std_registration::all();
         $subj = Subject::all();
         $data = Classes::paginate(5);
         return view ('classes.class',['classes' => $data],['subj' => $subj]+['professor' => $prof]);
@@ -64,7 +64,7 @@ class ClassController extends Controller
 
     public function show($id){
         $data = Classes::findorFail($id);
-        $list = Professor::all();
+        $list = std_registration::all();
         $subject = Subject::all();
         
         return view('classes.edit',['class' => $data],['professor'=>$list]+['subject'=>$subject]);
@@ -115,7 +115,7 @@ class ClassController extends Controller
 
     public function showClass(){
         
-       $professor = Professor::all();
+       $professor = std_registration::all();
        $subject = Subject::all();
        return view('classes.class',['professor' => $professor],['subject' => $subject]);
     
