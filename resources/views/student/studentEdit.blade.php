@@ -9,29 +9,23 @@
       <form action="/student/{{ $stud->id }}" method="POST">
           @method('PUT')
           @csrf
-          <label for="stud_no">Student Number</label>
-          <input class="input-form" type="text" id="stud_no" name="student_no" placeholder="Your Student number.." value="{{ $stud->student_no }}" required>
+          <label for="regno">Student Number</label>
+          <input class="input-form" type="text" id="regno" name="regno" placeholder="Your Student number.." value="{{ $stud->regno }}" required>
       
-          <label for="fname">First Name</label>
-          <input class="input-form" type="text" id="fname" name="first_name" placeholder="Your name.." value="{{ $stud->first_name }}" required>
+          <label for="fname">Name</label>
+          <input class="input-form" type="text" id="name" name="name" placeholder="Your Name.." value="{{ $stud->name }}" required>
       
-          <label for="lname">Last Name</label>
-          <input class="input-form" type="text" id="lname" name="last_name" placeholder="Your last name.." value="{{ $stud->last_name }}" required>
-          <label for="age">Age</label>
-          <input class="input-form" type="number" id="age" name="age" placeholder="Your age.." value="{{ $stud->age }}" required>
-      
-          <label for="gender">Gender</label>
-          <select id="gender" name="gender" required>
-            <option value="" selected disabled>Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
+          <label for="username">Username</label>
+          <input class="input-form" type="text" id="username" name="username" placeholder="Your Username.." value="{{ $stud->username }}" required>
+
+          <label for="phone">Phone</label>
+          <input class="input-form" type="number" id="phone" name="phone" placeholder="Your Phone.." value="{{ $stud->phone }}" required>
+
+          <label for="address">Address</label>
+          <input class="input-form" type="text" id="address" name="address" placeholder="Your Address.." value="{{ $stud->address }}" required>
       
           <label for="email">Email</label>
           <input class="input-form" type="email" id="email" name="email" placeholder="Your email.." value="{{ $stud->email }}" required>
-      
-          <label for="contact_no">Contact Number</label>
-          <input class="input-form" type="text" id="contact_no" name="contact_no" placeholder="Your contact number.." value="{{ $stud->contact_no }}" required>
       
           <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
               add

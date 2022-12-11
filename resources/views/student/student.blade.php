@@ -85,29 +85,26 @@
 <div class="create-stud">
 <form action="/Student/create" method="POST">
     @csrf
-    <label for="stud_no">Student Number</label>
-    <input class="input-form" type="text" id="stud_no" name="student_no" placeholder="Your Student number.." required>
+    <label for="regno">Student Number</label>
+    <input class="input-form" type="text" id="regno" name="regno" placeholder="Your Student number.." required>
 
-    <label for="fname">First Name</label>
-    <input class="input-form" type="text" id="fname" name="first_name" placeholder="Your name.." required>
+    <label for="name">Name</label>
+    <input class="input-form" type="text" id="name" name="name" placeholder="Your name.." required>
 
-    <label for="lname">Last Name</label>
-    <input class="input-form" type="text" id="lname" name="last_name" placeholder="Your last name.." required>
-    <label for="age">Age</label>
-    <input class="input-form" type="number" id="age" name="age" placeholder="Your age.." required>
+    <label for="username">Userame</label>
+    <input class="input-form" type="text" id="username" name="username" placeholder="Your Username.." required>
 
-    <label for="gender">Gender</label>
-    <select id="gender" name="gender" required>
-      <option value="" selected disabled>Select Gender</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-    </select>
+    <label for="phone">Phone</label>
+    <input class="input-form" type="text" id="phone" name="phone" placeholder="Your Phone.." required>
+
+    <label for="address">Address</label>
+    <input class="input-form" type="text" id="address" name="address" placeholder="Your Address.." required>
 
     <label for="email">Email</label>
     <input class="input-form" type="email" id="email" name="email" placeholder="Your email.." required>
 
-    <label for="contact_no">Contact Number</label>
-    <input class="input-form" type="text" id="contact_no" name="contact_no" placeholder="Your contact number.." required>
+    <label for="password">Password</label>
+    <input class="input-form" type="password" id="password" name="password" placeholder="Default Password.." required>
 
     <button class="btn-create-stud" type="submit"><span class="material-icons-sharp">
         add

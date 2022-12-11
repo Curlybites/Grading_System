@@ -13,13 +13,13 @@ class StudentsController extends Controller
 {
     public function create(Request $request){
         $validated = $request->validate([
-            "student_no"=>['required'],
-            "first_name"=>['required'],
-            "last_name"=>['required'],
-            "age"=>['required'],
-            "gender"=>['required'],
-            "contact_no"=>['required'],
-            "email"=>['required','email',Rule::unique('students','email')]
+            "regno"=>['required'],
+            "name"=>['required'],
+            "username"=>['required'],
+            "phone"=>['required'],
+            "address"=>['required'],
+            "password"=>['required'],
+            "email"=>['required','email',Rule::unique('std_registration','email')]
             
         ]);
 
@@ -60,12 +60,12 @@ class StudentsController extends Controller
 
     public function update(Request $req, std_registration $student){
         $student=std_registration::find($req->id);
-        $student->student_no=$req->student_no;
-        $student->first_name=$req->first_name;
-        $student->last_name=$req->last_name;
-        $student->age=$req->age;
+        $student->regno=$req->regno;
+        $student->name=$req->name;
+        $student->username=$req->username;
+        $student->phone=$req->phone;
         $student->gender=$req->gender;
-        $student->contact_no=$req->contact_no;
+        $student->address=$req->address;
         $student->email=$req->email;
         $student->save();
 
