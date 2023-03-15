@@ -42,19 +42,19 @@
 
 
 
-            <a href="{{'/Grading'}}" class="btn"">
+            {{-- <a href="{{'/Grading'}}" class="btn"">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Grading</h3>
             </a>
             <a href="{{'/Setting'}}" class="btn">
                 <span class="material-icons-sharp">settings</span>
                 <h3>Settings</h3>
-            </a>
+            </a> --}}
 
                 <form action="/logout" method="POST">
                     @csrf
                     <button class="btn">
-                        <span class="material-icons-sharp">logout</span>
+                        <span class="material-icons-sharp">logoupt</span>
                         <h3>Logout</h3>
                     </button>
                 </form>

@@ -40,14 +40,14 @@
                 <span class="material-icons-sharp">people</span>   
                 <h3>Students</h3>
             </a>
-            <a href="{{'/Grading'}}" class="btn"">
+            {{-- <a href="{{'/Grading'}}" class="btn"">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Grading</h3>
             </a>
             <a href="{{'/Setting'}}" class="btn">
                 <span class="material-icons-sharp">settings</span>
                 <h3>Settings</h3>
-            </a>
+            </a> --}}
             
                 <form action="/logout" method="POST">
                     @csrf

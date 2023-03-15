@@ -16,8 +16,11 @@ class ProfessorController extends Controller
             "fname"=>['required'],
             "lname"=>['required'],
             "gender"=>['required'],
-            "email"=>['required','email',Rule::unique('professors','email')]
+            "email"=>['required','email',Rule::unique('professors','email')],
+            "password" =>'required|min:6'
         ]);
+
+        $validated['password'] = bcrypt($validated['password']);
 
         $prof = Professor::create($validated);
 
